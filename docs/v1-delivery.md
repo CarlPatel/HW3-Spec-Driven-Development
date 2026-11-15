@@ -11,4 +11,6 @@
 - No V2, learning log or student evaluation was authored.
 - External hosting: private Site registered but source upload/deployment blocked by
   automatic approval review pending explicit user authorization. No live URL claimed.
-- GitHub: push status to be recorded after preserving the local V1 commit.
+- Git: V1 is committed on local branch `v1` in the original repository.
+- GitHub: automatic approval review blocked pushing `v1` to the existing origin
+  pending explicit user authorization; the remote branch has not been created.
