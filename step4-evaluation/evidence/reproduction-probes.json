@@ -1,0 +1,60 @@
+{
+  "baselineCommit": "bef8e6c0bfae46af486e561841c32f9c8d159b88",
+  "purpose": "Reproduce observed requirements gaps, not pass/fail claims of stakeholder satisfaction.",
+  "observations": [
+    {
+      "id": "PROBE-01",
+      "finding": "F-01",
+      "observed": "An unverified lock record can be removed, released, and closed.",
+      "zeroEnergy": false,
+      "closed": true
+    },
+    {
+      "id": "PROBE-02",
+      "finding": "F-02",
+      "observed": "Stored first-good-part time can precede lock removal and release.",
+      "firstGoodPart": "02:30",
+      "lockRemoval": "03:00",
+      "release": "03:00"
+    },
+    {
+      "id": "PROBE-03",
+      "finding": "F-03",
+      "observed": "A stop after resumed production is absorbed into the not-yet-closed event; clock stays stopped.",
+      "events": 1,
+      "retainedStop": "02:14",
+      "retainedFirstGoodPart": "03:02",
+      "ignoredNewStop": "03:10",
+      "downtime": 48
+    },
+    {
+      "id": "PROBE-04",
+      "finding": "F-04",
+      "observed": "A current-shift note erases the overdue handover state without an acknowledgment.",
+      "before": "Not acknowledged",
+      "after": "Current shift",
+      "acknowledgments": 0
+    },
+    {
+      "id": "PROBE-05",
+      "finding": "F-05",
+      "observed": "Repair is labeled as having run a full shift although another ongoing stop covers that shift.",
+      "label": "Verified – ran full Day shift",
+      "ongoingStop": "07:00",
+      "ongoingStopFirstGoodPart": null
+    },
+    {
+      "id": "PROBE-06",
+      "finding": "F-01",
+      "observed": "Gates evaluate recorded/applied locks only, without a job-level required-source applicability decision.",
+      "machineSources": [
+        "Hydraulic",
+        "Electrical"
+      ],
+      "recordedSources": [
+        "Hydraulic"
+      ],
+      "releaseAuthorized": true
+    }
+  ]
+}
