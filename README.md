@@ -26,7 +26,7 @@ Reload or Reset demo restores sample data. All data, including photos, lives in 
 |---|---|
 | GitHub V1 | [v1 branch](https://github.com/CarlPatel/HW3-Spec-Driven-Development/tree/v1) (see delivery record for push status) |
 | GitHub V2 | Not created; reserved for the subsequent student evaluation/revision steps |
-| Prototype V1 | Local: http://localhost:4173; external deployment awaiting permission, see [delivery record](docs/v1-delivery.md) |
+| Prototype V1 | Local: http://localhost:4173; not deployed (local-only by request); [GitHub Pages setup](docs/github-pages.md) |
 | Prototype V2 | Not created |
 | Requirements selection and goal relationships | [Merged goal model](docs/goal-model.md) |
 | Specification | [Authoritative 002 V1 spec](specs/002-maintenance-reliability-safety/spec.md) |
@@ -72,3 +72,10 @@ or enforcement of physical safety procedures. Demo roles are selectable by anyon
 - AI development assistance: V1 scope alignment, technical planning, tasks, application,
   automated checks and run documentation. No learning-log authorship or student
   evaluation claims are included.
+
+## Host later on GitHub Pages
+
+A ready-to-use workflow is in `.github/workflows/pages.yml`. It publishes only
+the built application at `/HW3-Spec-Driven-Development/v1/`. Follow
+[the hosting guide](docs/github-pages.md) when ready. No push or deployment was
+performed. The unused Sites hosting configuration has been removed.

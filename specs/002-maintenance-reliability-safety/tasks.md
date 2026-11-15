@@ -24,11 +24,11 @@ Independent test: next full shift verification and same/different reason repeats
 - [X] T011 Add acceptance-rule checks in tests/domain.test.js (REQ-01–09).
 - [X] T012 Add responsive styles in frontend/styles.css and accessible frontend/index.html (G4).
 - [X] T013 Document usage, scope and implementation references in README.md and docs/implementation-map.md.
-- [ ] T014 Build/check V1, preserve Git version and deploy; record actual status in docs/v1-delivery.md.
+- [X] T014 Build/check V1, preserve Git version and prepare hosting (deployment deferred by user); record actual status in docs/v1-delivery.md.
 
 ## Dependencies and strategy
 T001 → T002 → US1 → US2 → US3 → US4 → validation/delivery.
 MVP is US1; V1 includes all four stories. Shared module edits are sequential.
 Optional parallel review: UI layout vs. documentation after domain contracts stabilize.
 
-T014 partial: local validation complete; external deployment awaits permission.
+T014 complete within revised scope: local validation and preservation complete; GitHub Pages configuration supplied; push/deployment deferred by user.

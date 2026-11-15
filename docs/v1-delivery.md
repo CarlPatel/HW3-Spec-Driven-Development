@@ -9,8 +9,10 @@
   blocking, supervisor release, closure validation, handled history and verification.
 - Preserved original 001 specification, interview/model inputs and unresolved conflicts.
 - No V2, learning log or student evaluation was authored.
-- External hosting: private Site registered but source upload/deployment blocked by
-  automatic approval review pending explicit user authorization. No live URL claimed.
+- Hosting decision: user requested local-only work and will publish to GitHub Pages
+  later. Sites registration occurred earlier, but no code was uploaded or deployed;
+  its unused local hosting manifest has been removed.
 - Git: V1 is committed on local branch `v1` in the original repository.
-- GitHub: automatic approval review blocked pushing `v1` to the existing origin
-  pending explicit user authorization; the remote branch has not been created.
+- GitHub: branch remains local at the user's request; no push performed.
+- GitHub Pages readiness: checked-in workflow tests/builds the app and publishes only
+  `_site/`, with a stable `/v1/` path and relative assets. See github-pages.md.
