@@ -118,3 +118,22 @@ touches it on the floor. **Uncertain** = stakeholders disagree or the evidence i
 | R12 | Agent uncertainty | Who authorizes release? M-model flagged "shift supervisor" as an AI assumption | T11-L14, T5-L76, T10-L24 | **Resolved by cross-team evidence.** The shift supervisor authorizes release. Rob (T11) and Angela (T5, T10) both name a supervisor or approver. |
 | R13 | Conflict (P model) | Personal notebook knowledge vs. shared record | T1-L49, P analysis §3 | **Out of scope, preserved.** The prototype never imports personal notes. |
 | R14 | Conflicts C-3, C-5 | Alert suppression vs. safety alerts; offline sync vs. overwrite | M combined docstring | **Out of scope, preserved.** Revisit when G1.5 or G5 is selected. |
+
+## V1 scope alignment — 2026-11-15
+
+The original sections above preserve the first six-requirement selection. The later
+`specs/002-maintenance-reliability-safety/spec.md` is the authoritative V1 scope,
+superseding `001-maintenance-event-logging` for implementation. Its 15-goal table
+retains original goal IDs and evidence. Add these selected refinements to the model:
+
+- G1.1.1 sensor stop, G1.1.2 manual stop, G1.1.3 stop-to-good-part duration under G1.1.
+- G1.2.1 quick reason list under G1.2.
+- G1.3.5 incoming-shift acknowledgment under G1.3 (REQ-07).
+- G1.9 next-full-shift repair verification under G1 (REQ-08).
+- G2.1.1 removed locks plus supervisor release under G2.1.
+- G3.4 incomplete LOTO record blocks closure/handover under G3 (REQ-09).
+
+G1.9 implements both definitions in I-2: first good part ends downtime; the next
+full shift verifies the fix. C-2 remains unresolved: V1 includes LOTO hold in the
+single downtime clock and flags it. All other documented conflicts remain preserved.
+This is alignment with the existing expanded spec, not a V2 evaluation or learning log.

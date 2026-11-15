@@ -180,7 +180,7 @@ Day shift with no repeat (verified). Repeat with a second Hydraulic stop (reopen
 - Release authorization by a non-supervisor is refused (US2-4).
 - A press may stay locked out across a shift change. Handover is allowed only if every applied lock has zero energy confirmed (US2-8, US2-9).
 - An entry with neither text nor photo is not saved (US3-2).
-- First good part exactly at a shift boundary (e.g. 06:00) belongs to the shift that starts then. Verification waits for the end of the next full shift (14:00 Swing → 22:00).
+- First good part exactly at a shift boundary (e.g. 06:00) belongs to the shift that starts then. Verification waits for that full Day shift to end at 14:00, as required by FR-018.
 - A new stop with a different reason code does not reopen a repair (US4-4).
 
 ## Requirements *(mandatory)*
@@ -313,3 +313,23 @@ statements and must be checked with the named stakeholder.
 | G4 (parent), G4.2 voice note, G4.4 stale or missing sensor data, G4.5 nickname search | G4 is covered by G4.1 and G4.3. G4.2 has a feasibility risk on a noisy floor (I-4). G4.4 has no sensor display in V1. G4.5: the mock list is short, so nicknames are shown as labels only. |
 | G5 connectivity, G6 tablet distraction | G5 needs a backend (C-5 preserved). G6 is respected through C-6 but not tested. |
 | Real authentication, backend and sensor integration | Prototype constraint. |
+
+## V1 implementation clarifications (2026-11-15)
+
+- This 002 spec supersedes 001 for V1; 001 is retained as the earlier draft.
+- A new stop initially has no reason, as required by FR-003. An uncoded stop inside
+  an earlier repair's verification window holds that repair in Awaiting verification.
+  Once coded, its stop timestamp determines whether it was a repeat; reason entry
+  after the deadline does not erase a repeat that occurred before it.
+- Demo clock uses browser-local calendar shifts and advances only forward. User shift
+  labels are demo identities; acknowledgment requires the selected user's shift to
+  match the current clock shift and work from an earlier shift occurrence.
+- Applying a fresh lock invalidates release. After first good part, a new isolation
+  belongs to a new stop: close the completed event first. Closed records are read-only.
+- Photo demo accepts PNG/JPEG/WebP/GIF up to 5 MiB; data resets on reload.
+
+- Verification boundary convention: a first good part at 06:00 qualifies for the
+  full Day shift ending 14:00 (FR-018); at 06:01 it qualifies for Swing ending
+  22:00. Stops exactly at the verification deadline are not pre-deadline repeats.
+- Acknowledgment eligibility uses latest entry or lock-application time. Incoming
+  verification/removal of an existing lock does not erase the pending handover.
