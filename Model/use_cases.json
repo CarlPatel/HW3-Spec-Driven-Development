@@ -1,0 +1,287 @@
+[
+  {
+    "uc_name": "Record a Breakdown and Repair Event",
+    "uc_id": "UC-1",
+    "actors": [
+      "Technician",
+      "Operator",
+      "Sensor Monitoring System"
+    ],
+    "pre_conditions": [
+      "The press is registered in the system, including whether it has sensors or is offline",
+      "The technician is signed in on the maintenance tablet"
+    ],
+    "flow_of_events": [
+      [
+        "The sensor monitoring system detects that the press has stopped; the system opens a maintenance event with the machine, stop time and alarm, and sends an alert with severity, likely condition and recommended next action",
+        "If the press has no sensors or the stop is not detected, the operator reports the problem manually, and the system does not treat the missing sensor data as a fault"
+      ],
+      "The technician opens the event at the press without searching for the machine and reviews the open-repair status, handover notes, who worked on it and what was already tested",
+      "The technician locks out the press (UC-3) before starting work; the system does not require any other entries before isolation",
+      [
+        "The system shows the alarm history and sensor trend around the fault, and the technician compares the readings with the press's normal trend",
+        "If the press has no sensors, the technician records what was seen, heard and done manually"
+      ],
+      "The system shows the spare part's actual bin or crib location, and the technician replaces the faulty component",
+      [
+        "The technician logs what was found and what was done with a quick note, photo or short voice note",
+        "If the tablet loses its network connection, entries are stored on the tablet and synchronized later <mark>as new entries that keep their device timestamps and never overwrite existing records</mark>"
+      ],
+      "The technician runs trial cycles and watches the press",
+      "The operator confirms the first good part, and the system stops the downtime clock and computes the downtime minutes from the stop",
+      [
+        "The technician selects the reason code from a short list and closes the event",
+        "If the reason code, stop time or first-good-part time is missing, the system blocks closing the event and prompts only for the missing entry"
+      ],
+      [
+        "<mark>The system keeps the repair on watch through the next shift and marks it fixed if no repeat fault occurs</mark>",
+        "<mark>If the fault repeats during the next shift, the system reopens the repair and links the new event to it</mark>"
+      ]
+    ],
+    "post_conditions": [
+      "The event record holds the stop time, first-good-part time, downtime minutes, reason code, technician, work done and linked sensor data",
+      "The press is back in production"
+    ],
+    "non_functional": [
+      "Every entry can be made with dirty or wet gloves in a noisy area",
+      "Required entries never delay isolation or repair; they are enforced only when the event is closed",
+      "The tablet tolerates brief network interruptions without losing entries",
+      "At least 95% of repairs have the stop time, first-good-part time, reason code, technician and completed work recorded"
+    ]
+  },
+  {
+    "uc_name": "Hand Over an Open Repair Between Shifts",
+    "uc_id": "UC-2",
+    "actors": [
+      "Outgoing Technician",
+      "Incoming Technician"
+    ],
+    "pre_conditions": [
+      "A repair is still open on a press at the end of a shift"
+    ],
+    "flow_of_events": [
+      "The outgoing technician updates the open repair with the machine condition, isolation status, what was found, work done, parts used, tests completed, any temporary repair, and the next action or what to watch",
+      "The system shows the open repairs and their next actions by machine and shift",
+      [
+        "If the press is down or needs watching, the outgoing technician walks the incoming technician to the machine and explains what was tested and changed",
+        "Otherwise the incoming technician relies on the recorded handover"
+      ],
+      "The incoming technician repeats back what they are taking over",
+      "The incoming technician checks the prior tests before continuing troubleshooting",
+      "<mark>The system records the incoming technician as the current owner of the open repair</mark>"
+    ],
+    "post_conditions": [
+      "The incoming shift knows the current state and next action of the repair and does not repeat checks already done"
+    ],
+    "non_functional": [
+      "The recorded handover is complete without the verbal explanation, so it holds up in customer audits"
+    ]
+  },
+  {
+    "uc_name": "Lock Out and Release Equipment",
+    "uc_id": "UC-3",
+    "actors": [
+      "Authorized Technician",
+      "Shift Supervisor"
+    ],
+    "pre_conditions": [
+      "The equipment needs service",
+      "The technician is authorized to perform lockout/tagout"
+    ],
+    "flow_of_events": [
+      "The technician isolates every hazardous-energy source, such as electrical and hydraulic energy",
+      "The technician applies a personal lock and tag at each isolation point",
+      "The technician verifies zero energy before work starts",
+      "The technician records each energy source isolated, who applied each lock and tag, and the date and time",
+      "The technician services the equipment (UC-1, steps 4 to 7)",
+      "The technician corrects the hazard and inspects the equipment",
+      "The technician removes the locks and records who removed each lock and when",
+      [
+        "The <mark>shift supervisor</mark> authorizes the release, and the system records who authorized and who performed it",
+        "If the lock removal or release record is missing, the system blocks the release of the equipment"
+      ]
+    ],
+    "post_conditions": [
+      "The equipment is released only after the hazard is corrected",
+      "The full lockout/tagout record is retained for regulatory inspections"
+    ],
+    "non_functional": [
+      "Lockout/tagout entries cannot be changed without a visible change history",
+      "<mark>Lockout details are entered before or after work near the equipment, never while handling energized moving parts</mark>"
+    ]
+  },
+  {
+    "uc_name": "Respond to an Unsafe Machine Condition",
+    "uc_id": "UC-4",
+    "actors": [
+      "Operator",
+      "Shift Supervisor",
+      "EHS Officer",
+      "Authorized Technician",
+      "Sensor Monitoring System"
+    ],
+    "pre_conditions": [
+      "The machine is running or under maintenance"
+    ],
+    "flow_of_events": [
+      [
+        "The sensor monitoring system detects an unsafe condition, such as rising vibration or irregular cycling, and the system creates a report with the equipment, location, time and sensor readings",
+        "If a person notices the problem first, the operator reports it manually with the equipment, location, time and observed symptoms"
+      ],
+      [
+        "The system alerts the operator and the shift supervisor first",
+        "If the condition could seriously endanger someone, the system also notifies the EHS officer immediately"
+      ],
+      "The operator stops the equipment and keeps people out of the area",
+      "<mark>The operator confirms the stop on the tablet with a single action</mark>",
+      "The shift supervisor records who decided to stop work",
+      "An authorized technician locks out the equipment (UC-3) and verifies that the area is safe",
+      "The technician compares the sensor readings with what they observe and records the observation",
+      "The technician records the hazard assessment and the corrective action",
+      "Work resumes only after the hazard is corrected and the release is recorded (UC-3, steps 6 to 8)"
+    ],
+    "post_conditions": [
+      "Nobody approached the equipment before it was isolated and verified safe",
+      "The record shows what the sensor detected, what the technician observed and who decided to stop work"
+    ],
+    "non_functional": [
+      "<mark>Detailed entries are not requested until the area has been secured</mark>",
+      "Safety alerts are delivered immediately <mark>and are never suppressed, including during planned maintenance</mark>"
+    ]
+  },
+  {
+    "uc_name": "Perform Preventive Maintenance",
+    "uc_id": "UC-5",
+    "actors": [
+      "Technician",
+      "Maintenance Manager"
+    ],
+    "pre_conditions": [
+      "The machine's controlled preventive-maintenance work instruction and checklist, with acceptable ranges from the OEM and plant standards, are available"
+    ],
+    "flow_of_events": [
+      "The maintenance manager schedules the preventive maintenance in a planned changeover, around production orders",
+      "The system does not send condition alerts for the machine while it is down for planned maintenance",
+      "<mark>The technician locks out the machine (UC-3)</mark>",
+      "The technician inspects, lubricates and replaces parts, and enters the readings (pressure, temperature, lubrication, wear) against the checklist",
+      [
+        "The system compares the readings with the acceptable ranges and the previous maintenance history, and flags out-of-tolerance results",
+        "If a reading is out of tolerance, the system links it to a follow-up repair or root-cause review"
+      ],
+      "The technician signs off the preventive maintenance before production resumes"
+    ],
+    "post_conditions": [
+      "The findings are stored against the machine's checklist, and out-of-tolerance results are linked to follow-up work"
+    ],
+    "non_functional": [
+      "Checklist revisions are controlled so technicians never follow informal or conflicting instructions"
+    ]
+  },
+  {
+    "uc_name": "Review a Repeat Failure and Adjust the Maintenance Interval",
+    "uc_id": "UC-6",
+    "actors": [
+      "Maintenance Manager"
+    ],
+    "pre_conditions": [
+      "The machine has failure and preventive-maintenance history in the system"
+    ],
+    "flow_of_events": [
+      "The maintenance manager opens the machine's complete record: event timeline, downtime, reason codes, repairs, parts and preventive-maintenance findings",
+      "The system shows MTBF by machine and failure mode, alongside downtime minutes and repair duration",
+      "The maintenance manager decides whether the repeat failure has a root cause or is a one-off",
+      [
+        "If a critical machine degrades before its scheduled interval, the maintenance manager tightens the preventive-maintenance frequency",
+        "If the equipment is stable, the maintenance manager lengthens the interval under controlled revision"
+      ],
+      "The maintenance manager plans the maintenance around production orders"
+    ],
+    "post_conditions": [
+      "The interval change is recorded as a controlled revision"
+    ],
+    "non_functional": [
+      "The complete machine record is available in under one minute"
+    ]
+  },
+  {
+    "uc_name": "Prepare Records for an Inspection or Audit",
+    "uc_id": "UC-7",
+    "actors": [
+      "EHS Officer",
+      "Inspector or Auditor"
+    ],
+    "pre_conditions": [
+      "An inspector or customer auditor has asked for the records of a piece of equipment"
+    ],
+    "flow_of_events": [
+      "The EHS officer retrieves the complete record for the equipment as one record",
+      "The system shows the problem and sensor evidence, hazard assessment, corrective actions, inspection findings, lockout/tagout record, and the names and times of everyone who stopped, worked on, verified and released the equipment",
+      "The system shows the change history of every safety-critical entry",
+      [
+        "<mark>The system flags any missing signature, mismatched time or incomplete lockout detail</mark>",
+        "<mark>If a gap is found, the EHS officer has the responsible person complete it as a recorded change</mark>"
+      ],
+      "The EHS officer presents the record to the inspector or auditor"
+    ],
+    "post_conditions": [
+      "The inspector receives one complete record without anyone assembling paper forms, emails and shift logs"
+    ],
+    "non_functional": [
+      "There is a single official copy of each record, <mark>so supervisors' local copies are not needed</mark>"
+    ]
+  },
+  {
+    "uc_name": "Report a Near Miss or Chemical Spill",
+    "uc_id": "UC-8",
+    "actors": [
+      "Technician",
+      "EHS Officer"
+    ],
+    "pre_conditions": [
+      "A near miss or a chemical spill has occurred during maintenance"
+    ],
+    "flow_of_events": [
+      "The technician submits a near-miss report with the equipment, what happened, when it happened and whether work was stopped",
+      "<mark>If the near-miss report is still open close to 24 hours, the system notifies the EHS officer</mark>",
+      "If a chemical spill is reported on a repair, <mark>the system opens a separate environmental report linked to the repair</mark>",
+      "The EHS officer records the exposure and cleanup in the environmental report"
+    ],
+    "post_conditions": [
+      "The near miss is reported within 24 hours, even though nobody was hurt",
+      "The spill is tracked in its own environmental report, not buried in the repair notes"
+    ],
+    "non_functional": [
+      "Near-miss reports are submitted within 24 hours of the event"
+    ]
+  },
+  {
+    "uc_name": "Detect and Share Early Warning Signs",
+    "uc_id": "UC-9",
+    "actors": [
+      "Technician",
+      "New Technician",
+      "Sensor Monitoring System"
+    ],
+    "pre_conditions": [
+      "The press is running"
+    ],
+    "flow_of_events": [
+      [
+        "<mark>The system flags readings that drift from the press's normal trend before any alarm is triggered</mark>",
+        "If the press has no sensors, the technician relies on how the press sounds and feels"
+      ],
+      "The technician notices an abnormal sound or feel during a round",
+      "The technician stops and inspects the press when a warning sign is detected",
+      "The technician records the warning pattern for that press: the sound, what the readings were doing, and what was found",
+      "<mark>The system shows the recorded warning patterns with the press's history</mark>",
+      "The technician coaches new technicians at the press, through a full cycle"
+    ],
+    "post_conditions": [
+      "The failure is avoided before it becomes an alarm or a breakdown",
+      "The press's warning sign is known to more than one technician"
+    ],
+    "non_functional": [
+      "Recorded warning patterns are specific to each press, not one plant-wide rule"
+    ]
+  }
+]

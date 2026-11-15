@@ -1,0 +1,145 @@
+flowchart BT
+annotationnode0["non-functional"]:::stroke -.- node0
+annotationnode27["H4"]:::stroke -.- node27
+node27((" ")) ===> node0
+node2[/"Achieve[G-3 Mechanic obtains evidence to distinguish a<br/>heater fault from other faults]"/] --- node27
+annotationnode2["functional"]:::stroke -.- node2
+annotationnode29["H5"]:::stroke -.- node29
+node29((" ")) ===> node2
+node4[/"Achieve[G-4 Tablet displays live actual temperature,<br/>setpoint, and normal range for the selected<br/>press]"/]:::bold --- node29
+annotationnode4["functional"]:::stroke -.- node4
+node3{{Maintenance system}} --- node4
+node4[/"Achieve[G-4 Tablet displays live actual temperature,<br/>setpoint, and normal range for the selected<br/>press]"/]
+node6[/"Achieve[G-5 Mechanic compares temperature, part quality,<br/>and heater cycling before diagnosing the fault]"/]:::bold --- node29
+annotationnode6["functional"]:::stroke -.- node6
+node5{{fa:fa-person Mechanic}} --- node6
+node6[/"Achieve[G-5 Mechanic compares temperature, part quality,<br/>and heater cycling before diagnosing the fault]"/]
+
+node2[/"Achieve[G-3 Mechanic obtains evidence to distinguish a<br/>heater fault from other faults]"/]
+node7[/"Achieve[G-6 Shared repair record explains the fault,<br/>intervention, and verification for the next<br/>shift]"/] --- node27
+annotationnode7["functional"]:::stroke -.- node7
+annotationnode30["P5"]:::stroke -.- node30
+node30((" ")) ===> node7
+node8[/"Achieve[G-7 Repair record identifies the asset, fault<br/>symptoms, and last fault code]"/]:::bold --- node30
+annotationnode8["functional"]:::stroke -.- node8
+node5{{fa:fa-person Mechanic}} --- node8
+node8[/"Achieve[G-7 Repair record identifies the asset, fault<br/>symptoms, and last fault code]"/]
+node9[/"Achieve[G-8 Repair record contains actual temperature<br/>and setpoint]"/]:::bold --- node30
+annotationnode9["functional"]:::stroke -.- node9
+node5{{fa:fa-person Mechanic}} --- node9
+node9[/"Achieve[G-8 Repair record contains actual temperature<br/>and setpoint]"/]
+node10[/"Achieve[G-9 Repair record states tests, corrective<br/>action, installed part number, and verification<br/>result]"/]:::bold --- node30
+annotationnode10["functional"]:::stroke -.- node10
+node5{{fa:fa-person Mechanic}} --- node10
+node10[/"Achieve[G-9 Repair record states tests, corrective<br/>action, installed part number, and verification<br/>result]"/]
+
+node7[/"Achieve[G-6 Shared repair record explains the fault,<br/>intervention, and verification for the next<br/>shift]"/]
+node15[/"Achieve[G-14 Mechanic retrieves earlier troubleshooting<br/>to avoid repeating checks]"/] --- node27
+annotationnode15["functional"]:::stroke -.- node15
+annotationnode33["P5"]:::stroke -.- node33
+node33((" ")) ===> node15
+node16[/"Achieve[G-15 Mechanic reads the shift handoff and open<br/>fault history]"/]:::bold --- node33
+annotationnode16["functional"]:::stroke -.- node16
+node5{{fa:fa-person Mechanic}} --- node16
+node16[/"Achieve[G-15 Mechanic reads the shift handoff and open<br/>fault history]"/]
+node17[/"Achieve[G-16 Mechanic retrieves closed work orders and<br/>recorded part numbers from CMMS]"/]:::bold --- node33
+annotationnode17["functional"]:::stroke -.- node17
+node5{{fa:fa-person Mechanic}} --- node17
+node17[/"Achieve[G-16 Mechanic retrieves closed work orders and<br/>recorded part numbers from CMMS]"/]
+
+node15[/"Achieve[G-14 Mechanic retrieves earlier troubleshooting<br/>to avoid repeating checks]"/]
+node18[/"Achieve[G-17 Mechanic locates a suitable replacement<br/>part without hunting through bins]"/] --- node27
+annotationnode18["functional"]:::stroke -.- node18
+annotationnode34["H11"]:::stroke -.- node34
+node34((" ")) ===> node18
+node19[/"Achieve[G-18 Parts view provides exact part number,<br/>stock quantity, crib location, and approved<br/>substitutes]"/]:::bold --- node34
+annotationnode19["functional"]:::stroke -.- node19
+node3{{Maintenance system}} --- node19
+node19[/"Achieve[G-18 Parts view provides exact part number,<br/>stock quantity, crib location, and approved<br/>substitutes]"/]
+
+node18[/"Achieve[G-17 Mechanic locates a suitable replacement<br/>part without hunting through bins]"/]
+node20[/"Achieve[G-19 Press repair includes isolation<br/>confirmation, corrective work, and a<br/>verification run]"/] --- node27
+annotationnode20["functional"]:::stroke -.- node20
+annotationnode35["P1"]:::stroke -.- node35
+node35((" ")) ===> node20
+node21[/"Maintain[G-20 Press is stopped and lockout/tagout is<br/>confirmed before the mechanic opens equipment]"/]:::bold --- node35
+annotationnode21["non-functional"]:::stroke -.- node21
+node5{{fa:fa-person Mechanic}} --- node21
+node21[/"Maintain[G-20 Press is stopped and lockout/tagout is<br/>confirmed before the mechanic opens equipment]"/]
+node22[/"Achieve[G-21 Tablet records the confirmed safety check<br/>at the machine]"/]:::bold --- node35
+annotationnode22["functional"]:::stroke -.- node22
+node5{{fa:fa-person Mechanic}} --- node22
+node22[/"Achieve[G-21 Tablet records the confirmed safety check<br/>at the machine]"/]
+node23[/"Achieve[G-22 Mechanic checks connections, replaces the<br/>weak band, and verifies stable temperature and<br/>good parts]"/]:::bold --- node35
+annotationnode23["functional"]:::stroke -.- node23
+node5{{fa:fa-person Mechanic}} --- node23
+node23[/"Achieve[G-22 Mechanic checks connections, replaces the<br/>weak band, and verifies stable temperature and<br/>good parts]"/]
+
+node20[/"Achieve[G-19 Press repair includes isolation<br/>confirmation, corrective work, and a<br/>verification run]"/]
+
+node0[/"G-1 Reduce production lost while diagnosing and<br/>repairing press faults"/]
+annotationnode1["non-functional"]:::stroke -.- node1
+annotationnode28["H6"]:::stroke -.- node28
+node28((" ")) ===> node1
+node11[/"Achieve[G-10 Fault and change are captured before the<br/>mechanic moves on]"/]:::bold --- node28
+annotationnode11["functional"]:::stroke -.- node11
+node5{{fa:fa-person Mechanic}} --- node11
+node11[/"Achieve[G-10 Fault and change are captured before the<br/>mechanic moves on]"/]
+node12[/"Achieve[G-11 Mechanic attaches quick evidence without<br/>typing the entire account]"/] --- node28
+annotationnode12["functional"]:::stroke -.- node12
+annotationnode31["P2"]:::stroke -.- node31
+node31((" ")):::filled ===> node12
+node13[/"Achieve[G-12 Mechanic attaches a photo of the finding]"/]:::bold --- node31
+annotationnode13["functional"]:::stroke -.- node13
+node5{{fa:fa-person Mechanic}} --- node13
+node13[/"Achieve[G-12 Mechanic attaches a photo of the finding]"/]
+
+annotationnode32["P2"]:::stroke -.- node32
+node32((" ")):::filled ===> node12
+node14[/"Achieve[G-13 Mechanic attaches a short voice note of the<br/>finding]"/]:::bold --- node32
+annotationnode14["functional"]:::stroke -.- node14
+node5{{fa:fa-person Mechanic}} --- node14
+node14[/"Achieve[G-13 Mechanic attaches a short voice note of the<br/>finding]"/]
+node26[/"Maintain[G-72 Mechanic confirms voice-note content before<br/>it is published to the shared repair record]"/]:::bold --- node32
+annotationnode26["non-functional; interpretation beyond transcript"]:::stroke -.- node26
+node5{{fa:fa-person Mechanic}} --- node26
+node26[/"Maintain[G-72 Mechanic confirms voice-note content before<br/>it is published to the shared repair record]"/]
+
+node12[/"Achieve[G-11 Mechanic attaches quick evidence without<br/>typing the entire account]"/]
+
+node1[/"G-2 Minimize effort and interruption when<br/>recording work on a noisy floor with gloves"/]
+annotationnode24["non-functional"]:::stroke -.- node24
+annotationnode36["H8"]:::stroke -.- node36
+node36((" ")) ===> node24
+node25[/"Maintain[G-24 Personal notes remain private unless the<br/>mechanic explicitly selects content to share]"/]:::bold --- node36
+annotationnode25["non-functional; interpretation beyond transcript"]:::stroke -.- node25
+node3{{Maintenance system}} --- node25
+node25[/"Maintain[G-24 Personal notes remain private unless the<br/>mechanic explicitly selects content to share]"/]
+
+node24[/"Avoid[G-23 Machine-specific personal working knowledge<br/>becomes company property by default]"/]
+
+classDef bold stroke-width:3,stroke:#000
+classDef filled fill:#000;
+classDef nostroke stroke-width:0,fill-opacity:0.0
+classDef stroke stroke-dasharray: 5 5,fill-opacity:0.0,text-align:left
+
+    
+%% Yellow = added interpretation; functional/category labels are annotations.
+class node4 bold
+class node6 bold
+class node8 bold
+class node9 bold
+class node10 bold
+class node11 bold
+class node13 bold
+class node14 bold
+class node16 bold
+class node17 bold
+class node19 bold
+class node21 bold
+class node22 bold
+class node23 bold
+class node25 bold
+style node25 fill:#fff59d,color:#111
+class node26 bold
+style node26 fill:#fff59d,color:#111

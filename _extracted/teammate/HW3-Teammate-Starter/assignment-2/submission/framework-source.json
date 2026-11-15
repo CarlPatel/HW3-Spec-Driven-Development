@@ -1,0 +1,8 @@
+{
+  "source": "https://github.com/cmu-relab/goalmodeling",
+  "revision": "a9fd39bceec2841e9abe723106794716dd3f9fa1",
+  "retrieved": "2026-11-04",
+  "framework_unmodified": true,
+  "mermaid_library_source": "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js",
+  "mermaid_bundle_sha256": "581ed7d74bd9048d0e3a91363927d72ef22942d7722546b27f7cc29e35390eb8"
+}

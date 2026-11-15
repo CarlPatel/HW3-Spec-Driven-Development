@@ -1,0 +1,116 @@
+flowchart BT
+annotationnode37["non-functional"]:::stroke -.- node37
+annotationnode63["H3"]:::stroke -.- node63
+node63((" ")) ===> node37
+node38[/"Achieve[G-26 Incoming supervisor receives an unambiguous<br/>machine and open-work handover]"/] --- node63
+annotationnode38["functional"]:::stroke -.- node38
+annotationnode64["P5"]:::stroke -.- node64
+node64((" ")) ===> node38
+node40[/"Achieve[G-27 Shift view shows machine status, work<br/>ownership, restoration estimate, and production<br/>impact]"/]:::bold --- node64
+annotationnode40["functional"]:::stroke -.- node40
+node39{{Maintenance system}} --- node40
+node40[/"Achieve[G-27 Shift view shows machine status, work<br/>ownership, restoration estimate, and production<br/>impact]"/]
+node41[/"Achieve[G-28 Handover links downtime event, alarms,<br/>diagnosis, corrective action, and reason code]"/]:::bold --- node64
+annotationnode41["functional"]:::stroke -.- node41
+node39{{Maintenance system}} --- node41
+node41[/"Achieve[G-28 Handover links downtime event, alarms,<br/>diagnosis, corrective action, and reason code]"/]
+node43[/"Achieve[G-29 Outgoing and incoming supervisors agree<br/>what to monitor and when to escalate]"/]:::bold --- node64
+annotationnode43["functional"]:::stroke -.- node43
+node42{{fa:fa-person Shift supervisor}} --- node43
+node43[/"Achieve[G-29 Outgoing and incoming supervisors agree<br/>what to monitor and when to escalate]"/]
+
+node38[/"Achieve[G-26 Incoming supervisor receives an unambiguous<br/>machine and open-work handover]"/]
+node44[/"Maintain[G-30 Completed maintenance records contain a<br/>reason and accurate downtime minutes]"/] --- node63
+annotationnode44["non-functional"]:::stroke -.- node44
+annotationnode65["H4"]:::stroke -.- node65
+node65((" ")) ===> node44
+node45[/"Maintain[G-31 Work-order completion requires a reason<br/>code]"/]:::bold --- node65
+annotationnode45["functional"]:::stroke -.- node45
+node39{{Maintenance system}} --- node45
+node45[/"Maintain[G-31 Work-order completion requires a reason<br/>code]"/]
+node46[/"Achieve[G-32 Supervisor sees missing reason codes and<br/>other required fields immediately]"/]:::bold --- node65
+annotationnode46["functional"]:::stroke -.- node46
+node39{{Maintenance system}} --- node46
+node46[/"Achieve[G-32 Supervisor sees missing reason codes and<br/>other required fields immediately]"/]
+node47[/"Achieve[G-33 Supervisor verifies downtime minutes<br/>against machine stop and first good part times]"/]:::bold --- node65
+annotationnode47["functional"]:::stroke -.- node47
+node42{{fa:fa-person Shift supervisor}} --- node47
+node47[/"Achieve[G-33 Supervisor verifies downtime minutes<br/>against machine stop and first good part times]"/]
+
+node44[/"Maintain[G-30 Completed maintenance records contain a<br/>reason and accurate downtime minutes]"/]
+node48[/"Achieve[G-34 Supervisor identifies critical machines<br/>from bottleneck, backup, cell, downtime, and<br/>quality impact]"/]:::bold --- node63
+annotationnode48["functional"]:::stroke -.- node48
+node42{{fa:fa-person Shift supervisor}} --- node48
+node48[/"Achieve[G-34 Supervisor identifies critical machines<br/>from bottleneck, backup, cell, downtime, and<br/>quality impact]"/]
+node49[/"Achieve[G-35 Unresolved maintenance issues receive an<br/>escalation when required]"/] --- node63
+annotationnode49["functional"]:::stroke -.- node49
+annotationnode66["H11"]:::stroke -.- node66
+node66((" ")):::filled ===> node49
+node50[/"Achieve[G-36 Issue is escalated if [restoration target<br/>exceeded, critical equipment affected, or safety<br/>or quality at risk]]"/]:::bold --- node66
+annotationnode50["functional"]:::stroke -.- node50
+node42{{fa:fa-person Shift supervisor}} --- node50
+node50[/"Achieve[G-36 Issue is escalated if [restoration target<br/>exceeded, critical equipment affected, or safety<br/>or quality at risk]]"/]
+node51[/"Achieve[G-37 Escalation record identifies owner, time,<br/>reason, and next action]"/]:::bold --- node66
+annotationnode51["functional"]:::stroke -.- node51
+node42{{fa:fa-person Shift supervisor}} --- node51
+node51[/"Achieve[G-37 Escalation record identifies owner, time,<br/>reason, and next action]"/]
+
+node49[/"Achieve[G-35 Unresolved maintenance issues receive an<br/>escalation when required]"/]
+node52[/"Maintain[G-38 Equipment is released only with complete<br/>safety documentation and release authority]"/] --- node63
+annotationnode52["non-functional"]:::stroke -.- node52
+annotationnode67["P4"]:::stroke -.- node67
+node67((" ")) ===> node52
+node54[/"Achieve[G-39 Repair record contains lockout/tagout<br/>status, hazard assessment, and release authority]"/]:::bold --- node67
+annotationnode54["functional"]:::stroke -.- node54
+node53{{fa:fa-person Mechanic}} --- node54
+node54[/"Achieve[G-39 Repair record contains lockout/tagout<br/>status, hazard assessment, and release authority]"/]
+node55[/"Achieve[G-40 Safety-part repair is traceable to failure<br/>mode, technician, parts, action, inspection, and<br/>restart approver]"/]:::bold --- node67
+annotationnode55["functional"]:::stroke -.- node55
+node39{{Maintenance system}} --- node55
+node55[/"Achieve[G-40 Safety-part repair is traceable to failure<br/>mode, technician, parts, action, inspection, and<br/>restart approver]"/]
+node56[/"Maintain[G-41 Safety hold remains if [required release<br/>documentation is incomplete], despite production<br/>pressure]"/]:::bold --- node67
+annotationnode56["non-functional"]:::stroke -.- node56
+node42{{fa:fa-person Shift supervisor}} --- node56
+node56[/"Maintain[G-41 Safety hold remains if [required release<br/>documentation is incomplete], despite production<br/>pressure]"/]
+node57[/"Achieve[G-42 Supervisor assigns an owner to each missing<br/>release item and sees the hold clearly]"/]:::bold --- node67
+annotationnode57["functional"]:::stroke -.- node57
+node42{{fa:fa-person Shift supervisor}} --- node57
+node57[/"Achieve[G-42 Supervisor assigns an owner to each missing<br/>release item and sees the hold clearly]"/]
+
+node52[/"Maintain[G-38 Equipment is released only with complete<br/>safety documentation and release authority]"/]
+node60[/"Achieve[G-44 Equipment and shift view ties downtime,<br/>root cause, ownership, and impact across all<br/>three shifts]"/]:::bold --- node63
+annotationnode60["functional"]:::stroke -.- node60
+node39{{Maintenance system}} --- node60
+node60[/"Achieve[G-44 Equipment and shift view ties downtime,<br/>root cause, ownership, and impact across all<br/>three shifts]"/]
+
+node37[/"G-25 Improve maintenance and production<br/>decisions using accurate facts across shifts"/]
+annotationnode59["non-functional"]:::stroke -.- node59
+node58{{fa:fa-person Production supervisor}} --- node59
+node59[/"G-43 Reduce production waiting for maintenance<br/>restoration"/]
+annotationnode62["non-functional"]:::stroke -.- node62
+node61{{fa:fa-person Plant management}} --- node62
+node62[/"Avoid[G-45 Personnel are penalized for stopping an<br/>unsafe restart in accordance with procedure]"/]
+
+classDef bold stroke-width:3,stroke:#000
+classDef filled fill:#000;
+classDef nostroke stroke-width:0,fill-opacity:0.0
+classDef stroke stroke-dasharray: 5 5,fill-opacity:0.0,text-align:left
+
+    
+%% Yellow = added interpretation; functional/category labels are annotations.
+class node40 bold
+class node41 bold
+class node43 bold
+class node45 bold
+class node46 bold
+class node47 bold
+class node48 bold
+class node50 bold
+class node51 bold
+class node54 bold
+class node55 bold
+class node56 bold
+class node57 bold
+class node59 bold
+class node60 bold
+class node62 bold

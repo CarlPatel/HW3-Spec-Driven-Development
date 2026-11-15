@@ -1,0 +1,247 @@
+                         17-626: Requirements for Information Systems
+                            Assignment 3: Spec-Driven Development
+Software engineering (SE) practice is transforming to use SE agents that take requirements as inputs,
+called “specs,” and generate code as output. This permits developers to focus more on writing the right
+requirements and on quality assurance than on writing code. In this assignment, students will practice
+spec-driven development using GitHub Spec Kit and an AI-assisted development tool. Students will use
+stakeholder interviews and goal models to identify and prioritize requirements, develop specifications,
+build prototypes, and evaluate how well the resulting implementation supports stakeholder goals.
+
+The objective is not simply to build a working application, but to understand how human judgment
+contributes to requirements selection, conflict resolution, traceability, and specification refinement,
+when AI can generate most of the implementation.
+
+Required Readings
+•​ GitHub Spec Kit QuickStart1 and Command Reference2
+
+Learning Objectives
+•​ Guide SE agents in translating stakeholder requirements into code
+•​ Trace and evaluate whether code satisfies requirements and discover new requirements through
+   implementation
+•​ Identify and distinguish complementary roles for human developers and SE agents in software
+   design
+
+Assignment Deliverables​
+You are a software engineer assigned to a team at ABC Design Services, who is responsible for elicitation,
+requirements modeling and analysis, sprint planning, and requirements verification. Your team has
+recently completed goal modeling from stakeholder interviews. Your task is to review the goal models
+and plan two prototypes, after which you will supervise an SE agent in the implementation of the
+prototypes to ensure the software satisfies the associated requirements. Your employer is very optimistic
+that SE agents will replace human developers, so your task is to carefully monitor your agent(s) and
+ensure they are doing good work, while also documenting your role throughout the process.
+
+Your job is to be faithful to stakeholder needs and expectations, anticipate additional needs and risks,
+and validate that “additional needs” are necessary or desired.
+
+Because your company does not use a formal process (e.g., Scrum), you have wide latitude to decide
+what portion of the requirements that you have collected will be included in your first deliverable. You
+should choose goals that demonstrate a core feature, a user-facing aspect or an aspect with high
+uncertainty and clearly justify your choice. This selection will be used in a mock sprint to develop this
+feature or aspect.
+
+1
+    https://github.github.io/spec-kit/quickstart.html
+2
+    https://github.github.io/spec-kit/reference/agentic-sdd.html
+This is a group assignment. You will continue working with the same group assigned to you. Each group
+will complete and submit one assignment together.
+
+Step 1: Review the goal models that your team members created in Assignment #2. Based on the three
+priority criteria (core, user-facing, uncertain), choose a subset of the goals from your stakeholders to
+become the system boundary for your prototypes. Merge and reconcile any differences between your
+team members' goal models: one team member may have identified more detail than another on a
+particular aspect of the system, or this detail may be distributed across multiple team members.
+Combine your findings to realize the best model for this assignment. Justify your decision by considering
+other priorities that you decided were less important and include those in your learning log, below.
+
+Step 2: Review the relationships between the selected requirements and stakeholder goals. Identify any
+meaningful overlap, dependency, or conflict involving your selected requirements. For example, two
+stakeholders may request different behaviors for the same feature, or two requirements may support
+the same goal but propose different approaches. Use your goal model to explain the relationship and
+justify your decision. Where requirements overlap, determine whether they should be combined,
+implemented separately, or prioritized differently. Where goals conflict, explain the trade-off and how
+you decided to proceed. You may prioritize one goal, develop a compromise, or document an unresolved
+conflict that requires additional stakeholder clarification. Do not simply remove conflicting goals or
+requirements from the model. Preserve the relationship and document the reasoning behind your
+decision. Update your goal model to reflect your sprint scope and any decisions or assumptions made.
+
+Step 3: Create your development environment by creating a GitHub private repository GitHub Spec Kit
+and an AI-assisted development tool, translate your selected requirements into a “spec”. Your initial spec
+should include:
+
+    ●​   The selected stakeholder goals and corresponding requirements.
+    ●​   Acceptance scenarios defining how the requirements can be evaluated.
+    ●​   Relevant assumptions, dependencies, and edge cases.
+    ●​   Decisions made regarding overlapping or conflicting requirements.
+
+Use Spec Kit to generate an implementation plan and development tasks, then build a functional
+prototype based on the specification. You should use mock data and simplified interactions where
+appropriate. The prototype should only demonstrate the selected requirements rather than attempt to
+implement all elicited goals. Preserve your initial specification, goal model, Spec Kit artifacts, and
+prototype source code as Version 1 (V1) in GitHub. Deploy Prototype V1 and retain its URL.
+
+Step 4: Interact with Prototype V1 and evaluate whether it satisfies the requirements you selected for
+the sprint. Review and assure you have traceability between the interview transcripts, goal model,
+specification, and implementation. For each selected requirement, identify:
+
+    ●​ The supporting stakeholder interview evidence.
+    ●​ The corresponding goal in your goal model.
+      ●​ The requirement identifier in your specification.
+      ●​ The relevant code component, function, or implemented behavior.
+      ●​ Whether the requirement is fully satisfied, partially satisfied, or not satisfied.
+
+Document these relationships in a Requirements Traceability Matrix, like the one below:
+
+
+    Requirement3      Interview Evidence4         Goal Model       Code /                     Status
+                                                  Reference5       Implementation
+
+    REQ 01            Transcript Reference        Goal ID          Component/Function         Fully satisfied
+
+    REQ 02            Transcript Reference        Goal ID          Component/Function         Partially
+                                                                                              satisfied
+
+    REQ 03            Transcript Reference        Goal ID          Not implemented            Not satisfied
+
+Identify any meaningful observations from your evaluation. For each observation, distinguish between:
+
+      ●​ Implementation defect: The prototype does not satisfy a requirement that was already clearly
+         specified.
+      ●​ Requirements issue: The specification is missing information, or contains ambiguous, incorrect,
+         or insufficient information to satisfy the stakeholder's goal.
+
+As you evaluate the prototype, consider and report your answers in your learning log, below:
+
+      ●​ Describe what you discovered.
+      ●​ Identify whether it is a requirements issue or an implementation defect.
+      ●​ Explain what needs to change.
+
+Explain what each observation reveals and whether a specification change, implementation correction,
+or further stakeholder clarification is needed.
+
+Step 5: Use the findings from your evaluation to improve the specification. Revisit your original
+requirements decisions, including any conflicts or overlaps identified earlier. Update the goal model
+where your understanding of goal relationships or satisfaction has changed. Preserve unresolved
+stakeholder conflicts and document any assumptions or trade-offs. Revise the specification before
+changing the intended implementation behavior. Use the revised specification to update the relevant
+planning artifacts and prototype. Preserve the revised specification, goal model, and implementation as
+Version 2 (V2) in the same GitHub repository. Deploy Prototype V2 separately so that both versions can
+be accessed and compared. Your revised version should demonstrate at least one meaningful
+requirements-level improvement informed by evaluating Prototype V1.
+
+3
+  From Assignment 1
+4
+  From Assignment 1
+5
+  From Assignment 2
+Step 6: Prepare a single document named learning-log.md describing your decisions, observations, and
+learning throughout the sprint.
+
+The document should contain the following sections.
+
+1. Sprint Planning and Requirements Selection
+
+Briefly describe the requirements and the goals you selected for the sprint, and why you prioritized
+them. Identify the overlapping, dependent, or conflicting requirements you considered. Briefly explain
+how your goal model helped you understand these relationships, what decisions you made, and why.
+
+2. Prototype Evaluation
+
+Discuss your significant observations from Prototype V1. Explain whether the issues arose from the
+specification or implementation and what they revealed about the stakeholder goals.
+
+3. Revisions and Learning
+
+Describe the significant changes between Versions 1 and 2, including changes to the goal model,
+specification, and prototype. For each significant change, explain:
+
+    ●​   What you initially intended.
+    ●​   What you discovered through evaluation.
+    ●​   What you changed and why.
+    ●​   How the revised implementation better addresses the requirement or stakeholder goal.
+
+Conclude with a brief reflection addressing:
+
+    ●​ Which decisions required your judgment rather than relying solely on AI?
+    ●​ How did prototyping change your understanding of stakeholder needs?
+    ●​ How did spec-driven development help maintain consistency between the requirements and
+       implementation?
+    ●​ What evidence from your work would you present to management to demonstrate the value
+       you contributed beyond AI-generated specifications and code?
+
+The learning log should emphasize your reasoning and decisions rather than simply listing the commands
+or prompts used during development.
+
+Assignment Submission
+Assignments are due at the date and time shown in the course website. Submit electronically at the
+course website. Submit one GitHub repository URL through the course website. Your repository must
+contain the complete source code, goal models, Spec Kit artifacts, requirements traceability matrix, and
+learning document. Maintain both versions in the same repository, preferably using separate v1 and v2
+branches/tags. Version 2 should build upon Version 1 so that the development history is preserved. Your
+repository's default branch must contain a clearly organized README.md with direct links to the
+following five components:
+
+
+ Deliverable                    Description
+
+ 1. GitHub Version 1            Direct link to the v1 branch or commit containing the initial goal model,
+                                specification, Spec Kit artifacts, and prototype source code.
+
+ 2. GitHub Version 2            Direct link to the v2 branch or commit containing the revised goal
+                                model, specification, Spec Kit artifacts, and prototype source code.
+
+ 3. Prototype V1 URL            A working deployment of the initial prototype.
+
+ 4. Prototype V2 URL            A working deployment of the revised prototype.
+
+ 5. Requirements Analysis       Direct link to the document containing requirements selection, goal
+ and Learning Log               relationships, traceability, evaluation findings, revisions, and reflection.
+
+Recommended Repository Structure
+
+  None‎
+  repository/
+  ├── frontend/           # Application source code
+  ├── specs/            # Spec Kit artifacts
+  ├── docs/
+  │ ├── goal-model.md         # Goal model and decisions
+  │ ├── traceability.md      # Requirements Traceability Matrix
+  │ └── learning-log.md       # Requirements analysis and reflection
+  └── README.md              # Links to both versions and deployments
+
+
+Each version must preserve its corresponding specification, goal model, and implementation artifacts.
+The README.md should make it easy to navigate between versions and understand what changed. Both
+deployed prototypes must remain functional and accessible at the time of evaluation. Only the GitHub
+repository URL needs to be submitted. All five deliverables must be accessible through its README.md.
+Your README.md must also include a Roles and Responsibilities section listing all group members and
+briefly describing each member's contributions to the assignment.
+
+AI Assistance
+You may use AI assistance to complete this assignment, except for the authorship of the learning log. All
+examples and answers to the questions in Step 6 must be completed without the use of AI assistance.
+Any indication of using AI assistance on completing the learning log will be handled in accordance with
+the AI Assistance Policy in the course syllabus.
+
+Evaluation Criteria​
+Your work will be evaluated on your ability to:
+   1.​ Select and justify requirements: Identify a coherent sprint scope grounded in stakeholder
+       evidence and goal models.
+   2.​ Analyze goal relationships: Recognize overlapping, dependent, and conflicting requirements and
+       justify the decisions made.
+   3.​ Apply spec-driven development: Produce coherent specifications, planning artifacts, and
+       working prototypes.
+   4.​ Establish traceability: Connect stakeholder interview evidence to goals, requirements, and
+       implemented functionality.
+   5.​ Evaluate and revise: Identify meaningful requirements issues, improve the specification and goal
+       model, and demonstrate the resulting changes in Prototype V2.
+   6.​ Demonstrate human judgment: Clearly explain how your reasoning, decisions, and evaluation
+       contributed to the outcome beyond AI-generated artifacts.
+
+The emphasis is on requirements engineering, traceability, and evidence-based decision-making, rather
+than the visual polish or technical complexity of the prototype. Remember: Your goal is not simply to
+demonstrate that you can build software using AI coding assistance. Your goal is to demonstrate how and
+why understanding stakeholder needs, making informed requirements decisions, and evaluating what
+was built remain essential responsibilities of a software engineer.
+

@@ -1,0 +1,578 @@
+[
+  {
+    "uc_name": "Find the intended press",
+    "uc_id": "UC-1",
+    "actors": [
+      "Maintenance technician",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "The technician knows the press floor nickname.",
+      "<mark style=\"background-color: yellow\">Press records include nickname, asset number, and floor area or line.</mark>"
+    ],
+    "flow_of_events": [
+      "The technician searches by the press floor nickname.",
+      "The system displays matching presses with nickname, asset number underneath, and floor area or line.",
+      "<mark style=\"background-color: yellow\">The technician selects the intended press using its identity and location.</mark>"
+    ],
+    "post_conditions": [
+      "<mark style=\"background-color: yellow\">The intended press is selected for subsequent history viewing and repair logging.</mark>"
+    ],
+    "non_functional": [
+      "Finding a press should be quick at the machine."
+    ],
+    "alternative_flows": [
+      "If multiple presses share the nickname, the technician distinguishes them using the displayed floor area or line and asset number.",
+      "<mark style=\"background-color: yellow\">If no press matches, the system reports no matches and allows the technician to revise the search.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Review machine history and verify downtime against available machine data",
+    "uc_id": "UC-2",
+    "actors": [
+      "Maintenance technician",
+      "Plant manager",
+      "Maintenance logging system",
+      "Plant monitoring system"
+    ],
+    "pre_conditions": [
+      "<mark style=\"background-color: yellow\">The intended machine has been identified; the technician or manager is reviewing diagnosis or downtime.</mark>"
+    ],
+    "flow_of_events": [
+      "The technician or manager requests recent faults, repairs, and the relevant downtime event.",
+      "The system displays what prior shifts tested, changed, and whether the repair held.",
+      "The system presents available live readings, run-stop states, cycle counts, alarms, and relevant temperature or pressure history beside technician notes.",
+      "If a sensor recorded temperature drift before an alarm, the system shows it beside the repair notes.",
+      "The system identifies available machine-data coverage, gaps, and where the technician entry is authoritative.",
+      [
+        "The worker reviews the evidence for the current task.",
+        "For diagnosis, the technician assesses trends, suspect signals, and previous diagnostic attempts.",
+        "For downtime review, the manager compares reported downtime with available actual machine states."
+      ],
+      "Technician records continue to supply diagnosis, repair actions, and downtime reason."
+    ],
+    "post_conditions": [
+      "Available history and machine evidence have been reviewed for diagnosis or downtime verification."
+    ],
+    "non_functional": [
+      "History and sensor readings should be visible together without hunting through separate screens.",
+      "The information should be accessible at the press.",
+      "Coverage gaps across machines must be visible.",
+      "Sensor data must not replace technician diagnosis and repair records."
+    ],
+    "alternative_flows": [
+      "If sensor data are local only or have gaps, the system identifies the unavailable coverage.",
+      "<mark style=\"background-color: yellow\">If history is unavailable, the system identifies the missing information rather than implying a complete history.</mark>",
+      "<mark style=\"background-color: yellow\">If reported downtime and machine states disagree, the system flags the discrepancy for review; no automatic reconciliation or override rule is assumed.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Record a downtime event, diagnostic work, and repair outcome",
+    "uc_id": "UC-3",
+    "actors": [
+      "Maintenance technician",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "<mark style=\"background-color: yellow\">A machine event has occurred and the intended machine has been identified.</mark>"
+    ],
+    "flow_of_events": [
+      "The technician logs the machine stop or repair at the machine using the tablet, including a quick note when the cause is found.",
+      "The system offers a few simple fields, short prompts, and an adjacent free note.",
+      "The system captures downtime in minutes and requires a downtime reason code.",
+      "The technician records fault description or code, symptoms, alarms, current machine status, and relevant measurements.",
+      "The technician records diagnosis, components tested, test results, and work already attempted.",
+      "The technician records corrective actions and changed parts, including part numbers and quantities used.",
+      [
+        "The technician can add supporting evidence without typing a paragraph.",
+        "The technician attaches a photo of the failed part.",
+        "Alternatively, the technician records a short voice note."
+      ],
+      "The technician records whether the repair held through a production run.",
+      "The system links technician identity and repair facts to the specific machine event and displays production-order impact.",
+      "<mark style=\"background-color: yellow\">The system saves the entry against the selected machine and makes it available in its history.</mark>",
+      "If needed, the technician cleans up the initial note later."
+    ],
+    "post_conditions": [
+      "The event record contains downtime and reason code, diagnostic and repair facts, and the available verification outcome for subsequent shifts."
+    ],
+    "non_functional": [
+      "Entry should be quick at the press with gloves on and shop-floor noise.",
+      "Prompts should avoid a long form or extensive mandatory categorization.",
+      "Fault codes, part numbers, and corrective actions should remain distinguishable.",
+      "Records should be complete and consistent across shifts.",
+      "Technical recording must remain separate from production-stop authorization."
+    ],
+    "alternative_flows": [
+      "<mark style=\"background-color: yellow\">If a production run has not yet occurred, the record identifies the outcome as not yet verified and the technician updates it after verification.</mark>",
+      "<mark style=\"background-color: yellow\">If the reason code is missing, the system prompts before treating the event as complete; enforcement timing needs confirmation.</mark>",
+      "<mark style=\"background-color: yellow\">If saving fails, the system reports that the entry has not been saved and allows retry; poor-connectivity handling follows the separate floor-record workflow.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Locate spare parts, record parts use, and manage shortages",
+    "uc_id": "UC-4",
+    "actors": [
+      "Maintenance technician",
+      "Shift supervisor",
+      "Plant manager",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "<mark style=\"background-color: yellow\">The machine and component requiring a spare are identified; recording issued parts requires the relevant work order.</mark>"
+    ],
+    "flow_of_events": [
+      "<mark style=\"background-color: yellow\">The technician requests spare-part information for the machine or failed component.</mark>",
+      "The system presents the appropriate spare part and its location.",
+      [
+        "The next action depends on availability.",
+        "If the part is available, the technician uses the location information to retrieve it and records the issued part number and quantity against the work order.",
+        "If the part is unavailable, the supervisor marks the machine awaiting parts and escalates according to lead time and production impact."
+      ],
+      "The manager reviews stock accuracy, stockouts, supplier lead time, downtime waiting for parts, and effects on the production plan."
+    ],
+    "post_conditions": [
+      "The technician has available part and location information; issued parts or a shortage and its impact are recorded as applicable."
+    ],
+    "non_functional": [
+      "Part and location lookup should be quick during a breakdown.",
+      "Parts shortages should be visible in repair and production decisions."
+    ],
+    "alternative_flows": [
+      "<mark style=\"background-color: yellow\">If no matching part or location information is available, the system identifies the information gap; missing data alone is not treated as proof of a stockout.</mark>",
+      "Critical assemblies or specialized components may require a purchase order; ordering and reservation workflows are not specified."
+    ]
+  },
+  {
+    "uc_name": "Share machine-specific troubleshooting knowledge conditionally",
+    "uc_id": "UC-5",
+    "actors": [
+      "Maintenance technician",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "<mark style=\"background-color: yellow\">The technician has a machine-specific troubleshooting technique to consider sharing.</mark>"
+    ],
+    "flow_of_events": [
+      "<mark style=\"background-color: yellow\">The technician requests or obtains an explanation of who owns shared troubleshooting knowledge and how it will be used.</mark>",
+      "<mark style=\"background-color: yellow\">An organization representative explains the applicable ownership and use arrangements.</mark>",
+      "<mark style=\"background-color: yellow\">If the technician understands those arrangements and chooses to share, the technician adds the technique to the relevant press note.</mark>"
+    ],
+    "post_conditions": [
+      "<mark style=\"background-color: yellow\">If the technician chooses to share, the technique is recorded for the relevant press; otherwise it is not submitted.</mark>"
+    ],
+    "non_functional": [
+      "The technician should understand intended ownership and use before sharing personal troubleshooting knowledge."
+    ],
+    "alternative_flows": [
+      "<mark style=\"background-color: yellow\">If ownership or intended use remains unclear, the technician defers sharing; no mandatory disclosure or ownership policy is assumed.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Review shift handoff and maintenance job closeout",
+    "uc_id": "UC-6",
+    "actors": [
+      "Outgoing technician",
+      "Incoming technician",
+      "Shift supervisor",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "A maintenance job is being handed over or proposed for closeout."
+    ],
+    "flow_of_events": [
+      "The outgoing technician updates open repairs, temporary fixes, awaited parts, watched machines, and current equipment condition.",
+      "For jobs involving isolation, the record identifies energy sources, locks and tags, who applied them and when, isolation ownership, and zero-energy verification.",
+      "The system requires critical safety information appropriate to the current job state.",
+      [
+        "The review follows the job state.",
+        "For handoff, the outgoing technician explains the work and the incoming technician reviews the written maintenance and safety record, including isolation ownership and verification.",
+        "For closeout, the completed isolation record identifies who released each lock; the supervisor reviews the work, conditions, and documentation."
+      ],
+      "Incomplete LOTO records are prevented from being handed off or closed.",
+      "If information is unclear, the incoming technician contacts the supervisor; if isolation ownership or verification is unclear, work stops rather than guessing.",
+      "The supervisor returns incorrect or incomplete information for correction before closeout.",
+      "The system records reviewer and closer identity and the corresponding date and time."
+    ],
+    "post_conditions": [
+      "An incoming shift receives a complete current safety record, or a completed job has the required supervisor review and closeout evidence."
+    ],
+    "non_functional": [
+      "The written record should be a reliable source of truth across shifts.",
+      "A handoff must not depend only on verbal updates.",
+      "Required release fields must respect ongoing isolation; a handoff is not a release authorization."
+    ],
+    "alternative_flows": [
+      "<mark style=\"background-color: yellow\">If required updates are missing, clarification and correction are requested; generic non-safety omissions do not imply an unspecified automatic handover block.</mark>",
+      "<mark style=\"background-color: yellow\">If critical records are unavailable during connectivity loss, the workflow remains pending rather than assuming completeness; exact offline authorization rules need confirmation.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Escalate a repair and record a production-stop decision",
+    "uc_id": "UC-7",
+    "actors": [
+      "Maintenance technician",
+      "Shift supervisor or maintenance lead",
+      "Engineering or equipment supplier",
+      "Plant manager",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "There is a safety concern, repeated failure, or no clear repair path."
+    ],
+    "flow_of_events": [
+      "The technician stops the work, makes the machine safe, and contacts the supervisor or lead.",
+      "The technician records fault, attempted work, status, and escalation reason.",
+      "The system routes those facts to the supervisor for an explicit decision.",
+      "The supervisor reviews history, manuals, expertise, criticality, safety, repeated failures, parts availability, and production impact.",
+      [
+        "The supervisor records the next decision.",
+        "The repair continues with assigned next steps.",
+        "Alternatively, engineering or the supplier is contacted.",
+        "Alternatively, an explicit production stoppage is approved."
+      ],
+      "The supervisor records priority, staffing or production impact, and the approval decision.",
+      "If an exception affects plant-wide priorities, major commitments, a critical machine, or resources across shifts, the plant manager reviews and approves the exception."
+    ],
+    "post_conditions": [
+      "The escalation and supervisor decision are recorded separately from the technical repair entry."
+    ],
+    "non_functional": [
+      "A technician entry alone must not authorize production stoppage.",
+      "Decision-making uses criteria rather than an imposed rigid decision tree."
+    ],
+    "alternative_flows": [
+      "<mark style=\"background-color: yellow\">If a supervisor decision is pending, the system displays pending approval rather than implying authorization; response deadlines are unspecified.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Record machine release traceability",
+    "uc_id": "UC-8",
+    "actors": [
+      "Maintenance technician",
+      "Shift supervisor",
+      "Release authorizer - role to confirm",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "<mark style=\"background-color: yellow\">A repair event is available for release review.</mark>"
+    ],
+    "flow_of_events": [
+      "The technician records identity, parts replaced, and repair actions for the specific machine event.",
+      "The supervisor records who authorized release back into production.",
+      "The system records the release decision, approver, and approval time linked to the event."
+    ],
+    "post_conditions": [
+      "Release approval and repair facts are traceable to the specific machine event."
+    ],
+    "non_functional": [
+      "For machines producing safety-related parts, release approval is mandatory traceability rather than an optional note."
+    ],
+    "alternative_flows": [
+      "<mark style=\"background-color: yellow\">If approver or approval time is missing for a safety-related event, the record is identified as incomplete; whether the system blocks physical restart is unspecified.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Review losses and prioritize maintenance",
+    "uc_id": "UC-9",
+    "actors": [
+      "Plant manager",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "<mark style=\"background-color: yellow\">Machine events, statuses, and relevant production-order information are available.</mark>"
+    ],
+    "flow_of_events": [
+      "The system displays downtime minutes by machine and reason code and highlights repeat failures.",
+      "The system displays current status, criticality, order impact, and whether keeping a machine down has supervisor approval.",
+      "The manager considers machines currently down or losing the most minutes, especially critical machines tied to an active order.",
+      "The manager then considers repeat failures and overdue preventive work along with parts availability, repair time, and technician availability.",
+      "The system filters critical losses and exceptions by impact and urgency.",
+      "The manager reviews repair cycle time, repeat failures, preventive completion, and parts use by machine."
+    ],
+    "post_conditions": [
+      "The manager has an evidence-based maintenance priority assessment."
+    ],
+    "non_functional": [
+      "Exceptions and critical losses should be visible quickly.",
+      "Desktop schedules, reports, and analysis and tablet or phone-sized floor status, repairs, and approvals should be available."
+    ],
+    "alternative_flows": [
+      "<mark style=\"background-color: yellow\">If relevant reason codes or status updates are missing, the system identifies incomplete information rather than silently treating the figures as complete.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Plan preventive maintenance and handle schedule conflicts",
+    "uc_id": "UC-10",
+    "actors": [
+      "Maintenance team",
+      "Shift supervisor",
+      "Plant manager",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "<mark style=\"background-color: yellow\">Required maintenance intervals and the production schedule are available.</mark>"
+    ],
+    "flow_of_events": [
+      "The system identifies due work from each machine required hours, cycle count, or calendar-day interval.",
+      "The system displays upcoming and overdue work by criticality and escalates overdue work.",
+      "The maintenance team checks current production orders and actual availability.",
+      "The supervisor coordinates an available maintenance window.",
+      [
+        "If an urgent order or extended machine run conflicts with the window, the supervisor considers order impact and criticality.",
+        "The supervisor finds another window.",
+        "Alternatively, night-shift work is coordinated if capacity is available.",
+        "Alternatively, the conflict is escalated for explicit supervisor or plant-level approval."
+      ],
+      "The system displays conflict impact and approval status."
+    ],
+    "post_conditions": [
+      "Maintenance has a coordinated window or an explicitly visible conflict awaiting a decision."
+    ],
+    "non_functional": [
+      "Maintenance planning must not automatically block production.",
+      "Night availability must not be assumed."
+    ],
+    "alternative_flows": [
+      "<mark style=\"background-color: yellow\">If no suitable window or approval is available, the conflict remains pending for an authorized decision; automatic rescheduling rules are unspecified.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Assess the job and record pre-work safety controls",
+    "uc_id": "UC-11",
+    "actors": [
+      "Maintenance technician",
+      "Shift supervisor",
+      "EHS coordinator",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "A maintenance task and equipment are identified."
+    ],
+    "flow_of_events": [
+      "The involved workers review job steps, hazards, energy sources, controls, PPE, permits, emergency actions, and responsibilities.",
+      "Hazard assessment considers severity, likelihood, and the hierarchy of controls.",
+      "The technician identifies all hazardous energy sources, isolates them, applies locks and tags, and verifies zero energy before touching equipment.",
+      "The record captures equipment, job, energy sources, completed isolation steps, lock and tag appliers, application times, verifier, and zero-energy verification.",
+      "The supervisor verifies required PPE, equipment condition, instruction, demonstrated competency, and fit testing where applicable.",
+      "The system links LOTO details to the maintenance job and permit."
+    ],
+    "post_conditions": [
+      "The pre-work control checks and their evidence are recorded; safe-work decisions remain human responsibilities."
+    ],
+    "non_functional": [
+      "Incomplete information must not encourage work to proceed.",
+      "Electronic records must not substitute for physical isolation or human verification."
+    ],
+    "alternative_flows": [
+      "If conditions change, work stops and the team reassesses hazards and controls.",
+      "If a critical control is inadequate, the job stops until corrected and verified."
+    ]
+  },
+  {
+    "uc_name": "Respond to a safety violation",
+    "uc_id": "UC-12",
+    "actors": [
+      "Worker",
+      "Shift supervisor",
+      "EHS coordinator",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "An unsafe condition or violation is identified."
+    ],
+    "flow_of_events": [
+      "Work stops immediately and the people and area are made safe.",
+      "The supervisor and EHS are notified before work resumes.",
+      "The violation is documented and the control is corrected.",
+      "EHS verifies the corrected control before work resumes.",
+      "Retraining is required where competency or procedure was lacking.",
+      "If the event is an incident or near miss, the relevant investigation is initiated and linked to the work."
+    ],
+    "post_conditions": [
+      "The violation and response are documented and control correction is verified before resumption."
+    ],
+    "non_functional": [
+      "Speed or convenience must never override a safety stop.",
+      "EHS retains authority to stop unsafe work independently of supervisor reporting lines."
+    ],
+    "alternative_flows": [
+      "Repeated or deliberate violations can lead to discipline; the interview does not specify a disciplinary application workflow."
+    ]
+  },
+  {
+    "uc_name": "Report and investigate an incident or near miss",
+    "uc_id": "UC-13",
+    "actors": [
+      "Reporting worker",
+      "EHS coordinator",
+      "Shift supervisor",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "An event caused harm, damage, or loss, or had the potential to cause harm."
+    ],
+    "flow_of_events": [
+      "The area is secured and relevant facts preserved.",
+      "The event is recorded as an incident or near miss according to its actual consequences.",
+      "A near miss is reported within 24 hours even if nobody was hurt.",
+      "EHS interviews the people involved and identifies failed or missing controls.",
+      "Relevant maintenance, LOTO, and permit records are linked to the investigation.",
+      "Corrective actions are assigned an owner and due date.",
+      "EHS tracks and verifies completion; the system visibly identifies overdue and awaiting-verification actions."
+    ],
+    "post_conditions": [
+      "The event has investigation evidence, linked records, and corrective actions tracked through verification."
+    ],
+    "non_functional": [
+      "Records must be retained and traceable to equipment and people.",
+      "Completion entry alone must not be mistaken for verified corrective action."
+    ],
+    "alternative_flows": [
+      "<mark style=\"background-color: yellow\">If a near-miss report is late, the system identifies the missed reporting interval while still accepting the report; late-report handling is inferred.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Document a maintenance chemical spill",
+    "uc_id": "UC-14",
+    "actors": [
+      "Maintenance team",
+      "EHS coordinator",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "A chemical spill occurred during maintenance."
+    ],
+    "flow_of_events": [
+      "The team stops work and secures or evacuates the affected area until safe.",
+      "The event is investigated.",
+      "EHS creates a separate environmental report recording material, amount, location, response, and corrective actions.",
+      "Maintenance and safety records are retained separately from the environmental report.",
+      "<mark style=\"background-color: yellow\">The system links the related reports to the same equipment and maintenance event.</mark>"
+    ],
+    "post_conditions": [
+      "The environmental event has its own report alongside the maintenance and safety evidence."
+    ],
+    "non_functional": [
+      "Separate report types must retain enough detail to stand on their own during inspection."
+    ],
+    "alternative_flows": [
+      "<mark style=\"background-color: yellow\">If the material amount is initially unknown, it is identified as unknown and updated after investigation; no quantity is invented.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Retrieve complete inspection evidence and audit history",
+    "uc_id": "UC-15",
+    "actors": [
+      "EHS coordinator",
+      "Shift supervisor",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "EHS is reviewing work or preparing for an inspection."
+    ],
+    "flow_of_events": [
+      "EHS accesses maintenance, LOTO, permit, inspection, incident, corrective-action, and relevant training records.",
+      "EHS traces the evidence to equipment and people and asks technicians or supervisors to fill gaps.",
+      "The system shows who created, changed, reviewed, or closed each record and the corresponding date and time.",
+      "EHS reviews permits, emergency-equipment inspections, training, and corrective actions."
+    ],
+    "post_conditions": [
+      "EHS has the available evidence and audit history and has identified gaps requiring follow-up."
+    ],
+    "non_functional": [
+      "Records must be usable on the floor under poor connectivity.",
+      "Records must be retained for inspections; the interview specifies no retention duration."
+    ],
+    "alternative_flows": [
+      "<mark style=\"background-color: yellow\">If a signed permit exists only on paper, the system identifies the evidence gap or reference; scanning and replacement of wet signatures require confirmation.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Capture and retrieve floor safety records under poor connectivity",
+    "uc_id": "UC-16",
+    "actors": [
+      "Maintenance technician",
+      "Shift supervisor",
+      "EHS coordinator",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "A worker needs safety records in an area with poor connectivity."
+    ],
+    "flow_of_events": [
+      "The worker uses the floor system from a safe location, during a suitable pause, or while another qualified person monitors the area.",
+      "The system provides usable access to critical maintenance and safety records despite poor connectivity.",
+      "<mark style=\"background-color: yellow\">The system retains captured records locally and clearly identifies pending synchronization.</mark>",
+      "<mark style=\"background-color: yellow\">When connectivity returns, pending records synchronize without silently discarding safety information.</mark>"
+    ],
+    "post_conditions": [
+      "Floor records remain usable and captured evidence is retained; synchronization details require validation."
+    ],
+    "non_functional": [
+      "Tablet interaction must not distract workers from moving equipment or material handling.",
+      "Offline convenience must not override safety stops or missing verification."
+    ],
+    "alternative_flows": [
+      "<mark style=\"background-color: yellow\">If synchronized versions conflict, the system preserves the conflicting evidence for authorized review rather than silently overwriting it; the resolution procedure needs confirmation.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Respond to a safety-critical sensor alert",
+    "uc_id": "UC-17",
+    "actors": [
+      "Plant monitoring system",
+      "Area supervisor",
+      "EHS coordinator",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "Available sensor information indicates a potentially safety-critical condition."
+    ],
+    "flow_of_events": [
+      "The system helps flag abnormal temperatures, pressure, vibration, or guarding conditions where signals are available.",
+      "The system promptly makes a safety-critical condition visible to the area supervisor and EHS.",
+      "The supervisor acts immediately on the floor to control exposure and make the area safe.",
+      "EHS receives the safety-critical alert and follow-up record and verifies that the hazard was controlled."
+    ],
+    "post_conditions": [
+      "The safety-critical condition has human response and follow-up evidence for EHS verification."
+    ],
+    "non_functional": [
+      "Sensor data never replaces LOTO, worker verification, or making the area safe.",
+      "EHS need not be the first recipient every time; prompt visibility matters."
+    ],
+    "alternative_flows": [
+      "<mark style=\"background-color: yellow\">If acknowledgment or verification is still pending, the system makes that state visible; deadlines and automatic escalation routes are not specified.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Record task training and refresher requirements",
+    "uc_id": "UC-18",
+    "actors": [
+      "Worker",
+      "Trainer",
+      "Shift supervisor",
+      "EHS coordinator",
+      "Maintenance logging system"
+    ],
+    "pre_conditions": [
+      "A worker requires initial training, refresher training, or corrective retraining."
+    ],
+    "flow_of_events": [
+      "Training addresses the safe task method, hazard recognition, PPE, guarding, and LOTO verification.",
+      "The worker receives required instruction and demonstrates competency before maintenance.",
+      "Attendance, subject, trainer, and any required refresher date are recorded.",
+      "If a violation exposed deficient competency or procedure, corrective retraining is assigned."
+    ],
+    "post_conditions": [
+      "Training evidence and any required refresher information are available for review."
+    ],
+    "non_functional": [
+      "Retraining is corrective action and does not replace accountability."
+    ],
+    "alternative_flows": [
+      "<mark style=\"background-color: yellow\">If competency has not been demonstrated, the worker is not treated as qualified for the task; detailed assessment and application permissions need confirmation.</mark>"
+    ]
+  }
+]

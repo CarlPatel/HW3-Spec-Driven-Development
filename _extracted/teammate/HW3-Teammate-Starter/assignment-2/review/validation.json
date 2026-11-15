@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "individual_goal_counts": {
+    "teo": 25,
+    "angela": 21,
+    "rob": 25
+  },
+  "combined_goal_count": 73,
+  "retired_duplicate_ids": {
+    "G-43": "G-1",
+    "G-28": "G-6",
+    "G-47": "G-38",
+    "G-52": "G-41"
+  },
+  "use_case_count": 9,
+  "use_case_step_count": 56,
+  "matrix_shape": [
+    2,
+    149
+  ],
+  "added_goal_ids": [
+    "G-24",
+    "G-71",
+    "G-72",
+    "G-73",
+    "G-74",
+    "G-75",
+    "G-76",
+    "G-77"
+  ],
+  "unmapped_goals": [
+    "G-71"
+  ],
+  "checks": [
+    "all goal evidence references resolve to stakeholder utterances",
+    "every combined goal and use-case step represented in matrix",
+    "all leaf goals assigned to an agent",
+    "refinement graphs are acyclic",
+    "explicit OR alternative exists",
+    "functional and non-functional categories present",
+    "no retired goal IDs referenced in matrix"
+  ],
+  "missing_required_file": "reflections.pdf (intentionally left for Timothy)",
+  "cautions": [
+    "Structural validation does not replace the student review of source accuracy and refinement semantics.",
+    "Potential conflict links are conditional tensions, explained in analysis.md."
+  ]
+}

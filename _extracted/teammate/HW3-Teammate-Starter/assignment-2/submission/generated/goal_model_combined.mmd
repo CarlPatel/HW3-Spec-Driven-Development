@@ -1,0 +1,419 @@
+flowchart BT
+annotationnode174["non-functional; interpretation beyond transcript"]:::stroke -.- node174
+annotationnode196["H12"]:::stroke -.- node196
+node196((" ")) ===> node174
+node102[/"G-1 Reduce production lost while diagnosing,<br/>repairing, and restoring faulty equipment"/] --- node196
+annotationnode102["non-functional"]:::stroke -.- node102
+annotationnode181["H4"]:::stroke -.- node181
+node181((" ")) ===> node102
+node104[/"Achieve[G-3 Mechanic obtains evidence to distinguish a<br/>heater fault from other faults]"/] --- node181
+annotationnode104["functional"]:::stroke -.- node104
+annotationnode199["H5"]:::stroke -.- node199
+node199((" ")) ===> node104
+node106[/"Achieve[G-4 Tablet displays live actual temperature,<br/>setpoint, and normal range for the selected<br/>press]"/]:::bold --- node199
+annotationnode106["functional"]:::stroke -.- node106
+node105{{Maintenance system}} --- node106
+node106[/"Achieve[G-4 Tablet displays live actual temperature,<br/>setpoint, and normal range for the selected<br/>press]"/]
+node108[/"Achieve[G-5 Mechanic compares temperature, part quality,<br/>and heater cycling before diagnosing the fault]"/]:::bold --- node199
+annotationnode108["functional"]:::stroke -.- node108
+node107{{fa:fa-person Mechanic}} --- node108
+node108[/"Achieve[G-5 Mechanic compares temperature, part quality,<br/>and heater cycling before diagnosing the fault]"/]
+node178[/"Achieve[G-75 System flags missing or stale telemetry if<br/>[a current temperature reading cannot be<br/>obtained]]"/]:::bold --- node199
+annotationnode178["functional; interpretation beyond transcript"]:::stroke -.- node178
+node105{{Maintenance system}} --- node178
+node178[/"Achieve[G-75 System flags missing or stale telemetry if<br/>[a current temperature reading cannot be<br/>obtained]]"/]
+
+node104[/"Achieve[G-3 Mechanic obtains evidence to distinguish a<br/>heater fault from other faults]"/]
+node109[/"Achieve[G-6 Shared handover links asset fault, downtime,<br/>alarms, diagnosis, corrective action, reason<br/>code, parts, and verification]"/] --- node181
+annotationnode109["functional"]:::stroke -.- node109
+annotationnode183["P5"]:::stroke -.- node183
+node183((" ")) ===> node109
+node110[/"Achieve[G-7 Repair record identifies the asset, fault<br/>symptoms, and last fault code]"/]:::bold --- node183
+annotationnode110["functional"]:::stroke -.- node110
+node107{{fa:fa-person Mechanic}} --- node110
+node110[/"Achieve[G-7 Repair record identifies the asset, fault<br/>symptoms, and last fault code]"/]
+node111[/"Achieve[G-8 Repair record contains actual temperature<br/>and setpoint]"/]:::bold --- node183
+annotationnode111["functional"]:::stroke -.- node111
+node107{{fa:fa-person Mechanic}} --- node111
+node111[/"Achieve[G-8 Repair record contains actual temperature<br/>and setpoint]"/]
+node112[/"Achieve[G-9 Repair record states tests, corrective<br/>action, installed part number, and verification<br/>result]"/]:::bold --- node183
+annotationnode112["functional"]:::stroke -.- node112
+node107{{fa:fa-person Mechanic}} --- node112
+node112[/"Achieve[G-9 Repair record states tests, corrective<br/>action, installed part number, and verification<br/>result]"/]
+
+node109[/"Achieve[G-6 Shared handover links asset fault, downtime,<br/>alarms, diagnosis, corrective action, reason<br/>code, parts, and verification]"/]
+node117[/"Achieve[G-14 Mechanic retrieves earlier troubleshooting<br/>to avoid repeating checks]"/] --- node181
+annotationnode117["functional"]:::stroke -.- node117
+annotationnode186["P5"]:::stroke -.- node186
+node186((" ")) ===> node117
+node118[/"Achieve[G-15 Mechanic reads the shift handoff and open<br/>fault history]"/]:::bold --- node186
+annotationnode118["functional"]:::stroke -.- node118
+node107{{fa:fa-person Mechanic}} --- node118
+node118[/"Achieve[G-15 Mechanic reads the shift handoff and open<br/>fault history]"/]
+node119[/"Achieve[G-16 Mechanic retrieves closed work orders and<br/>recorded part numbers from CMMS]"/]:::bold --- node186
+annotationnode119["functional"]:::stroke -.- node119
+node107{{fa:fa-person Mechanic}} --- node119
+node119[/"Achieve[G-16 Mechanic retrieves closed work orders and<br/>recorded part numbers from CMMS]"/]
+
+node117[/"Achieve[G-14 Mechanic retrieves earlier troubleshooting<br/>to avoid repeating checks]"/]
+node120[/"Achieve[G-17 Mechanic locates a suitable replacement<br/>part without hunting through bins]"/] --- node181
+annotationnode120["functional"]:::stroke -.- node120
+annotationnode187["H11"]:::stroke -.- node187
+node187((" ")) ===> node120
+node121[/"Achieve[G-18 Parts view provides exact part number,<br/>stock quantity, crib location, and approved<br/>substitutes]"/]:::bold --- node187
+annotationnode121["functional"]:::stroke -.- node121
+node105{{Maintenance system}} --- node121
+node121[/"Achieve[G-18 Parts view provides exact part number,<br/>stock quantity, crib location, and approved<br/>substitutes]"/]
+
+node120[/"Achieve[G-17 Mechanic locates a suitable replacement<br/>part without hunting through bins]"/]
+node122[/"Achieve[G-19 Press repair includes isolation<br/>confirmation, corrective work, and a<br/>verification run]"/] --- node181
+annotationnode122["functional"]:::stroke -.- node122
+annotationnode188["P1"]:::stroke -.- node188
+node188((" ")) ===> node122
+node123[/"Maintain[G-20 Press is stopped and lockout/tagout is<br/>confirmed before the mechanic opens equipment]"/]:::bold --- node188
+annotationnode123["non-functional"]:::stroke -.- node123
+node107{{fa:fa-person Mechanic}} --- node123
+node123[/"Maintain[G-20 Press is stopped and lockout/tagout is<br/>confirmed before the mechanic opens equipment]"/]
+node124[/"Achieve[G-21 Tablet records the confirmed safety check<br/>at the machine]"/]:::bold --- node188
+annotationnode124["functional"]:::stroke -.- node124
+node107{{fa:fa-person Mechanic}} --- node124
+node124[/"Achieve[G-21 Tablet records the confirmed safety check<br/>at the machine]"/]
+node125[/"Achieve[G-22 Mechanic checks connections, replaces the<br/>weak band, and verifies stable temperature and<br/>good parts]"/]:::bold --- node188
+annotationnode125["functional"]:::stroke -.- node125
+node107{{fa:fa-person Mechanic}} --- node125
+node125[/"Achieve[G-22 Mechanic checks connections, replaces the<br/>weak band, and verifies stable temperature and<br/>good parts]"/]
+
+node122[/"Achieve[G-19 Press repair includes isolation<br/>confirmation, corrective work, and a<br/>verification run]"/]
+
+node102[/"G-1 Reduce production lost while diagnosing,<br/>repairing, and restoring faulty equipment"/]
+node103[/"G-2 Minimize effort and interruption when<br/>recording work on a noisy floor with gloves"/] --- node196
+annotationnode103["non-functional"]:::stroke -.- node103
+annotationnode182["H6"]:::stroke -.- node182
+node182((" ")) ===> node103
+node113[/"Achieve[G-10 Fault and change are captured before the<br/>mechanic moves on]"/]:::bold --- node182
+annotationnode113["functional"]:::stroke -.- node113
+node107{{fa:fa-person Mechanic}} --- node113
+node113[/"Achieve[G-10 Fault and change are captured before the<br/>mechanic moves on]"/]
+node114[/"Achieve[G-11 Mechanic attaches quick evidence without<br/>typing the entire account]"/] --- node182
+annotationnode114["functional"]:::stroke -.- node114
+annotationnode184["P2"]:::stroke -.- node184
+node184((" ")):::filled ===> node114
+node115[/"Achieve[G-12 Mechanic attaches a photo of the finding]"/]:::bold --- node184
+annotationnode115["functional"]:::stroke -.- node115
+node107{{fa:fa-person Mechanic}} --- node115
+node115[/"Achieve[G-12 Mechanic attaches a photo of the finding]"/]
+
+annotationnode185["P2"]:::stroke -.- node185
+node185((" ")):::filled ===> node114
+node116[/"Achieve[G-13 Mechanic attaches a short voice note of the<br/>finding]"/]:::bold --- node185
+annotationnode116["functional"]:::stroke -.- node116
+node107{{fa:fa-person Mechanic}} --- node116
+node116[/"Achieve[G-13 Mechanic attaches a short voice note of the<br/>finding]"/]
+node175[/"Maintain[G-72 Mechanic confirms voice-note content before<br/>it is published to the shared repair record]"/]:::bold --- node185
+annotationnode175["non-functional; interpretation beyond transcript"]:::stroke -.- node175
+node107{{fa:fa-person Mechanic}} --- node175
+node175[/"Maintain[G-72 Mechanic confirms voice-note content before<br/>it is published to the shared repair record]"/]
+
+node114[/"Achieve[G-11 Mechanic attaches quick evidence without<br/>typing the entire account]"/]
+
+node103[/"G-2 Minimize effort and interruption when<br/>recording work on a noisy floor with gloves"/]
+node128[/"G-25 Improve maintenance and production<br/>decisions using accurate facts across shifts"/] --- node196
+annotationnode128["non-functional"]:::stroke -.- node128
+annotationnode189["H3"]:::stroke -.- node189
+node189((" ")) ===> node128
+node129[/"Achieve[G-26 Incoming supervisor receives an unambiguous<br/>machine and open-work handover]"/] --- node189
+annotationnode129["functional"]:::stroke -.- node129
+annotationnode190["P5"]:::stroke -.- node190
+node190((" ")) ===> node129
+node130[/"Achieve[G-27 Shift view shows machine status, work<br/>ownership, restoration estimate, and production<br/>impact]"/]:::bold --- node190
+annotationnode130["functional"]:::stroke -.- node130
+node105{{Maintenance system}} --- node130
+node130[/"Achieve[G-27 Shift view shows machine status, work<br/>ownership, restoration estimate, and production<br/>impact]"/]
+node109[/"Achieve[G-6 Shared handover links asset fault, downtime,<br/>alarms, diagnosis, corrective action, reason<br/>code, parts, and verification]"/] --- node190
+node132[/"Achieve[G-29 Outgoing and incoming supervisors agree<br/>what to monitor and when to escalate]"/]:::bold --- node190
+annotationnode132["functional"]:::stroke -.- node132
+node131{{fa:fa-person Shift supervisor}} --- node132
+node132[/"Achieve[G-29 Outgoing and incoming supervisors agree<br/>what to monitor and when to escalate]"/]
+
+node129[/"Achieve[G-26 Incoming supervisor receives an unambiguous<br/>machine and open-work handover]"/]
+node133[/"Maintain[G-30 Completed maintenance records contain a<br/>reason and accurate downtime minutes]"/] --- node189
+annotationnode133["non-functional"]:::stroke -.- node133
+annotationnode191["H4"]:::stroke -.- node191
+node191((" ")) ===> node133
+node134[/"Maintain[G-31 Work-order completion requires a reason<br/>code]"/]:::bold --- node191
+annotationnode134["functional"]:::stroke -.- node134
+node105{{Maintenance system}} --- node134
+node134[/"Maintain[G-31 Work-order completion requires a reason<br/>code]"/]
+node135[/"Achieve[G-32 Supervisor sees missing reason codes and<br/>other required fields immediately]"/]:::bold --- node191
+annotationnode135["functional"]:::stroke -.- node135
+node105{{Maintenance system}} --- node135
+node135[/"Achieve[G-32 Supervisor sees missing reason codes and<br/>other required fields immediately]"/]
+node136[/"Achieve[G-33 Supervisor verifies downtime minutes<br/>against machine stop and first good part times]"/]:::bold --- node191
+annotationnode136["functional"]:::stroke -.- node136
+node131{{fa:fa-person Shift supervisor}} --- node136
+node136[/"Achieve[G-33 Supervisor verifies downtime minutes<br/>against machine stop and first good part times]"/]
+
+node133[/"Maintain[G-30 Completed maintenance records contain a<br/>reason and accurate downtime minutes]"/]
+node137[/"Achieve[G-34 Supervisor identifies critical machines<br/>from bottleneck, backup, cell, downtime, and<br/>quality impact]"/]:::bold --- node189
+annotationnode137["functional"]:::stroke -.- node137
+node131{{fa:fa-person Shift supervisor}} --- node137
+node137[/"Achieve[G-34 Supervisor identifies critical machines<br/>from bottleneck, backup, cell, downtime, and<br/>quality impact]"/]
+node138[/"Achieve[G-35 Unresolved maintenance issues receive an<br/>escalation when required]"/] --- node189
+annotationnode138["functional"]:::stroke -.- node138
+annotationnode192["H11"]:::stroke -.- node192
+node192((" ")):::filled ===> node138
+node139[/"Achieve[G-36 Issue is escalated if [restoration target<br/>exceeded, critical equipment affected, or safety<br/>or quality at risk]]"/]:::bold --- node192
+annotationnode139["functional"]:::stroke -.- node139
+node131{{fa:fa-person Shift supervisor}} --- node139
+node139[/"Achieve[G-36 Issue is escalated if [restoration target<br/>exceeded, critical equipment affected, or safety<br/>or quality at risk]]"/]
+node140[/"Achieve[G-37 Escalation record identifies owner, time,<br/>reason, and next action]"/]:::bold --- node192
+annotationnode140["functional"]:::stroke -.- node140
+node131{{fa:fa-person Shift supervisor}} --- node140
+node140[/"Achieve[G-37 Escalation record identifies owner, time,<br/>reason, and next action]"/]
+
+node138[/"Achieve[G-35 Unresolved maintenance issues receive an<br/>escalation when required]"/]
+node141[/"Maintain[G-38 Hazard controls and complete safety records<br/>are verified and release is authorized before<br/>equipment returns to service]"/] --- node189
+annotationnode141["non-functional"]:::stroke -.- node141
+annotationnode201["P4"]:::stroke -.- node201
+node201((" ")) ===> node141
+node142[/"Achieve[G-39 Repair record contains lockout/tagout<br/>status, hazard assessment, and release authority]"/]:::bold --- node201
+annotationnode142["functional"]:::stroke -.- node142
+node107{{fa:fa-person Mechanic}} --- node142
+node142[/"Achieve[G-39 Repair record contains lockout/tagout<br/>status, hazard assessment, and release authority]"/]
+node143[/"Achieve[G-40 Safety-part repair is traceable to failure<br/>mode, technician, parts, action, inspection, and<br/>restart approver]"/]:::bold --- node201
+annotationnode143["functional"]:::stroke -.- node143
+node105{{Maintenance system}} --- node143
+node143[/"Achieve[G-40 Safety-part repair is traceable to failure<br/>mode, technician, parts, action, inspection, and<br/>restart approver]"/]
+node144[/"Maintain[G-41 Equipment stays on hold if [release<br/>documentation or isolation, alarm, permit, or<br/>hazard fields are incomplete, or hazards remain<br/>unresolved]]"/]:::bold --- node201
+annotationnode144["non-functional"]:::stroke -.- node144
+node131{{fa:fa-person Shift supervisor}} --- node144
+node144[/"Maintain[G-41 Equipment stays on hold if [release<br/>documentation or isolation, alarm, permit, or<br/>hazard fields are incomplete, or hazards remain<br/>unresolved]]"/]
+node145[/"Achieve[G-42 Supervisor assigns an owner to each missing<br/>release item and sees the hold clearly]"/]:::bold --- node201
+annotationnode145["functional"]:::stroke -.- node145
+node131{{fa:fa-person Shift supervisor}} --- node145
+node145[/"Achieve[G-42 Supervisor assigns an owner to each missing<br/>release item and sees the hold clearly]"/]
+node151[/"Achieve[G-48 Safety coordinator assesses hazard, active<br/>alarms, isolation, and applicable work permits]"/]:::bold --- node201
+annotationnode151["functional"]:::stroke -.- node151
+node150{{fa:fa-person Safety coordinator}} --- node151
+node151[/"Achieve[G-48 Safety coordinator assesses hazard, active<br/>alarms, isolation, and applicable work permits]"/]
+node152[/"Achieve[G-49 Isolation record states equipment,<br/>isolation points, each lock applier, date/time,<br/>and release authorizer and performer]"/]:::bold --- node201
+annotationnode152["functional"]:::stroke -.- node152
+node107{{fa:fa-person Mechanic}} --- node152
+node152[/"Achieve[G-49 Isolation record states equipment,<br/>isolation points, each lock applier, date/time,<br/>and release authorizer and performer]"/]
+node153[/"Achieve[G-50 Return-to-service authorization and<br/>technician/supervisor acknowledgments are<br/>recorded before release]"/]:::bold --- node201
+annotationnode153["functional"]:::stroke -.- node153
+node131{{fa:fa-person Shift supervisor}} --- node153
+node153[/"Achieve[G-50 Return-to-service authorization and<br/>technician/supervisor acknowledgments are<br/>recorded before release]"/]
+node154[/"Achieve[G-51 Supervisor validates hazard controls before<br/>closeout]"/]:::bold --- node201
+annotationnode154["functional"]:::stroke -.- node154
+node131{{fa:fa-person Shift supervisor}} --- node154
+node154[/"Achieve[G-51 Supervisor validates hazard controls before<br/>closeout]"/]
+node155[/"Achieve[G-53 Incoming supervisor acknowledges a digital<br/>handoff with all critical fields completed]"/]:::bold --- node201
+annotationnode155["functional"]:::stroke -.- node155
+node131{{fa:fa-person Shift supervisor}} --- node155
+node155[/"Achieve[G-53 Incoming supervisor acknowledges a digital<br/>handoff with all critical fields completed]"/]
+node156[/"Achieve[G-54 Work order retains permits, photos, alarm<br/>information, replaced parts, and release<br/>decision]"/]:::bold --- node201
+annotationnode156["functional"]:::stroke -.- node156
+node105{{Maintenance system}} --- node156
+node156[/"Achieve[G-54 Work order retains permits, photos, alarm<br/>information, replaced parts, and release<br/>decision]"/]
+node176[/"Maintain[G-73 A release request is rejected and missing<br/>items shown if [the safety-release checks are<br/>not all satisfied]]"/]:::bold --- node201
+annotationnode176["non-functional; interpretation beyond transcript"]:::stroke -.- node176
+node105{{Maintenance system}} --- node176
+node176[/"Maintain[G-73 A release request is rejected and missing<br/>items shown if [the safety-release checks are<br/>not all satisfied]]"/]
+
+node141[/"Maintain[G-38 Hazard controls and complete safety records<br/>are verified and release is authorized before<br/>equipment returns to service]"/]
+node146[/"Achieve[G-44 Equipment and shift view ties downtime,<br/>root cause, ownership, and impact across all<br/>three shifts]"/]:::bold --- node189
+annotationnode146["functional"]:::stroke -.- node146
+node105{{Maintenance system}} --- node146
+node146[/"Achieve[G-44 Equipment and shift view ties downtime,<br/>root cause, ownership, and impact across all<br/>three shifts]"/]
+
+node128[/"G-25 Improve maintenance and production<br/>decisions using accurate facts across shifts"/]
+node149[/"G-46 Minimize maintenance injuries and<br/>demonstrate safe work during inspections"/] --- node196
+annotationnode149["non-functional"]:::stroke -.- node149
+annotationnode193["H7"]:::stroke -.- node193
+node193((" ")) ===> node149
+node141[/"Maintain[G-38 Hazard controls and complete safety records<br/>are verified and release is authorized before<br/>equipment returns to service]"/] --- node193
+node158[/"Achieve[G-56 Inspector can retrieve complete equipment<br/>maintenance and safety history without chasing<br/>people]"/] --- node193
+annotationnode158["functional"]:::stroke -.- node158
+annotationnode194["P5"]:::stroke -.- node194
+node194((" ")) ===> node158
+node159[/"Maintain[G-57 Maintenance, permit, handoff, and sensor<br/>records include a consistent equipment<br/>identifier and time window]"/]:::bold --- node194
+annotationnode159["functional"]:::stroke -.- node159
+node105{{Maintenance system}} --- node159
+node159[/"Maintain[G-57 Maintenance, permit, handoff, and sensor<br/>records include a consistent equipment<br/>identifier and time window]"/]
+node160[/"Achieve[G-58 Equipment record joins maintenance,<br/>isolation, alarms, permits, and corrective-<br/>action history]"/]:::bold --- node194
+annotationnode160["functional"]:::stroke -.- node160
+node105{{Maintenance system}} --- node160
+node160[/"Achieve[G-58 Equipment record joins maintenance,<br/>isolation, alarms, permits, and corrective-<br/>action history]"/]
+node157[/"Maintain[G-55 Record corrections preserve who changed<br/>what and when]"/]:::bold --- node194
+annotationnode157["non-functional"]:::stroke -.- node157
+node105{{Maintenance system}} --- node157
+node157[/"Maintain[G-55 Record corrections preserve who changed<br/>what and when]"/]
+node161[/"Maintain[G-59 Records remain readable and retrievable for<br/>the inspection period despite retirement or<br/>staff changes]"/] --- node194
+annotationnode161["non-functional"]:::stroke -.- node161
+annotationnode198["H4"]:::stroke -.- node198
+node198((" ")) ===> node161
+node180[/"Achieve[G-77 Safety coordinator configures the<br/>applicable inspection retention period before<br/>records are scheduled for disposal]"/]:::bold --- node198
+annotationnode180["functional; interpretation beyond transcript"]:::stroke -.- node180
+node150{{fa:fa-person Safety coordinator}} --- node180
+node180[/"Achieve[G-77 Safety coordinator configures the<br/>applicable inspection retention period before<br/>records are scheduled for disposal]"/]
+
+node105{{Maintenance system}} --- node161
+node161[/"Maintain[G-59 Records remain readable and retrievable for<br/>the inspection period despite retirement or<br/>staff changes]"/]
+node162[/"Achieve[G-60 Safety coordinator exports inspectable<br/>records without granting access to the entire<br/>operating system]"/]:::bold --- node194
+annotationnode162["functional"]:::stroke -.- node162
+node150{{fa:fa-person Safety coordinator}} --- node162
+node162[/"Achieve[G-60 Safety coordinator exports inspectable<br/>records without granting access to the entire<br/>operating system]"/]
+
+node158[/"Achieve[G-56 Inspector can retrieve complete equipment<br/>maintenance and safety history without chasing<br/>people]"/]
+node163[/"Achieve[G-61 Near misses are recorded, acknowledged,<br/>reviewed, and followed through]"/] --- node193
+annotationnode163["functional"]:::stroke -.- node163
+annotationnode195["P1"]:::stroke -.- node195
+node195((" ")) ===> node163
+node165[/"Achieve[G-62 Named reporter records what happened,<br/>where, when, and who within 24 hours of a near<br/>miss]"/]:::bold --- node195
+annotationnode165["functional"]:::stroke -.- node165
+node164{{fa:fa-person Reporter}} --- node165
+node165[/"Achieve[G-62 Named reporter records what happened,<br/>where, when, and who within 24 hours of a near<br/>miss]"/]
+node166[/"Achieve[G-63 Supervisor acknowledges a near-miss report<br/>before its 24-hour deadline]"/]:::bold --- node195
+annotationnode166["functional"]:::stroke -.- node166
+node131{{fa:fa-person Shift supervisor}} --- node166
+node166[/"Achieve[G-63 Supervisor acknowledges a near-miss report<br/>before its 24-hour deadline]"/]
+node167[/"Achieve[G-64 Safety review considers facts and controls<br/>without punishing the reporter for speaking up]"/]:::bold --- node195
+annotationnode167["functional"]:::stroke -.- node167
+node150{{fa:fa-person Safety coordinator}} --- node167
+node167[/"Achieve[G-64 Safety review considers facts and controls<br/>without punishing the reporter for speaking up]"/]
+node168[/"Achieve[G-65 Corrective action has a named owner and<br/>verified completion]"/]:::bold --- node195
+annotationnode168["functional"]:::stroke -.- node168
+node150{{fa:fa-person Safety coordinator}} --- node168
+node168[/"Achieve[G-65 Corrective action has a named owner and<br/>verified completion]"/]
+
+node163[/"Achieve[G-61 Near misses are recorded, acknowledged,<br/>reviewed, and followed through]"/]
+node169[/"Achieve[G-66 Separate environmental report is created if<br/>[a chemical spill occurs during maintenance]]"/]:::bold --- node193
+annotationnode169["functional"]:::stroke -.- node169
+node164{{fa:fa-person Reporter}} --- node169
+node169[/"Achieve[G-66 Separate environmental report is created if<br/>[a chemical spill occurs during maintenance]]"/]
+node170[/"Avoid[G-67 Tablet use distracts personnel around<br/>moving machinery]"/] --- node193
+annotationnode170["non-functional"]:::stroke -.- node170
+annotationnode197["H4"]:::stroke -.- node197
+node197((" ")) ===> node170
+node177[/"Maintain[G-74 Capture uses a safe stationary interaction<br/>point if [machinery is moving nearby]]"/]:::bold --- node197
+annotationnode177["non-functional; interpretation beyond transcript"]:::stroke -.- node177
+node107{{fa:fa-person Mechanic}} --- node177
+node177[/"Maintain[G-74 Capture uses a safe stationary interaction<br/>point if [machinery is moving nearby]]"/]
+
+node107{{fa:fa-person Mechanic}} --- node170
+node170[/"Avoid[G-67 Tablet use distracts personnel around<br/>moving machinery]"/]
+node171[/"Maintain[G-68 Safety-critical controls remain prominent<br/>and distinguishable from general maintenance<br/>notes]"/]:::bold --- node193
+annotationnode171["non-functional"]:::stroke -.- node171
+node105{{Maintenance system}} --- node171
+node171[/"Maintain[G-68 Safety-critical controls remain prominent<br/>and distinguishable from general maintenance<br/>notes]"/]
+node172[/"Achieve[G-69 Work is stopped and hazard documented if<br/>[an alarm indicates a hazard requiring<br/>investigation]]"/]:::bold --- node193
+annotationnode172["functional"]:::stroke -.- node172
+node131{{fa:fa-person Shift supervisor}} --- node172
+node172[/"Achieve[G-69 Work is stopped and hazard documented if<br/>[an alarm indicates a hazard requiring<br/>investigation]]"/]
+node173[/"Achieve[G-70 Safety coordinator reviews recurring alarms<br/>and failure modes for shutdown, action, or<br/>inspection]"/]:::bold --- node193
+annotationnode173["functional"]:::stroke -.- node173
+node150{{fa:fa-person Safety coordinator}} --- node173
+node173[/"Achieve[G-70 Safety coordinator reviews recurring alarms<br/>and failure modes for shutdown, action, or<br/>inspection]"/]
+
+node149[/"G-46 Minimize maintenance injuries and<br/>demonstrate safe work during inspections"/]
+node126[/"Avoid[G-23 Machine-specific personal working knowledge<br/>becomes company property by default]"/] --- node196
+annotationnode126["non-functional"]:::stroke -.- node126
+annotationnode200["H5"]:::stroke -.- node200
+node200((" ")) ===> node126
+node127[/"Maintain[G-24 Personal notes remain private unless the<br/>mechanic explicitly selects content to share]"/]:::bold --- node200
+annotationnode127["non-functional; interpretation beyond transcript"]:::stroke -.- node127
+node105{{Maintenance system}} --- node127
+node127[/"Maintain[G-24 Personal notes remain private unless the<br/>mechanic explicitly selects content to share]"/]
+node179[/"Achieve[G-76 Required shared repair facts are recorded<br/>without automatically copying personal notebook<br/>content]"/]:::bold --- node200
+annotationnode179["functional; interpretation beyond transcript"]:::stroke -.- node179
+node107{{fa:fa-person Mechanic}} --- node179
+node179[/"Achieve[G-76 Required shared repair facts are recorded<br/>without automatically copying personal notebook<br/>content]"/]
+
+node126[/"Avoid[G-23 Machine-specific personal working knowledge<br/>becomes company property by default]"/]
+
+node174[/"G-71 Improve safe maintenance continuity with<br/>usable, reliable cross-shift records"/]
+annotationnode148["non-functional"]:::stroke -.- node148
+node147{{fa:fa-person Plant management}} --- node148
+node148[/"Avoid[G-45 Personnel are penalized for stopping an<br/>unsafe restart in accordance with procedure]"/]
+node103 --"#128498;"--- node141
+node141[/"Maintain[G-38 Hazard controls and complete safety records<br/>are verified and release is authorized before<br/>equipment returns to service]"/]
+node103[/"G-2 Minimize effort and interruption when<br/>recording work on a noisy floor with gloves"/]
+
+node103 --"#128498;"--- node170
+node170[/"Avoid[G-67 Tablet use distracts personnel around<br/>moving machinery]"/]
+node103[/"G-2 Minimize effort and interruption when<br/>recording work on a noisy floor with gloves"/]
+
+node126 --"#128498;"--- node109
+node109[/"Achieve[G-6 Shared handover links asset fault, downtime,<br/>alarms, diagnosis, corrective action, reason<br/>code, parts, and verification]"/]
+node126[/"Avoid[G-23 Machine-specific personal working knowledge<br/>becomes company property by default]"/]
+
+
+classDef bold stroke-width:3,stroke:#000
+classDef filled fill:#000;
+classDef nostroke stroke-width:0,fill-opacity:0.0
+classDef stroke stroke-dasharray: 5 5,fill-opacity:0.0,text-align:left
+
+    
+%% Yellow = added interpretation; functional/category labels are annotations.
+class node106 bold
+class node108 bold
+class node110 bold
+class node111 bold
+class node112 bold
+class node113 bold
+class node115 bold
+class node116 bold
+class node118 bold
+class node119 bold
+class node121 bold
+class node123 bold
+class node124 bold
+class node125 bold
+class node127 bold
+style node127 fill:#fff59d,color:#111
+class node130 bold
+class node132 bold
+class node134 bold
+class node135 bold
+class node136 bold
+class node137 bold
+class node139 bold
+class node140 bold
+class node142 bold
+class node143 bold
+class node144 bold
+class node145 bold
+class node146 bold
+class node148 bold
+class node151 bold
+class node152 bold
+class node153 bold
+class node154 bold
+class node155 bold
+class node156 bold
+class node157 bold
+class node159 bold
+class node160 bold
+class node162 bold
+class node165 bold
+class node166 bold
+class node167 bold
+class node168 bold
+class node169 bold
+class node171 bold
+class node172 bold
+class node173 bold
+style node174 fill:#fff59d,color:#111
+class node175 bold
+style node175 fill:#fff59d,color:#111
+class node176 bold
+style node176 fill:#fff59d,color:#111
+class node177 bold
+style node177 fill:#fff59d,color:#111
+class node178 bold
+style node178 fill:#fff59d,color:#111
+class node179 bold
+style node179 fill:#fff59d,color:#111
+class node180 bold
+style node180 fill:#fff59d,color:#111

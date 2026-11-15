@@ -1,0 +1,1 @@
+CSV files were downloaded from Clarity. Angela's follow-up terminology was also checked against the recorded conversation and the visible Clarity transcript. At the time checked, that follow-up was marked Paused; no assessment answers or interview status were changed.

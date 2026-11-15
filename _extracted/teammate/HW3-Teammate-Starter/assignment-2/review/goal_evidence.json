@@ -1,0 +1,1911 @@
+{
+  "G-1": {
+    "id": "G-1",
+    "stakeholder": "Teo",
+    "kind": "Soft",
+    "category": "non-functional",
+    "text": "Reduce production lost while diagnosing, repairing, and restoring faulty equipment",
+    "evidence": [
+      "A@13:34:16.376",
+      "A@13:36:49.533",
+      "T0@01:04:46.785",
+      "T2@01:34:41.523"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 16,
+        "Timestamp": "2026-10-28T13:34:16.376Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Yes—chasing the supervisor and technician revealed the alarm was a tooling issue, not an electrical failure, so we sent the right spare and recovered the cell two hours sooner."
+      },
+      {
+        "file": "angela-initial.csv",
+        "record": 27,
+        "Timestamp": "2026-10-28T13:36:49.533Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, the pressure comes when production is waiting and people believe the paperwork is the only thing holding up the restart. Technicians are moving between problems, supervisors want a quick answer, and if ownership or required fields aren’t clear, someone assumes the next shift will fill them in. That’s when I have to be firm: safety holds stay in place, and the record has to be complete before release."
+      },
+      {
+        "file": "teo-initial.csv",
+        "record": 29,
+        "Timestamp": "2026-10-28T01:04:46.785Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Right, that’s accurate. Those details are what let me avoid repeating the same checks and get Press 7 running sooner."
+      },
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 27,
+        "Timestamp": "2026-10-28T01:34:41.523Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I’d know it was helping if the next shift stopped repeating the same checks, the presses spent less time waiting, and the work order had enough there to see what actually happened. If people still have to come find me to ask whether it was really fixed, then it isn’t doing much."
+      }
+    ]
+  },
+  "G-2": {
+    "id": "G-2",
+    "stakeholder": "Teo",
+    "kind": "Soft",
+    "category": "non-functional",
+    "text": "Minimize effort and interruption when recording work on a noisy floor with gloves",
+    "evidence": [
+      "T0@01:00:17.854",
+      "T1@01:17:43.870",
+      "T2@01:35:01.447"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-initial.csv",
+        "record": 9,
+        "Timestamp": "2026-10-28T01:00:17.854Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The hard part is doing it quickly with gloves on while the floor’s making a racket. I’d want the tablet to show the live temperature against the normal range, and let me attach a quick photo or voice note instead of typing everything."
+      },
+      {
+        "file": "teo-follow-up-1.csv",
+        "record": 27,
+        "Timestamp": "2026-10-28T01:17:43.870Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Yeah. If it makes me stop and peck at fields, it’ll sit there until the job’s done. I need to get the fault and what I changed down in a few seconds, then carry on."
+      },
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 29,
+        "Timestamp": "2026-10-28T01:35:01.447Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, the part where I can look at the machine, make a quick note, and keep working without stopping for paperwork. It needs to stay simple enough that the useful details don’t get buried."
+      }
+    ]
+  },
+  "G-3": {
+    "id": "G-3",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Mechanic obtains evidence to distinguish a heater fault from other faults",
+    "evidence": [
+      "T0@00:59:52.304",
+      "T2@01:30:04.038"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-initial.csv",
+        "record": 7,
+        "Timestamp": "2026-10-28T00:59:52.304Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I compare the temperature reading with the parts coming out and check whether the heater cycles properly. If the temperature keeps wandering while the controls look steady, that points to the heater band."
+      },
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 7,
+        "Timestamp": "2026-10-28T01:30:04.038Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I compared the temperature readings with how the parts were coming out. The bad parts showed me the heat wasn’t holding steady, even though the setpoint looked fine."
+      }
+    ]
+  },
+  "G-4": {
+    "id": "G-4",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Tablet displays live actual temperature, setpoint, and normal range for the selected press",
+    "evidence": [
+      "T0@01:00:17.854",
+      "T1@01:15:07.221"
+    ],
+    "agent": "Maintenance system",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-initial.csv",
+        "record": 9,
+        "Timestamp": "2026-10-28T01:00:17.854Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The hard part is doing it quickly with gloves on while the floor’s making a racket. I’d want the tablet to show the live temperature against the normal range, and let me attach a quick photo or voice note instead of typing everything."
+      },
+      {
+        "file": "teo-follow-up-1.csv",
+        "record": 9,
+        "Timestamp": "2026-10-28T01:15:07.221Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The floor’s loud, and with gloves on, typing slows everything down. I’d want the tablet to show the live reading and setpoint clearly, with a quick photo or short voice note so I can capture what I found without leaving the machine."
+      }
+    ]
+  },
+  "G-5": {
+    "id": "G-5",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Mechanic compares temperature, part quality, and heater cycling before diagnosing the fault",
+    "evidence": [
+      "T0@00:59:52.304",
+      "T1@01:14:44.345"
+    ],
+    "agent": "Mechanic",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-initial.csv",
+        "record": 7,
+        "Timestamp": "2026-10-28T00:59:52.304Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I compare the temperature reading with the parts coming out and check whether the heater cycles properly. If the temperature keeps wandering while the controls look steady, that points to the heater band."
+      },
+      {
+        "file": "teo-follow-up-1.csv",
+        "record": 7,
+        "Timestamp": "2026-10-28T01:14:44.345Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I watched the live temperature reading, then compared it with the setpoint and the quality of the parts coming out. When the reading kept bouncing away from the setpoint, that pointed me to the heater band."
+      }
+    ]
+  },
+  "G-6": {
+    "id": "G-6",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Shared handover links asset fault, downtime, alarms, diagnosis, corrective action, reason code, parts, and verification",
+    "evidence": [
+      "A@13:34:52.902",
+      "T2@01:31:36.166",
+      "T2@01:34:15.324"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 19,
+        "Timestamp": "2026-10-28T13:34:52.902Z",
+        "Speaker": "Stakeholder",
+        "Speech": "A successful handover means no ambiguity on machine status, ownership of open work orders, estimated restoration time, or production impact. I also expect the downtime event, alarm history, diagnosis, corrective action, and reason code to be traceable, with the next shift knowing exactly what to monitor and when to escalate."
+      },
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 13,
+        "Timestamp": "2026-10-28T01:31:36.166Z",
+        "Speaker": "Stakeholder",
+        "Speech": "They fill in the gaps on the CMMS handoff: what symptom showed first, which interlock or connection was suspect, and what verification run actually passed. The shift mechanic can check the fault history and avoid repeating the same checks, especially on Press 7 where the manual doesn’t cover every quirk."
+      },
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 25,
+        "Timestamp": "2026-10-28T01:34:15.324Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The handoff details first: fault code, actual readings, what was replaced, and whether the verification run passed. That’d stop me from repeating checks while the press is down."
+      }
+    ]
+  },
+  "G-7": {
+    "id": "G-7",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Repair record identifies the asset, fault symptoms, and last fault code",
+    "evidence": [
+      "T2@01:31:05.537",
+      "T2@01:32:31.268"
+    ],
+    "agent": "Mechanic",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 11,
+        "Timestamp": "2026-10-28T01:31:05.537Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I note the asset ID, fault symptoms, setpoint versus actual temperature, part number, and the corrective action—heater band replaced, connections checked, verification run completed. I also write down the machine-specific tricks that aren’t in the manual, but those notes are my working knowledge, not something I want turned into company property by default."
+      },
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 17,
+        "Timestamp": "2026-10-28T01:32:31.268Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I need the last fault code, the corrective action, and the verification status on the work order. For parts, give me the exact part number, stock quantity, and crib location, plus any approved substitute—otherwise I’m hunting through bins while the press is down."
+      }
+    ]
+  },
+  "G-8": {
+    "id": "G-8",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Repair record contains actual temperature and setpoint",
+    "evidence": [
+      "T0@01:04:05.776",
+      "T2@01:31:05.537"
+    ],
+    "agent": "Mechanic",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-initial.csv",
+        "record": 27,
+        "Timestamp": "2026-10-28T01:04:05.776Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The actual temperature and setpoint, what was tested, and whether the band was replaced."
+      },
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 11,
+        "Timestamp": "2026-10-28T01:31:05.537Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I note the asset ID, fault symptoms, setpoint versus actual temperature, part number, and the corrective action—heater band replaced, connections checked, verification run completed. I also write down the machine-specific tricks that aren’t in the manual, but those notes are my working knowledge, not something I want turned into company property by default."
+      }
+    ]
+  },
+  "G-9": {
+    "id": "G-9",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Repair record states tests, corrective action, installed part number, and verification result",
+    "evidence": [
+      "T0@01:04:05.776",
+      "T2@01:31:05.537",
+      "T2@01:32:31.268"
+    ],
+    "agent": "Mechanic",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-initial.csv",
+        "record": 27,
+        "Timestamp": "2026-10-28T01:04:05.776Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The actual temperature and setpoint, what was tested, and whether the band was replaced."
+      },
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 11,
+        "Timestamp": "2026-10-28T01:31:05.537Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I note the asset ID, fault symptoms, setpoint versus actual temperature, part number, and the corrective action—heater band replaced, connections checked, verification run completed. I also write down the machine-specific tricks that aren’t in the manual, but those notes are my working knowledge, not something I want turned into company property by default."
+      },
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 17,
+        "Timestamp": "2026-10-28T01:32:31.268Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I need the last fault code, the corrective action, and the verification status on the work order. For parts, give me the exact part number, stock quantity, and crib location, plus any approved substitute—otherwise I’m hunting through bins while the press is down."
+      }
+    ]
+  },
+  "G-10": {
+    "id": "G-10",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Fault and change are captured before the mechanic moves on",
+    "evidence": [
+      "T1@01:15:57.589",
+      "T1@01:17:43.870"
+    ],
+    "agent": "Mechanic",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-follow-up-1.csv",
+        "record": 15,
+        "Timestamp": "2026-10-28T01:15:57.589Z",
+        "Speaker": "Stakeholder",
+        "Speech": "No, that’s the main thing—capture what I found and what I changed before I move on."
+      },
+      {
+        "file": "teo-follow-up-1.csv",
+        "record": 27,
+        "Timestamp": "2026-10-28T01:17:43.870Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Yeah. If it makes me stop and peck at fields, it’ll sit there until the job’s done. I need to get the fault and what I changed down in a few seconds, then carry on."
+      }
+    ]
+  },
+  "G-11": {
+    "id": "G-11",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Mechanic attaches quick evidence without typing the entire account",
+    "evidence": [
+      "T0@01:00:17.854",
+      "T1@01:15:07.221"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-initial.csv",
+        "record": 9,
+        "Timestamp": "2026-10-28T01:00:17.854Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The hard part is doing it quickly with gloves on while the floor’s making a racket. I’d want the tablet to show the live temperature against the normal range, and let me attach a quick photo or voice note instead of typing everything."
+      },
+      {
+        "file": "teo-follow-up-1.csv",
+        "record": 9,
+        "Timestamp": "2026-10-28T01:15:07.221Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The floor’s loud, and with gloves on, typing slows everything down. I’d want the tablet to show the live reading and setpoint clearly, with a quick photo or short voice note so I can capture what I found without leaving the machine."
+      }
+    ]
+  },
+  "G-12": {
+    "id": "G-12",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Mechanic attaches a photo of the finding",
+    "evidence": [
+      "T0@01:00:17.854"
+    ],
+    "agent": "Mechanic",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-initial.csv",
+        "record": 9,
+        "Timestamp": "2026-10-28T01:00:17.854Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The hard part is doing it quickly with gloves on while the floor’s making a racket. I’d want the tablet to show the live temperature against the normal range, and let me attach a quick photo or voice note instead of typing everything."
+      }
+    ]
+  },
+  "G-13": {
+    "id": "G-13",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Mechanic attaches a short voice note of the finding",
+    "evidence": [
+      "T0@01:00:17.854"
+    ],
+    "agent": "Mechanic",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-initial.csv",
+        "record": 9,
+        "Timestamp": "2026-10-28T01:00:17.854Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The hard part is doing it quickly with gloves on while the floor’s making a racket. I’d want the tablet to show the live temperature against the normal range, and let me attach a quick photo or voice note instead of typing everything."
+      }
+    ]
+  },
+  "G-14": {
+    "id": "G-14",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Mechanic retrieves earlier troubleshooting to avoid repeating checks",
+    "evidence": [
+      "T0@01:02:46.799",
+      "T2@01:31:36.166"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-initial.csv",
+        "record": 21,
+        "Timestamp": "2026-10-28T01:02:46.799Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I checked the shift handoff and the CMMS history to see what Day Shift had already swapped or tested. Then I went to the parts crib, checked the heater-band bin against Press 7’s part number, and pulled one before going back to the press."
+      },
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 13,
+        "Timestamp": "2026-10-28T01:31:36.166Z",
+        "Speaker": "Stakeholder",
+        "Speech": "They fill in the gaps on the CMMS handoff: what symptom showed first, which interlock or connection was suspect, and what verification run actually passed. The shift mechanic can check the fault history and avoid repeating the same checks, especially on Press 7 where the manual doesn’t cover every quirk."
+      }
+    ]
+  },
+  "G-15": {
+    "id": "G-15",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Mechanic reads the shift handoff and open fault history",
+    "evidence": [
+      "T0@01:02:46.799",
+      "T2@01:31:36.166"
+    ],
+    "agent": "Mechanic",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-initial.csv",
+        "record": 21,
+        "Timestamp": "2026-10-28T01:02:46.799Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I checked the shift handoff and the CMMS history to see what Day Shift had already swapped or tested. Then I went to the parts crib, checked the heater-band bin against Press 7’s part number, and pulled one before going back to the press."
+      },
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 13,
+        "Timestamp": "2026-10-28T01:31:36.166Z",
+        "Speaker": "Stakeholder",
+        "Speech": "They fill in the gaps on the CMMS handoff: what symptom showed first, which interlock or connection was suspect, and what verification run actually passed. The shift mechanic can check the fault history and avoid repeating the same checks, especially on Press 7 where the manual doesn’t cover every quirk."
+      }
+    ]
+  },
+  "G-16": {
+    "id": "G-16",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Mechanic retrieves closed work orders and recorded part numbers from CMMS",
+    "evidence": [
+      "T0@01:03:15.310"
+    ],
+    "agent": "Mechanic",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-initial.csv",
+        "record": 23,
+        "Timestamp": "2026-10-28T01:03:15.310Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The CMMS history was useful for closed work orders and parts numbers, but the troubleshooting notes were hit or miss. Day shift might write “checked heater” without saying what they measured or whether they actually swapped the band, so I still had to chase the details in the handoff."
+      }
+    ]
+  },
+  "G-17": {
+    "id": "G-17",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Mechanic locates a suitable replacement part without hunting through bins",
+    "evidence": [
+      "T2@01:32:31.268"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 17,
+        "Timestamp": "2026-10-28T01:32:31.268Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I need the last fault code, the corrective action, and the verification status on the work order. For parts, give me the exact part number, stock quantity, and crib location, plus any approved substitute—otherwise I’m hunting through bins while the press is down."
+      }
+    ]
+  },
+  "G-18": {
+    "id": "G-18",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Parts view provides exact part number, stock quantity, crib location, and approved substitutes",
+    "evidence": [
+      "T2@01:32:31.268"
+    ],
+    "agent": "Maintenance system",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 17,
+        "Timestamp": "2026-10-28T01:32:31.268Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I need the last fault code, the corrective action, and the verification status on the work order. For parts, give me the exact part number, stock quantity, and crib location, plus any approved substitute—otherwise I’m hunting through bins while the press is down."
+      }
+    ]
+  },
+  "G-19": {
+    "id": "G-19",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Press repair includes isolation confirmation, corrective work, and a verification run",
+    "evidence": [
+      "T2@01:30:30.890"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 9,
+        "Timestamp": "2026-10-28T01:30:30.890Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I stopped Press 7 and got the lockout/tagout confirmed before opening anything. Then I checked the band and its connections, replaced the weak one, and ran parts until the temperature held steady; the tablet should let me mark that safety check and record the readings right there."
+      }
+    ]
+  },
+  "G-20": {
+    "id": "G-20",
+    "stakeholder": "Teo",
+    "kind": "Maintain",
+    "category": "non-functional",
+    "text": "Press is stopped and lockout/tagout is confirmed before the mechanic opens equipment",
+    "evidence": [
+      "T2@01:30:30.890"
+    ],
+    "agent": "Mechanic",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 9,
+        "Timestamp": "2026-10-28T01:30:30.890Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I stopped Press 7 and got the lockout/tagout confirmed before opening anything. Then I checked the band and its connections, replaced the weak one, and ran parts until the temperature held steady; the tablet should let me mark that safety check and record the readings right there."
+      }
+    ]
+  },
+  "G-21": {
+    "id": "G-21",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Tablet records the confirmed safety check at the machine",
+    "evidence": [
+      "T2@01:30:30.890"
+    ],
+    "agent": "Mechanic",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 9,
+        "Timestamp": "2026-10-28T01:30:30.890Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I stopped Press 7 and got the lockout/tagout confirmed before opening anything. Then I checked the band and its connections, replaced the weak one, and ran parts until the temperature held steady; the tablet should let me mark that safety check and record the readings right there."
+      }
+    ]
+  },
+  "G-22": {
+    "id": "G-22",
+    "stakeholder": "Teo",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Mechanic checks connections, replaces the weak band, and verifies stable temperature and good parts",
+    "evidence": [
+      "T2@01:30:30.890",
+      "T2@01:33:22.867"
+    ],
+    "agent": "Mechanic",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 9,
+        "Timestamp": "2026-10-28T01:30:30.890Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I stopped Press 7 and got the lockout/tagout confirmed before opening anything. Then I checked the band and its connections, replaced the weak one, and ran parts until the temperature held steady; the tablet should let me mark that safety check and record the readings right there."
+      },
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 21,
+        "Timestamp": "2026-10-28T01:33:22.867Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I checked the band and its connections again, then ran a verification cycle while watching the actual temperature and the parts. Once it held steady, I wrote the readings and what I’d replaced in my notebook and left the missing part details for the handoff."
+      }
+    ]
+  },
+  "G-23": {
+    "id": "G-23",
+    "stakeholder": "Teo",
+    "kind": "Avoid",
+    "category": "non-functional",
+    "text": "Machine-specific personal working knowledge becomes company property by default",
+    "evidence": [
+      "T2@01:31:05.537"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 11,
+        "Timestamp": "2026-10-28T01:31:05.537Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I note the asset ID, fault symptoms, setpoint versus actual temperature, part number, and the corrective action—heater band replaced, connections checked, verification run completed. I also write down the machine-specific tricks that aren’t in the manual, but those notes are my working knowledge, not something I want turned into company property by default."
+      }
+    ]
+  },
+  "G-24": {
+    "id": "G-24",
+    "stakeholder": "Teo",
+    "kind": "Maintain",
+    "category": "non-functional",
+    "text": "Personal notes remain private unless the mechanic explicitly selects content to share",
+    "evidence": [
+      "T2@01:31:05.537"
+    ],
+    "agent": "Maintenance system",
+    "inferred": true,
+    "source_passages": [
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 11,
+        "Timestamp": "2026-10-28T01:31:05.537Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I note the asset ID, fault symptoms, setpoint versus actual temperature, part number, and the corrective action—heater band replaced, connections checked, verification run completed. I also write down the machine-specific tricks that aren’t in the manual, but those notes are my working knowledge, not something I want turned into company property by default."
+      }
+    ]
+  },
+  "G-25": {
+    "id": "G-25",
+    "stakeholder": "Angela",
+    "kind": "Soft",
+    "category": "non-functional",
+    "text": "Improve maintenance and production decisions using accurate facts across shifts",
+    "evidence": [
+      "A@13:33:54.358",
+      "A@13:37:46.015"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 14,
+        "Timestamp": "2026-10-28T13:33:54.358Z",
+        "Speaker": "Stakeholder",
+        "Speech": "It makes the next few hours guesswork: I may hold a technician on the wrong problem, schedule the wrong spare, or prioritize a machine for the wrong reason. I’d want the shift view to flag missing reason codes immediately and show downtime, alarm data, current status, and production impact together so I can make a decision without chasing three people."
+      },
+      {
+        "file": "angela-initial.csv",
+        "record": 31,
+        "Timestamp": "2026-10-28T13:37:46.015Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The main point is that maintenance data has to be accurate enough to drive decisions, not just satisfy an audit. I need to see downtime in minutes, the root cause, ownership, and production impact across all three shifts; otherwise I’m managing by anecdotes instead of facts."
+      }
+    ]
+  },
+  "G-26": {
+    "id": "G-26",
+    "stakeholder": "Angela",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Incoming supervisor receives an unambiguous machine and open-work handover",
+    "evidence": [
+      "A@13:34:52.902"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 19,
+        "Timestamp": "2026-10-28T13:34:52.902Z",
+        "Speaker": "Stakeholder",
+        "Speech": "A successful handover means no ambiguity on machine status, ownership of open work orders, estimated restoration time, or production impact. I also expect the downtime event, alarm history, diagnosis, corrective action, and reason code to be traceable, with the next shift knowing exactly what to monitor and when to escalate."
+      }
+    ]
+  },
+  "G-27": {
+    "id": "G-27",
+    "stakeholder": "Angela",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Shift view shows machine status, work ownership, restoration estimate, and production impact",
+    "evidence": [
+      "A@13:33:54.358",
+      "A@13:34:52.902"
+    ],
+    "agent": "Maintenance system",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 14,
+        "Timestamp": "2026-10-28T13:33:54.358Z",
+        "Speaker": "Stakeholder",
+        "Speech": "It makes the next few hours guesswork: I may hold a technician on the wrong problem, schedule the wrong spare, or prioritize a machine for the wrong reason. I’d want the shift view to flag missing reason codes immediately and show downtime, alarm data, current status, and production impact together so I can make a decision without chasing three people."
+      },
+      {
+        "file": "angela-initial.csv",
+        "record": 19,
+        "Timestamp": "2026-10-28T13:34:52.902Z",
+        "Speaker": "Stakeholder",
+        "Speech": "A successful handover means no ambiguity on machine status, ownership of open work orders, estimated restoration time, or production impact. I also expect the downtime event, alarm history, diagnosis, corrective action, and reason code to be traceable, with the next shift knowing exactly what to monitor and when to escalate."
+      }
+    ]
+  },
+  "G-29": {
+    "id": "G-29",
+    "stakeholder": "Angela",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Outgoing and incoming supervisors agree what to monitor and when to escalate",
+    "evidence": [
+      "A@13:34:52.902"
+    ],
+    "agent": "Shift supervisor",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 19,
+        "Timestamp": "2026-10-28T13:34:52.902Z",
+        "Speaker": "Stakeholder",
+        "Speech": "A successful handover means no ambiguity on machine status, ownership of open work orders, estimated restoration time, or production impact. I also expect the downtime event, alarm history, diagnosis, corrective action, and reason code to be traceable, with the next shift knowing exactly what to monitor and when to escalate."
+      }
+    ]
+  },
+  "G-30": {
+    "id": "G-30",
+    "stakeholder": "Angela",
+    "kind": "Maintain",
+    "category": "non-functional",
+    "text": "Completed maintenance records contain a reason and accurate downtime minutes",
+    "evidence": [
+      "A@13:32:47.328",
+      "A@13:33:20.301"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 10,
+        "Timestamp": "2026-10-28T13:32:47.328Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, the last one was Press 14, a bottleneck with no practical backup. The outgoing supervisor showed me the stop time, the sensor alarm, the technician’s diagnosis, the parts already produced, and the expected repair time; I checked the open work order, confirmed production had been rerouted, and spoke with the incoming supervisor before accepting the handover. I also made sure the downtime was recorded in minutes against a reason code, because technicians often leave that blank and then we can’t tell whether we had an electrical failure, tooling problem, or operator issue."
+      },
+      {
+        "file": "angela-initial.csv",
+        "record": 12,
+        "Timestamp": "2026-10-28T13:33:20.301Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I stopped the handover long enough to get the technician to enter the reason before the repair was closed, then checked that the downtime minutes matched the machine stop and first good part. The system should make the reason code mandatory when a work order is completed and show missing fields to the supervisor, rather than letting incomplete records disappear into the next shift."
+      }
+    ]
+  },
+  "G-31": {
+    "id": "G-31",
+    "stakeholder": "Angela",
+    "kind": "Maintain",
+    "category": "functional",
+    "text": "Work-order completion requires a reason code",
+    "evidence": [
+      "A@13:33:20.301"
+    ],
+    "agent": "Maintenance system",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 12,
+        "Timestamp": "2026-10-28T13:33:20.301Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I stopped the handover long enough to get the technician to enter the reason before the repair was closed, then checked that the downtime minutes matched the machine stop and first good part. The system should make the reason code mandatory when a work order is completed and show missing fields to the supervisor, rather than letting incomplete records disappear into the next shift."
+      }
+    ]
+  },
+  "G-32": {
+    "id": "G-32",
+    "stakeholder": "Angela",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Supervisor sees missing reason codes and other required fields immediately",
+    "evidence": [
+      "A@13:33:20.301",
+      "A@13:33:54.358"
+    ],
+    "agent": "Maintenance system",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 12,
+        "Timestamp": "2026-10-28T13:33:20.301Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I stopped the handover long enough to get the technician to enter the reason before the repair was closed, then checked that the downtime minutes matched the machine stop and first good part. The system should make the reason code mandatory when a work order is completed and show missing fields to the supervisor, rather than letting incomplete records disappear into the next shift."
+      },
+      {
+        "file": "angela-initial.csv",
+        "record": 14,
+        "Timestamp": "2026-10-28T13:33:54.358Z",
+        "Speaker": "Stakeholder",
+        "Speech": "It makes the next few hours guesswork: I may hold a technician on the wrong problem, schedule the wrong spare, or prioritize a machine for the wrong reason. I’d want the shift view to flag missing reason codes immediately and show downtime, alarm data, current status, and production impact together so I can make a decision without chasing three people."
+      }
+    ]
+  },
+  "G-33": {
+    "id": "G-33",
+    "stakeholder": "Angela",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Supervisor verifies downtime minutes against machine stop and first good part times",
+    "evidence": [
+      "A@13:33:20.301"
+    ],
+    "agent": "Shift supervisor",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 12,
+        "Timestamp": "2026-10-28T13:33:20.301Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I stopped the handover long enough to get the technician to enter the reason before the repair was closed, then checked that the downtime minutes matched the machine stop and first good part. The system should make the reason code mandatory when a work order is completed and show missing fields to the supervisor, rather than letting incomplete records disappear into the next shift."
+      }
+    ]
+  },
+  "G-34": {
+    "id": "G-34",
+    "stakeholder": "Angela",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Supervisor identifies critical machines from bottleneck, backup, cell, downtime, and quality impact",
+    "evidence": [
+      "A@13:31:57.701"
+    ],
+    "agent": "Shift supervisor",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 8,
+        "Timestamp": "2026-10-28T13:31:57.701Z",
+        "Speaker": "Stakeholder",
+        "Speech": "A machine is critical when it’s a bottleneck, has no practical backup, or its failure stops an entire production cell. I also treat machines with a history of long downtime or high-impact quality issues as critical, even if production can technically route around them."
+      }
+    ]
+  },
+  "G-35": {
+    "id": "G-35",
+    "stakeholder": "Angela",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Unresolved maintenance issues receive an escalation when required",
+    "evidence": [
+      "A@13:35:19.832"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 21,
+        "Timestamp": "2026-10-28T13:35:19.832Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Escalation means moving an unresolved issue to the maintenance lead, production supervisor, or me when it exceeds the target restoration time, affects a critical machine, or creates a safety or quality risk. The record should show who owns it, the escalation time, the reason, and the next action."
+      }
+    ]
+  },
+  "G-36": {
+    "id": "G-36",
+    "stakeholder": "Angela",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Issue is escalated if [restoration target exceeded, critical equipment affected, or safety or quality at risk]",
+    "evidence": [
+      "A@13:35:19.832"
+    ],
+    "agent": "Shift supervisor",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 21,
+        "Timestamp": "2026-10-28T13:35:19.832Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Escalation means moving an unresolved issue to the maintenance lead, production supervisor, or me when it exceeds the target restoration time, affects a critical machine, or creates a safety or quality risk. The record should show who owns it, the escalation time, the reason, and the next action."
+      }
+    ]
+  },
+  "G-37": {
+    "id": "G-37",
+    "stakeholder": "Angela",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Escalation record identifies owner, time, reason, and next action",
+    "evidence": [
+      "A@13:35:19.832"
+    ],
+    "agent": "Shift supervisor",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 21,
+        "Timestamp": "2026-10-28T13:35:19.832Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Escalation means moving an unresolved issue to the maintenance lead, production supervisor, or me when it exceeds the target restoration time, affects a critical machine, or creates a safety or quality risk. The record should show who owns it, the escalation time, the reason, and the next action."
+      }
+    ]
+  },
+  "G-38": {
+    "id": "G-38",
+    "stakeholder": "Angela",
+    "kind": "Maintain",
+    "category": "non-functional",
+    "text": "Hazard controls and complete safety records are verified and release is authorized before equipment returns to service",
+    "evidence": [
+      "A@13:35:53.834",
+      "A@13:36:11.712",
+      "R@17:31:15.628",
+      "R@17:33:39.894"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 23,
+        "Timestamp": "2026-10-28T13:35:53.834Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Safety and compliance require a documented lockout/tagout status, hazard assessment, and clear release authority before a machine returns to service. For safety-part equipment, the repair record must be fully traceable—failure mode, technician, parts, corrective action, inspection, and the person who approved the restart—because customers audit those records."
+      },
+      {
+        "file": "angela-initial.csv",
+        "record": 25,
+        "Timestamp": "2026-10-28T13:36:11.712Z",
+        "Speaker": "Stakeholder",
+        "Speech": "We don’t restart it; incomplete documentation means the hold stays in place, regardless of production pressure."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 13,
+        "Timestamp": "2026-10-28T17:31:15.628Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The maintenance technician enters the work order and corrective-action details, while the shift supervisor validates the hazard controls before closeout. Safety-critical records, including isolation status and return-to-service authorization, must be updated before equipment release, not at the end of the shift."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 21,
+        "Timestamp": "2026-10-28T17:33:39.894Z",
+        "Speaker": "Stakeholder",
+        "Speech": "A required digital handoff with the critical fields completed and acknowledged by the incoming supervisor would help most. No equipment gets released while isolation status, alarms, permits, and unresolved hazards are blank."
+      }
+    ]
+  },
+  "G-39": {
+    "id": "G-39",
+    "stakeholder": "Angela",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Repair record contains lockout/tagout status, hazard assessment, and release authority",
+    "evidence": [
+      "A@13:35:53.834"
+    ],
+    "agent": "Mechanic",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 23,
+        "Timestamp": "2026-10-28T13:35:53.834Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Safety and compliance require a documented lockout/tagout status, hazard assessment, and clear release authority before a machine returns to service. For safety-part equipment, the repair record must be fully traceable—failure mode, technician, parts, corrective action, inspection, and the person who approved the restart—because customers audit those records."
+      }
+    ]
+  },
+  "G-40": {
+    "id": "G-40",
+    "stakeholder": "Angela",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Safety-part repair is traceable to failure mode, technician, parts, action, inspection, and restart approver",
+    "evidence": [
+      "A@13:35:53.834"
+    ],
+    "agent": "Maintenance system",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 23,
+        "Timestamp": "2026-10-28T13:35:53.834Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Safety and compliance require a documented lockout/tagout status, hazard assessment, and clear release authority before a machine returns to service. For safety-part equipment, the repair record must be fully traceable—failure mode, technician, parts, corrective action, inspection, and the person who approved the restart—because customers audit those records."
+      }
+    ]
+  },
+  "G-41": {
+    "id": "G-41",
+    "stakeholder": "Angela",
+    "kind": "Maintain",
+    "category": "non-functional",
+    "text": "Equipment stays on hold if [release documentation or isolation, alarm, permit, or hazard fields are incomplete, or hazards remain unresolved]",
+    "evidence": [
+      "A@13:36:11.712",
+      "A@13:36:49.533",
+      "R@17:33:39.894",
+      "R@17:50:15.782"
+    ],
+    "agent": "Shift supervisor",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 25,
+        "Timestamp": "2026-10-28T13:36:11.712Z",
+        "Speaker": "Stakeholder",
+        "Speech": "We don’t restart it; incomplete documentation means the hold stays in place, regardless of production pressure."
+      },
+      {
+        "file": "angela-initial.csv",
+        "record": 27,
+        "Timestamp": "2026-10-28T13:36:49.533Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, the pressure comes when production is waiting and people believe the paperwork is the only thing holding up the restart. Technicians are moving between problems, supervisors want a quick answer, and if ownership or required fields aren’t clear, someone assumes the next shift will fill them in. That’s when I have to be firm: safety holds stay in place, and the record has to be complete before release."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 21,
+        "Timestamp": "2026-10-28T17:33:39.894Z",
+        "Speaker": "Stakeholder",
+        "Speech": "A required digital handoff with the critical fields completed and acknowledged by the incoming supervisor would help most. No equipment gets released while isolation status, alarms, permits, and unresolved hazards are blank."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 47,
+        "Timestamp": "2026-10-28T17:50:15.782Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Good. Keep the safety-critical controls prominent, especially anything that prevents equipment being released with incomplete isolation or unresolved hazards. If the requirements are clear enough that a supervisor can verify them during a rushed handoff, you’ll have captured what matters."
+      }
+    ]
+  },
+  "G-42": {
+    "id": "G-42",
+    "stakeholder": "Angela",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Supervisor assigns an owner to each missing release item and sees the hold clearly",
+    "evidence": [
+      "A@13:37:14.563"
+    ],
+    "agent": "Shift supervisor",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 29,
+        "Timestamp": "2026-10-28T13:37:14.563Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Clear ownership helps: the supervisor confirms who is responsible for each missing item, and the system shows the hold visibly instead of burying it in a work order. I also back the person who stops the restart; nobody should be penalized for following the procedure."
+      }
+    ]
+  },
+  "G-44": {
+    "id": "G-44",
+    "stakeholder": "Angela",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Equipment and shift view ties downtime, root cause, ownership, and impact across all three shifts",
+    "evidence": [
+      "A@13:37:46.015",
+      "A@13:38:09.416"
+    ],
+    "agent": "Maintenance system",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 31,
+        "Timestamp": "2026-10-28T13:37:46.015Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The main point is that maintenance data has to be accurate enough to drive decisions, not just satisfy an audit. I need to see downtime in minutes, the root cause, ownership, and production impact across all three shifts; otherwise I’m managing by anecdotes instead of facts."
+      },
+      {
+        "file": "angela-initial.csv",
+        "record": 33,
+        "Timestamp": "2026-10-28T13:38:09.416Z",
+        "Speaker": "Stakeholder",
+        "Speech": "You’re welcome. I’m glad it was useful—good luck with the requirements work, and make sure the system keeps the facts tied to the equipment and the shift."
+      }
+    ]
+  },
+  "G-45": {
+    "id": "G-45",
+    "stakeholder": "Angela",
+    "kind": "Avoid",
+    "category": "non-functional",
+    "text": "Personnel are penalized for stopping an unsafe restart in accordance with procedure",
+    "evidence": [
+      "A@13:37:14.563"
+    ],
+    "agent": "Plant management",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 29,
+        "Timestamp": "2026-10-28T13:37:14.563Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Clear ownership helps: the supervisor confirms who is responsible for each missing item, and the system shows the hold visibly instead of burying it in a work order. I also back the person who stops the restart; nobody should be penalized for following the procedure."
+      }
+    ]
+  },
+  "G-46": {
+    "id": "G-46",
+    "stakeholder": "Rob",
+    "kind": "Soft",
+    "category": "non-functional",
+    "text": "Minimize maintenance injuries and demonstrate safe work during inspections",
+    "evidence": [
+      "R@17:29:34.313",
+      "R@17:47:27.669"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 7,
+        "Timestamp": "2026-10-28T17:29:34.313Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I oversee workplace safety during maintenance, make sure procedures are followed, and keep our records ready for inspections. My main concern is that everyone goes home unhurt."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 37,
+        "Timestamp": "2026-10-28T17:47:27.669Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Let’s cover inspections and record retrieval next. When an inspector asks about a machine, I need to find the complete maintenance, isolation, alarm, and corrective-action history without chasing people across shifts. If the record is incomplete, we can’t prove the work was safe."
+      }
+    ]
+  },
+  "G-48": {
+    "id": "G-48",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Safety coordinator assesses hazard, active alarms, isolation, and applicable work permits",
+    "evidence": [
+      "R@17:30:09.217",
+      "R@17:32:26.552"
+    ],
+    "agent": "Safety coordinator",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 9,
+        "Timestamp": "2026-10-28T17:30:09.217Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I use maintenance data for hazard assessments, lockout/tagout verification, confined-space or hot-work decisions, and determining whether equipment can be returned to service. I also look at recurring failure modes and sensor alarms to decide whether we need an immediate shutdown, corrective action, or a formal safety inspection."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 17,
+        "Timestamp": "2026-10-28T17:32:26.552Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, I stopped the job and documented the hazard instead of letting the production schedule decide for us. The supervisor backed that decision, and we reviewed the work permit and equipment history before anything moved. I also made sure the sensor alarm was preserved in the record, because recurring alarms can point to a bigger problem. Production lost time, but nobody got hurt—that’s the standard."
+      }
+    ]
+  },
+  "G-49": {
+    "id": "G-49",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Isolation record states equipment, isolation points, each lock applier, date/time, and release authorizer and performer",
+    "evidence": [
+      "R@17:44:38.682"
+    ],
+    "agent": "Mechanic",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 27,
+        "Timestamp": "2026-10-28T17:44:38.682Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The record has to identify the equipment, the specific isolation points, the person who applied each lock, the date and time, and the person who authorized and performed release; changes also need an audit trail so nobody can quietly rewrite history. I want the technician and supervisor acknowledgments tied to the work order, along with any permit, photos, alarm information, and return-to-service decision. A near miss still needs reporting within 24 hours, tablets must not distract operators, and a chemical spill gets its own environmental report."
+      }
+    ]
+  },
+  "G-50": {
+    "id": "G-50",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Return-to-service authorization and technician/supervisor acknowledgments are recorded before release",
+    "evidence": [
+      "R@17:31:15.628",
+      "R@17:44:38.682"
+    ],
+    "agent": "Shift supervisor",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 13,
+        "Timestamp": "2026-10-28T17:31:15.628Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The maintenance technician enters the work order and corrective-action details, while the shift supervisor validates the hazard controls before closeout. Safety-critical records, including isolation status and return-to-service authorization, must be updated before equipment release, not at the end of the shift."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 27,
+        "Timestamp": "2026-10-28T17:44:38.682Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The record has to identify the equipment, the specific isolation points, the person who applied each lock, the date and time, and the person who authorized and performed release; changes also need an audit trail so nobody can quietly rewrite history. I want the technician and supervisor acknowledgments tied to the work order, along with any permit, photos, alarm information, and return-to-service decision. A near miss still needs reporting within 24 hours, tablets must not distract operators, and a chemical spill gets its own environmental report."
+      }
+    ]
+  },
+  "G-51": {
+    "id": "G-51",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Supervisor validates hazard controls before closeout",
+    "evidence": [
+      "R@17:31:15.628"
+    ],
+    "agent": "Shift supervisor",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 13,
+        "Timestamp": "2026-10-28T17:31:15.628Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The maintenance technician enters the work order and corrective-action details, while the shift supervisor validates the hazard controls before closeout. Safety-critical records, including isolation status and return-to-service authorization, must be updated before equipment release, not at the end of the shift."
+      }
+    ]
+  },
+  "G-53": {
+    "id": "G-53",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Incoming supervisor acknowledges a digital handoff with all critical fields completed",
+    "evidence": [
+      "R@17:33:39.894"
+    ],
+    "agent": "Shift supervisor",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 21,
+        "Timestamp": "2026-10-28T17:33:39.894Z",
+        "Speaker": "Stakeholder",
+        "Speech": "A required digital handoff with the critical fields completed and acknowledged by the incoming supervisor would help most. No equipment gets released while isolation status, alarms, permits, and unresolved hazards are blank."
+      }
+    ]
+  },
+  "G-54": {
+    "id": "G-54",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Work order retains permits, photos, alarm information, replaced parts, and release decision",
+    "evidence": [
+      "R@17:33:12.862",
+      "R@17:44:38.682"
+    ],
+    "agent": "Maintenance system",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 19,
+        "Timestamp": "2026-10-28T17:33:12.862Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Usually it’s the exact failure description, what was already tried, the current isolation status, and whether the sensor alarm is still active. We also need the technician’s name, the time the equipment was locked out, and confirmation of who released it—those records matter during an inspection. Sometimes the permit, photos, or parts replaced don’t make it across the shift handoff. We’ve also had to stop work when a near miss was mentioned casually but never entered into the record."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 27,
+        "Timestamp": "2026-10-28T17:44:38.682Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The record has to identify the equipment, the specific isolation points, the person who applied each lock, the date and time, and the person who authorized and performed release; changes also need an audit trail so nobody can quietly rewrite history. I want the technician and supervisor acknowledgments tied to the work order, along with any permit, photos, alarm information, and return-to-service decision. A near miss still needs reporting within 24 hours, tablets must not distract operators, and a chemical spill gets its own environmental report."
+      }
+    ]
+  },
+  "G-55": {
+    "id": "G-55",
+    "stakeholder": "Rob",
+    "kind": "Maintain",
+    "category": "non-functional",
+    "text": "Record corrections preserve who changed what and when",
+    "evidence": [
+      "R@17:44:38.682",
+      "R@17:49:15.529"
+    ],
+    "agent": "Maintenance system",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 27,
+        "Timestamp": "2026-10-28T17:44:38.682Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The record has to identify the equipment, the specific isolation points, the person who applied each lock, the date and time, and the person who authorized and performed release; changes also need an audit trail so nobody can quietly rewrite history. I want the technician and supervisor acknowledgments tied to the work order, along with any permit, photos, alarm information, and return-to-service decision. A near miss still needs reporting within 24 hours, tablets must not distract operators, and a chemical spill gets its own environmental report."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 43,
+        "Timestamp": "2026-10-28T17:49:15.529Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, records need to remain readable and retrievable for the full inspection period, not disappear when equipment is retired or someone changes jobs. I also need a clear history of corrections—who changed what and when—plus an export an inspector can review without needing access to our entire operating system."
+      }
+    ]
+  },
+  "G-56": {
+    "id": "G-56",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Inspector can retrieve complete equipment maintenance and safety history without chasing people",
+    "evidence": [
+      "R@17:47:27.669"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 37,
+        "Timestamp": "2026-10-28T17:47:27.669Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Let’s cover inspections and record retrieval next. When an inspector asks about a machine, I need to find the complete maintenance, isolation, alarm, and corrective-action history without chasing people across shifts. If the record is incomplete, we can’t prove the work was safe."
+      }
+    ]
+  },
+  "G-57": {
+    "id": "G-57",
+    "stakeholder": "Rob",
+    "kind": "Maintain",
+    "category": "functional",
+    "text": "Maintenance, permit, handoff, and sensor records include a consistent equipment identifier and time window",
+    "evidence": [
+      "R@17:48:39.537"
+    ],
+    "agent": "Maintenance system",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 41,
+        "Timestamp": "2026-10-28T17:48:39.537Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, I’d make the equipment identifier and time window mandatory on every maintenance record, permit, handoff, and sensor event. Then the full history should be tied together under that equipment record, so an inspector can retrieve the work, isolation, alarms, and corrective actions without relying on someone’s memory."
+      }
+    ]
+  },
+  "G-58": {
+    "id": "G-58",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Equipment record joins maintenance, isolation, alarms, permits, and corrective-action history",
+    "evidence": [
+      "R@17:48:39.537"
+    ],
+    "agent": "Maintenance system",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 41,
+        "Timestamp": "2026-10-28T17:48:39.537Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, I’d make the equipment identifier and time window mandatory on every maintenance record, permit, handoff, and sensor event. Then the full history should be tied together under that equipment record, so an inspector can retrieve the work, isolation, alarms, and corrective actions without relying on someone’s memory."
+      }
+    ]
+  },
+  "G-59": {
+    "id": "G-59",
+    "stakeholder": "Rob",
+    "kind": "Maintain",
+    "category": "non-functional",
+    "text": "Records remain readable and retrievable for the inspection period despite retirement or staff changes",
+    "evidence": [
+      "R@17:49:15.529"
+    ],
+    "agent": "Maintenance system",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 43,
+        "Timestamp": "2026-10-28T17:49:15.529Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, records need to remain readable and retrievable for the full inspection period, not disappear when equipment is retired or someone changes jobs. I also need a clear history of corrections—who changed what and when—plus an export an inspector can review without needing access to our entire operating system."
+      }
+    ]
+  },
+  "G-60": {
+    "id": "G-60",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Safety coordinator exports inspectable records without granting access to the entire operating system",
+    "evidence": [
+      "R@17:49:15.529"
+    ],
+    "agent": "Safety coordinator",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 43,
+        "Timestamp": "2026-10-28T17:49:15.529Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, records need to remain readable and retrievable for the full inspection period, not disappear when equipment is retired or someone changes jobs. I also need a clear history of corrections—who changed what and when—plus an export an inspector can review without needing access to our entire operating system."
+      }
+    ]
+  },
+  "G-61": {
+    "id": "G-61",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Near misses are recorded, acknowledged, reviewed, and followed through",
+    "evidence": [
+      "R@17:45:20.933",
+      "R@17:46:57.049"
+    ],
+    "agent": null,
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 29,
+        "Timestamp": "2026-10-28T17:45:20.933Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, the handoff shouldn’t be the final place a near miss lives. Whoever hears it needs to open a report with the basic facts—what happened, where, when, and who was involved—and the supervisor needs to acknowledge it before the 24-hour deadline. A verbal mention without a recorded follow-up is how warnings disappear."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 35,
+        "Timestamp": "2026-10-28T17:46:57.049Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Yes—once the review identifies a corrective action, someone needs to own it and we need to verify it was completed. Otherwise we’re just documenting the same hazard and waiting for it to hurt somebody."
+      }
+    ]
+  },
+  "G-62": {
+    "id": "G-62",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Named reporter records what happened, where, when, and who within 24 hours of a near miss",
+    "evidence": [
+      "R@17:34:09.701",
+      "R@17:45:20.933",
+      "R@17:45:57.392"
+    ],
+    "agent": "Reporter",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 23,
+        "Timestamp": "2026-10-28T17:34:09.701Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, yes—near misses have to be reported within 24 hours even if nobody was hurt; a lucky escape is still a warning. Lockout/tagout records need to show who applied the lock, when, and who released it, and they must stay available for inspections. Tablets also can’t become a distraction around moving machinery, and any chemical spill during maintenance needs a separate environmental report, not just a note in the repair log."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 29,
+        "Timestamp": "2026-10-28T17:45:20.933Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, the handoff shouldn’t be the final place a near miss lives. Whoever hears it needs to open a report with the basic facts—what happened, where, when, and who was involved—and the supervisor needs to acknowledge it before the 24-hour deadline. A verbal mention without a recorded follow-up is how warnings disappear."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 31,
+        "Timestamp": "2026-10-28T17:45:57.392Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, make reporting part of the normal handoff instead of a separate favor someone has to remember. Keep the required facts short, assign it to a named person, and have the supervisor acknowledge it; if it isn’t recorded, it isn’t closed. People take it seriously when they know the record is reviewed and the deadline is real."
+      }
+    ]
+  },
+  "G-63": {
+    "id": "G-63",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Supervisor acknowledges a near-miss report before its 24-hour deadline",
+    "evidence": [
+      "R@17:45:20.933"
+    ],
+    "agent": "Shift supervisor",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 29,
+        "Timestamp": "2026-10-28T17:45:20.933Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, the handoff shouldn’t be the final place a near miss lives. Whoever hears it needs to open a report with the basic facts—what happened, where, when, and who was involved—and the supervisor needs to acknowledge it before the 24-hour deadline. A verbal mention without a recorded follow-up is how warnings disappear."
+      }
+    ]
+  },
+  "G-64": {
+    "id": "G-64",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Safety review considers facts and controls without punishing the reporter for speaking up",
+    "evidence": [
+      "R@17:46:28.516"
+    ],
+    "agent": "Safety coordinator",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 33,
+        "Timestamp": "2026-10-28T17:46:28.516Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Let me think... review the facts first: what happened, what controls were in place, and what we can change so it doesn’t happen again. The person reporting it shouldn’t be punished for speaking up; accountability belongs with correcting unsafe conditions and verifying the follow-through."
+      }
+    ]
+  },
+  "G-65": {
+    "id": "G-65",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Corrective action has a named owner and verified completion",
+    "evidence": [
+      "R@17:46:57.049"
+    ],
+    "agent": "Safety coordinator",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 35,
+        "Timestamp": "2026-10-28T17:46:57.049Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Yes—once the review identifies a corrective action, someone needs to own it and we need to verify it was completed. Otherwise we’re just documenting the same hazard and waiting for it to hurt somebody."
+      }
+    ]
+  },
+  "G-66": {
+    "id": "G-66",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Separate environmental report is created if [a chemical spill occurs during maintenance]",
+    "evidence": [
+      "R@17:34:09.701",
+      "R@17:44:38.682"
+    ],
+    "agent": "Reporter",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 23,
+        "Timestamp": "2026-10-28T17:34:09.701Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, yes—near misses have to be reported within 24 hours even if nobody was hurt; a lucky escape is still a warning. Lockout/tagout records need to show who applied the lock, when, and who released it, and they must stay available for inspections. Tablets also can’t become a distraction around moving machinery, and any chemical spill during maintenance needs a separate environmental report, not just a note in the repair log."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 27,
+        "Timestamp": "2026-10-28T17:44:38.682Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The record has to identify the equipment, the specific isolation points, the person who applied each lock, the date and time, and the person who authorized and performed release; changes also need an audit trail so nobody can quietly rewrite history. I want the technician and supervisor acknowledgments tied to the work order, along with any permit, photos, alarm information, and return-to-service decision. A near miss still needs reporting within 24 hours, tablets must not distract operators, and a chemical spill gets its own environmental report."
+      }
+    ]
+  },
+  "G-67": {
+    "id": "G-67",
+    "stakeholder": "Rob",
+    "kind": "Avoid",
+    "category": "non-functional",
+    "text": "Tablet use distracts personnel around moving machinery",
+    "evidence": [
+      "R@17:34:09.701"
+    ],
+    "agent": "Mechanic",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 23,
+        "Timestamp": "2026-10-28T17:34:09.701Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, yes—near misses have to be reported within 24 hours even if nobody was hurt; a lucky escape is still a warning. Lockout/tagout records need to show who applied the lock, when, and who released it, and they must stay available for inspections. Tablets also can’t become a distraction around moving machinery, and any chemical spill during maintenance needs a separate environmental report, not just a note in the repair log."
+      }
+    ]
+  },
+  "G-68": {
+    "id": "G-68",
+    "stakeholder": "Rob",
+    "kind": "Maintain",
+    "category": "non-functional",
+    "text": "Safety-critical controls remain prominent and distinguishable from general maintenance notes",
+    "evidence": [
+      "R@17:49:43.711",
+      "R@17:50:37.717"
+    ],
+    "agent": "Maintenance system",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 45,
+        "Timestamp": "2026-10-28T17:49:43.711Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, turn it into clear requirements and separate the safety-critical ones from the general recordkeeping. Keep the examples tied to real maintenance situations, especially the missing handoff details and inspection retrieval problems, so nobody mistakes these controls for optional paperwork."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 49,
+        "Timestamp": "2026-10-28T17:50:37.717Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Good. Make sure the safety-critical items don’t get buried in general maintenance notes. If a control can prevent an injury or prove what happened during an inspection, it needs to be unmistakable."
+      }
+    ]
+  },
+  "G-69": {
+    "id": "G-69",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Work is stopped and hazard documented if [an alarm indicates a hazard requiring investigation]",
+    "evidence": [
+      "R@17:30:42.356",
+      "R@17:32:26.552"
+    ],
+    "agent": "Shift supervisor",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 11,
+        "Timestamp": "2026-10-28T17:30:42.356Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, the alarm came in during a maintenance check, and we stopped the work while the technician and supervisor looked into it. We verified the hazard, checked whether the equipment was isolated, and decided it couldn’t go back into service until the issue was addressed and the records were updated."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 17,
+        "Timestamp": "2026-10-28T17:32:26.552Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, I stopped the job and documented the hazard instead of letting the production schedule decide for us. The supervisor backed that decision, and we reviewed the work permit and equipment history before anything moved. I also made sure the sensor alarm was preserved in the record, because recurring alarms can point to a bigger problem. Production lost time, but nobody got hurt—that’s the standard."
+      }
+    ]
+  },
+  "G-70": {
+    "id": "G-70",
+    "stakeholder": "Rob",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Safety coordinator reviews recurring alarms and failure modes for shutdown, action, or inspection",
+    "evidence": [
+      "R@17:30:09.217",
+      "R@17:32:26.552"
+    ],
+    "agent": "Safety coordinator",
+    "inferred": false,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 9,
+        "Timestamp": "2026-10-28T17:30:09.217Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I use maintenance data for hazard assessments, lockout/tagout verification, confined-space or hot-work decisions, and determining whether equipment can be returned to service. I also look at recurring failure modes and sensor alarms to decide whether we need an immediate shutdown, corrective action, or a formal safety inspection."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 17,
+        "Timestamp": "2026-10-28T17:32:26.552Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, I stopped the job and documented the hazard instead of letting the production schedule decide for us. The supervisor backed that decision, and we reviewed the work permit and equipment history before anything moved. I also made sure the sensor alarm was preserved in the record, because recurring alarms can point to a bigger problem. Production lost time, but nobody got hurt—that’s the standard."
+      }
+    ]
+  },
+  "G-71": {
+    "id": "G-71",
+    "stakeholder": "Combined",
+    "kind": "Soft",
+    "category": "non-functional",
+    "text": "Improve safe maintenance continuity with usable, reliable cross-shift records",
+    "evidence": [
+      "T2@01:34:41.523",
+      "A@13:37:46.015",
+      "R@17:29:34.313"
+    ],
+    "agent": null,
+    "inferred": true,
+    "source_passages": [
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 27,
+        "Timestamp": "2026-10-28T01:34:41.523Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I’d know it was helping if the next shift stopped repeating the same checks, the presses spent less time waiting, and the work order had enough there to see what actually happened. If people still have to come find me to ask whether it was really fixed, then it isn’t doing much."
+      },
+      {
+        "file": "angela-initial.csv",
+        "record": 31,
+        "Timestamp": "2026-10-28T13:37:46.015Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The main point is that maintenance data has to be accurate enough to drive decisions, not just satisfy an audit. I need to see downtime in minutes, the root cause, ownership, and production impact across all three shifts; otherwise I’m managing by anecdotes instead of facts."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 7,
+        "Timestamp": "2026-10-28T17:29:34.313Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I oversee workplace safety during maintenance, make sure procedures are followed, and keep our records ready for inspections. My main concern is that everyone goes home unhurt."
+      }
+    ]
+  },
+  "G-72": {
+    "id": "G-72",
+    "stakeholder": "Teo",
+    "kind": "Maintain",
+    "category": "non-functional",
+    "text": "Mechanic confirms voice-note content before it is published to the shared repair record",
+    "evidence": [
+      "T0@01:00:17.854"
+    ],
+    "agent": "Mechanic",
+    "inferred": true,
+    "source_passages": [
+      {
+        "file": "teo-initial.csv",
+        "record": 9,
+        "Timestamp": "2026-10-28T01:00:17.854Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The hard part is doing it quickly with gloves on while the floor’s making a racket. I’d want the tablet to show the live temperature against the normal range, and let me attach a quick photo or voice note instead of typing everything."
+      }
+    ]
+  },
+  "G-73": {
+    "id": "G-73",
+    "stakeholder": "Combined",
+    "kind": "Maintain",
+    "category": "non-functional",
+    "text": "A release request is rejected and missing items shown if [the safety-release checks are not all satisfied]",
+    "evidence": [
+      "A@13:36:11.712",
+      "R@17:33:39.894"
+    ],
+    "agent": "Maintenance system",
+    "inferred": true,
+    "source_passages": [
+      {
+        "file": "angela-initial.csv",
+        "record": 25,
+        "Timestamp": "2026-10-28T13:36:11.712Z",
+        "Speaker": "Stakeholder",
+        "Speech": "We don’t restart it; incomplete documentation means the hold stays in place, regardless of production pressure."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 21,
+        "Timestamp": "2026-10-28T17:33:39.894Z",
+        "Speaker": "Stakeholder",
+        "Speech": "A required digital handoff with the critical fields completed and acknowledged by the incoming supervisor would help most. No equipment gets released while isolation status, alarms, permits, and unresolved hazards are blank."
+      }
+    ]
+  },
+  "G-74": {
+    "id": "G-74",
+    "stakeholder": "Combined",
+    "kind": "Maintain",
+    "category": "non-functional",
+    "text": "Capture uses a safe stationary interaction point if [machinery is moving nearby]",
+    "evidence": [
+      "R@17:34:09.701",
+      "T1@01:17:43.870"
+    ],
+    "agent": "Mechanic",
+    "inferred": true,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 23,
+        "Timestamp": "2026-10-28T17:34:09.701Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, yes—near misses have to be reported within 24 hours even if nobody was hurt; a lucky escape is still a warning. Lockout/tagout records need to show who applied the lock, when, and who released it, and they must stay available for inspections. Tablets also can’t become a distraction around moving machinery, and any chemical spill during maintenance needs a separate environmental report, not just a note in the repair log."
+      },
+      {
+        "file": "teo-follow-up-1.csv",
+        "record": 27,
+        "Timestamp": "2026-10-28T01:17:43.870Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Yeah. If it makes me stop and peck at fields, it’ll sit there until the job’s done. I need to get the fault and what I changed down in a few seconds, then carry on."
+      }
+    ]
+  },
+  "G-75": {
+    "id": "G-75",
+    "stakeholder": "Combined",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "System flags missing or stale telemetry if [a current temperature reading cannot be obtained]",
+    "evidence": [
+      "T0@01:00:17.854"
+    ],
+    "agent": "Maintenance system",
+    "inferred": true,
+    "source_passages": [
+      {
+        "file": "teo-initial.csv",
+        "record": 9,
+        "Timestamp": "2026-10-28T01:00:17.854Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The hard part is doing it quickly with gloves on while the floor’s making a racket. I’d want the tablet to show the live temperature against the normal range, and let me attach a quick photo or voice note instead of typing everything."
+      }
+    ]
+  },
+  "G-76": {
+    "id": "G-76",
+    "stakeholder": "Combined",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Required shared repair facts are recorded without automatically copying personal notebook content",
+    "evidence": [
+      "T2@01:31:05.537",
+      "R@17:44:38.682"
+    ],
+    "agent": "Mechanic",
+    "inferred": true,
+    "source_passages": [
+      {
+        "file": "teo-follow-up-2.csv",
+        "record": 11,
+        "Timestamp": "2026-10-28T01:31:05.537Z",
+        "Speaker": "Stakeholder",
+        "Speech": "I note the asset ID, fault symptoms, setpoint versus actual temperature, part number, and the corrective action—heater band replaced, connections checked, verification run completed. I also write down the machine-specific tricks that aren’t in the manual, but those notes are my working knowledge, not something I want turned into company property by default."
+      },
+      {
+        "file": "rob-interview.csv",
+        "record": 27,
+        "Timestamp": "2026-10-28T17:44:38.682Z",
+        "Speaker": "Stakeholder",
+        "Speech": "The record has to identify the equipment, the specific isolation points, the person who applied each lock, the date and time, and the person who authorized and performed release; changes also need an audit trail so nobody can quietly rewrite history. I want the technician and supervisor acknowledgments tied to the work order, along with any permit, photos, alarm information, and return-to-service decision. A near miss still needs reporting within 24 hours, tablets must not distract operators, and a chemical spill gets its own environmental report."
+      }
+    ]
+  },
+  "G-77": {
+    "id": "G-77",
+    "stakeholder": "Combined",
+    "kind": "Achieve",
+    "category": "functional",
+    "text": "Safety coordinator configures the applicable inspection retention period before records are scheduled for disposal",
+    "evidence": [
+      "R@17:49:15.529"
+    ],
+    "agent": "Safety coordinator",
+    "inferred": true,
+    "source_passages": [
+      {
+        "file": "rob-interview.csv",
+        "record": 43,
+        "Timestamp": "2026-10-28T17:49:15.529Z",
+        "Speaker": "Stakeholder",
+        "Speech": "Well, records need to remain readable and retrievable for the full inspection period, not disappear when equipment is retired or someone changes jobs. I also need a clear history of corrections—who changed what and when—plus an export an inspector can review without needing access to our entire operating system."
+      }
+    ]
+  }
+}

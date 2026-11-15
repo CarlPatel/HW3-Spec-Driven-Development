@@ -1,0 +1,137 @@
+flowchart BT
+annotationnode68["non-functional"]:::stroke -.- node68
+annotationnode98["H7"]:::stroke -.- node98
+node98((" ")) ===> node68
+node69[/"Maintain[G-47 Hazard controls and release records are<br/>verified before equipment returns to service]"/] --- node98
+annotationnode69["non-functional"]:::stroke -.- node69
+annotationnode99["H5"]:::stroke -.- node99
+node99((" ")) ===> node69
+node71[/"Achieve[G-48 Safety coordinator assesses hazard, active<br/>alarms, isolation, and applicable work permits]"/]:::bold --- node99
+annotationnode71["functional"]:::stroke -.- node71
+node70{{fa:fa-person Safety coordinator}} --- node71
+node71[/"Achieve[G-48 Safety coordinator assesses hazard, active<br/>alarms, isolation, and applicable work permits]"/]
+node73[/"Achieve[G-49 Isolation record states equipment,<br/>isolation points, each lock applier, date/time,<br/>and release authorizer and performer]"/]:::bold --- node99
+annotationnode73["functional"]:::stroke -.- node73
+node72{{fa:fa-person Mechanic}} --- node73
+node73[/"Achieve[G-49 Isolation record states equipment,<br/>isolation points, each lock applier, date/time,<br/>and release authorizer and performer]"/]
+node75[/"Achieve[G-50 Return-to-service authorization and<br/>technician/supervisor acknowledgments are<br/>recorded before release]"/]:::bold --- node99
+annotationnode75["functional"]:::stroke -.- node75
+node74{{fa:fa-person Shift supervisor}} --- node75
+node75[/"Achieve[G-50 Return-to-service authorization and<br/>technician/supervisor acknowledgments are<br/>recorded before release]"/]
+node76[/"Achieve[G-51 Supervisor validates hazard controls before<br/>closeout]"/]:::bold --- node99
+annotationnode76["functional"]:::stroke -.- node76
+node74{{fa:fa-person Shift supervisor}} --- node76
+node76[/"Achieve[G-51 Supervisor validates hazard controls before<br/>closeout]"/]
+node77[/"Maintain[G-52 Equipment stays unreleased if [isolation,<br/>alarm, permit, or hazard fields are blank or a<br/>hazard is unresolved]]"/]:::bold --- node99
+annotationnode77["non-functional"]:::stroke -.- node77
+node74{{fa:fa-person Shift supervisor}} --- node77
+node77[/"Maintain[G-52 Equipment stays unreleased if [isolation,<br/>alarm, permit, or hazard fields are blank or a<br/>hazard is unresolved]]"/]
+node78[/"Achieve[G-53 Incoming supervisor acknowledges a digital<br/>handoff with all critical fields completed]"/]:::bold --- node99
+annotationnode78["functional"]:::stroke -.- node78
+node74{{fa:fa-person Shift supervisor}} --- node78
+node78[/"Achieve[G-53 Incoming supervisor acknowledges a digital<br/>handoff with all critical fields completed]"/]
+node80[/"Achieve[G-54 Work order retains permits, photos, alarm<br/>information, replaced parts, and release<br/>decision]"/]:::bold --- node99
+annotationnode80["functional"]:::stroke -.- node80
+node79{{Maintenance system}} --- node80
+node80[/"Achieve[G-54 Work order retains permits, photos, alarm<br/>information, replaced parts, and release<br/>decision]"/]
+
+node69[/"Maintain[G-47 Hazard controls and release records are<br/>verified before equipment returns to service]"/]
+node82[/"Achieve[G-56 Inspector can retrieve complete equipment<br/>maintenance and safety history without chasing<br/>people]"/] --- node98
+annotationnode82["functional"]:::stroke -.- node82
+annotationnode100["P5"]:::stroke -.- node100
+node100((" ")) ===> node82
+node83[/"Maintain[G-57 Maintenance, permit, handoff, and sensor<br/>records include a consistent equipment<br/>identifier and time window]"/]:::bold --- node100
+annotationnode83["functional"]:::stroke -.- node83
+node79{{Maintenance system}} --- node83
+node83[/"Maintain[G-57 Maintenance, permit, handoff, and sensor<br/>records include a consistent equipment<br/>identifier and time window]"/]
+node84[/"Achieve[G-58 Equipment record joins maintenance,<br/>isolation, alarms, permits, and corrective-<br/>action history]"/]:::bold --- node100
+annotationnode84["functional"]:::stroke -.- node84
+node79{{Maintenance system}} --- node84
+node84[/"Achieve[G-58 Equipment record joins maintenance,<br/>isolation, alarms, permits, and corrective-<br/>action history]"/]
+node81[/"Maintain[G-55 Record corrections preserve who changed<br/>what and when]"/]:::bold --- node100
+annotationnode81["non-functional"]:::stroke -.- node81
+node79{{Maintenance system}} --- node81
+node81[/"Maintain[G-55 Record corrections preserve who changed<br/>what and when]"/]
+node85[/"Maintain[G-59 Records remain readable and retrievable for<br/>the inspection period despite retirement or<br/>staff changes]"/]:::bold --- node100
+annotationnode85["non-functional"]:::stroke -.- node85
+node79{{Maintenance system}} --- node85
+node85[/"Maintain[G-59 Records remain readable and retrievable for<br/>the inspection period despite retirement or<br/>staff changes]"/]
+node86[/"Achieve[G-60 Safety coordinator exports inspectable<br/>records without granting access to the entire<br/>operating system]"/]:::bold --- node100
+annotationnode86["functional"]:::stroke -.- node86
+node70{{fa:fa-person Safety coordinator}} --- node86
+node86[/"Achieve[G-60 Safety coordinator exports inspectable<br/>records without granting access to the entire<br/>operating system]"/]
+
+node82[/"Achieve[G-56 Inspector can retrieve complete equipment<br/>maintenance and safety history without chasing<br/>people]"/]
+node87[/"Achieve[G-61 Near misses are recorded, acknowledged,<br/>reviewed, and followed through]"/] --- node98
+annotationnode87["functional"]:::stroke -.- node87
+annotationnode101["P1"]:::stroke -.- node101
+node101((" ")) ===> node87
+node89[/"Achieve[G-62 Named reporter records what happened,<br/>where, when, and who within 24 hours of a near<br/>miss]"/]:::bold --- node101
+annotationnode89["functional"]:::stroke -.- node89
+node88{{fa:fa-person Reporter}} --- node89
+node89[/"Achieve[G-62 Named reporter records what happened,<br/>where, when, and who within 24 hours of a near<br/>miss]"/]
+node90[/"Achieve[G-63 Supervisor acknowledges a near-miss report<br/>before its 24-hour deadline]"/]:::bold --- node101
+annotationnode90["functional"]:::stroke -.- node90
+node74{{fa:fa-person Shift supervisor}} --- node90
+node90[/"Achieve[G-63 Supervisor acknowledges a near-miss report<br/>before its 24-hour deadline]"/]
+node91[/"Achieve[G-64 Safety review considers facts and controls<br/>without punishing the reporter for speaking up]"/]:::bold --- node101
+annotationnode91["functional"]:::stroke -.- node91
+node70{{fa:fa-person Safety coordinator}} --- node91
+node91[/"Achieve[G-64 Safety review considers facts and controls<br/>without punishing the reporter for speaking up]"/]
+node92[/"Achieve[G-65 Corrective action has a named owner and<br/>verified completion]"/]:::bold --- node101
+annotationnode92["functional"]:::stroke -.- node92
+node70{{fa:fa-person Safety coordinator}} --- node92
+node92[/"Achieve[G-65 Corrective action has a named owner and<br/>verified completion]"/]
+
+node87[/"Achieve[G-61 Near misses are recorded, acknowledged,<br/>reviewed, and followed through]"/]
+node93[/"Achieve[G-66 Separate environmental report is created if<br/>[a chemical spill occurs during maintenance]]"/]:::bold --- node98
+annotationnode93["functional"]:::stroke -.- node93
+node88{{fa:fa-person Reporter}} --- node93
+node93[/"Achieve[G-66 Separate environmental report is created if<br/>[a chemical spill occurs during maintenance]]"/]
+node94[/"Avoid[G-67 Tablet use distracts personnel around<br/>moving machinery]"/]:::bold --- node98
+annotationnode94["non-functional"]:::stroke -.- node94
+node72{{fa:fa-person Mechanic}} --- node94
+node94[/"Avoid[G-67 Tablet use distracts personnel around<br/>moving machinery]"/]
+node95[/"Maintain[G-68 Safety-critical controls remain prominent<br/>and distinguishable from general maintenance<br/>notes]"/]:::bold --- node98
+annotationnode95["non-functional"]:::stroke -.- node95
+node79{{Maintenance system}} --- node95
+node95[/"Maintain[G-68 Safety-critical controls remain prominent<br/>and distinguishable from general maintenance<br/>notes]"/]
+node96[/"Achieve[G-69 Work is stopped and hazard documented if<br/>[an alarm indicates a hazard requiring<br/>investigation]]"/]:::bold --- node98
+annotationnode96["functional"]:::stroke -.- node96
+node74{{fa:fa-person Shift supervisor}} --- node96
+node96[/"Achieve[G-69 Work is stopped and hazard documented if<br/>[an alarm indicates a hazard requiring<br/>investigation]]"/]
+node97[/"Achieve[G-70 Safety coordinator reviews recurring alarms<br/>and failure modes for shutdown, action, or<br/>inspection]"/]:::bold --- node98
+annotationnode97["functional"]:::stroke -.- node97
+node70{{fa:fa-person Safety coordinator}} --- node97
+node97[/"Achieve[G-70 Safety coordinator reviews recurring alarms<br/>and failure modes for shutdown, action, or<br/>inspection]"/]
+
+node68[/"G-46 Minimize maintenance injuries and<br/>demonstrate safe work during inspections"/]
+
+classDef bold stroke-width:3,stroke:#000
+classDef filled fill:#000;
+classDef nostroke stroke-width:0,fill-opacity:0.0
+classDef stroke stroke-dasharray: 5 5,fill-opacity:0.0,text-align:left
+
+    
+%% Yellow = added interpretation; functional/category labels are annotations.
+class node71 bold
+class node73 bold
+class node75 bold
+class node76 bold
+class node77 bold
+class node78 bold
+class node80 bold
+class node81 bold
+class node83 bold
+class node84 bold
+class node85 bold
+class node86 bold
+class node89 bold
+class node90 bold
+class node91 bold
+class node92 bold
+class node93 bold
+class node94 bold
+class node95 bold
+class node96 bold
+class node97 bold

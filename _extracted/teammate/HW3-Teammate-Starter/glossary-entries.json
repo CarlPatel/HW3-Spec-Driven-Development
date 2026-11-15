@@ -1,0 +1,458 @@
+[
+  [
+    "Equipment and diagnosis",
+    [
+      [
+        "Injection molding machine / press",
+        "A machine that forms plastic parts by injecting heated material into a mold. Teo referred to Press 7; Angela discussed Press 14 and the production consequences of a stopped press.",
+        "T, A",
+        ""
+      ],
+      [
+        "Heater band",
+        "An electrical heater fitted around a cylindrical machine section to supply process heat. Teo associated a weakening band on Press 7 with unstable temperature and defective parts.",
+        "T",
+        "3"
+      ],
+      [
+        "Thermocouple",
+        "A temperature sensor made from dissimilar metal conductors whose voltage depends on temperature differences. In Teo's account, its reading was evidence that should accompany a heater check.",
+        "T",
+        "2"
+      ],
+      [
+        "Setpoint",
+        "The target value that a controller is instructed to maintain. Teo explicitly defined the temperature setpoint as the target shown on Press 7, distinct from its measured temperature.",
+        "T",
+        "10"
+      ],
+      [
+        "Actual temperature",
+        "The temperature measured by the machine's sensing system. Comparing it with the setpoint and part quality helped Teo investigate unstable heating; the target display alone did not establish actual conditions.",
+        "T",
+        ""
+      ],
+      [
+        "Temperature drift / excursion",
+        "Drift is an unwanted change in measured temperature; an excursion is a departure beyond an expected or configured limit. These observations can motivate investigation, but do not by themselves prove a particular failed component.",
+        "T, A",
+        ""
+      ],
+      [
+        "Fault code",
+        "A machine-generated identifier for a detected fault condition. Teo wanted the last fault code in the handoff so the next technician could identify the reported condition without starting from scratch.",
+        "T",
+        ""
+      ],
+      [
+        "Fault isolation",
+        "Diagnostic work to narrow symptoms to a defective component, connection, or failure mechanism. Teo linked incomplete fault isolation to repeated checks. This is different from isolating hazardous energy for safety.",
+        "T",
+        ""
+      ],
+      [
+        "Interlock",
+        "A control arrangement that permits or prevents an operation according to specified conditions. Teo mentioned suspect interlocks among machine-specific troubleshooting details that should be preserved in the handoff.",
+        "T",
+        ""
+      ],
+      [
+        "Megger test / insulation-resistance test",
+        "An electrical test that measures insulation resistance to help identify insulation weakness. Teo used \"megger-tested\" when describing missing evidence about a heater band. The transcript did not specify a test method or acceptance limit.",
+        "T",
+        "4"
+      ],
+      [
+        "Verification run",
+        "Operation or testing after repair to check the intended result. Teo watched temperature stability and produced parts after the heater-band repair; the outcome should be recorded rather than implied by \"replaced.\"",
+        "T",
+        ""
+      ],
+      [
+        "Tooling",
+        "The tools and fixtures used to form or support production, including molds in this plant. Angela described a fault initially treated as electrical that was later identified as a tooling issue.",
+        "A",
+        ""
+      ]
+    ]
+  ],
+  [
+    "Work orders, handoffs, and parts",
+    [
+      [
+        "CMMS",
+        "Computerized maintenance management system: software used to organize equipment history, maintenance work orders, scheduling, and related records. Teo specifically included fault records and shift handoff notes in the plant's CMMS.",
+        "T",
+        "1"
+      ],
+      [
+        "Asset ID / equipment identifier",
+        "A unique identifier for a particular machine or maintained asset. Rob wanted the same identifier on maintenance records, permits, handoffs, and sensor events so evidence could be retrieved together.",
+        "T, A, R",
+        ""
+      ],
+      [
+        "Work order",
+        "A record that organizes a maintenance task, its responsible person, actions, and status. Stakeholders wanted diagnoses, parts, readings, permits, and verification linked to the relevant work order.",
+        "T, A, R",
+        "1"
+      ],
+      [
+        "Corrective action",
+        "An assigned action to address an identified fault, hazard, or underlying problem. Replacing a heater band was one repair example; Rob also required ownership and verification of actions identified in incident reviews.",
+        "T, A, R",
+        "6"
+      ],
+      [
+        "Reason code",
+        "A structured category explaining a downtime event or maintenance issue. Angela contrasted electrical, tooling, and operator-related causes and wanted reason codes completed before work-order close-out.",
+        "A",
+        ""
+      ],
+      [
+        "Quick restart entry",
+        "Angela's proposed short initial maintenance entry used during an active failure. It must stay linked to later close-out details; it does not replace required safety evidence or restart approvals.",
+        "A",
+        ""
+      ],
+      [
+        "Close-out",
+        "Completion of a maintenance record after required information and checks are supplied. Angela distinguished later administrative close-out from the quick initial entry and from safety-critical requirements that must precede release.",
+        "A, R",
+        ""
+      ],
+      [
+        "Record ownership",
+        "Assignment of a named person responsible for outstanding work or documentation. Angela wanted incomplete close-outs assigned to the technician and escalated if still unfinished at shift change.",
+        "A, R",
+        ""
+      ],
+      [
+        "Shift handoff / handover",
+        "Transfer of machine status, unresolved work, responsibility, and relevant evidence to the incoming shift. Missing readings, part numbers, isolation details, or verification status forced repeat checks or created uncertainty.",
+        "T, A, R",
+        ""
+      ],
+      [
+        "Part number",
+        "An identifier for a particular replacement component specification. Teo needed the exact number to confirm the installed heater band and locate the correct spare.",
+        "T",
+        ""
+      ],
+      [
+        "Parts crib / crib location",
+        "The plant's storage and issue area for spare parts, and the specific location of a part within it. Teo described searching the heater-band bin and checking it against a part number.",
+        "T",
+        ""
+      ],
+      [
+        "Stock quantity",
+        "The recorded count of available units of a spare part. Teo wanted this information with the part number and storage location to avoid searching for an unavailable item.",
+        "T",
+        ""
+      ],
+      [
+        "Approved substitute",
+        "An alternative replacement part that has been accepted for the relevant application. Teo requested substitute information, but the interview did not establish who approves substitutions or which criteria they use.",
+        "T",
+        ""
+      ]
+    ]
+  ],
+  [
+    "Production, maintenance planning, and measures",
+    [
+      [
+        "Production cell",
+        "A linked group of machines or operations that carries out a production process. Angela described a failure that affected an entire cell and a correct diagnosis that restored it sooner.",
+        "A",
+        ""
+      ],
+      [
+        "Bottleneck",
+        "A production resource whose limited capacity constrains the surrounding process. Angela identified Press 14 as a bottleneck with no practical backup, making its outage especially consequential.",
+        "A",
+        ""
+      ],
+      [
+        "Machine criticality",
+        "The importance of an asset based on the consequences of failure. Angela considered bottleneck status, lack of backup, cell stoppage, prolonged downtime, and high-impact quality problems.",
+        "A",
+        ""
+      ],
+      [
+        "Scrap",
+        "Produced material or parts that cannot be accepted for the intended product and are rejected from normal output. Angela cited significant scrap as a possible consequence of a critical-machine failure.",
+        "A",
+        ""
+      ],
+      [
+        "Preventive maintenance (PM)",
+        "Planned maintenance performed to reduce the likelihood of failure. Angela described balancing scheduled PM against production needs and reconsidering the schedule when repeat failures indicate a problem.",
+        "A",
+        "5"
+      ],
+      [
+        "PM interval / maintenance window",
+        "The interval is the scheduled spacing between preventive tasks; a maintenance window is an available period to perform them. Angela might change the interval or use the next production window after reviewing failures.",
+        "A",
+        ""
+      ],
+      [
+        "PM compliance",
+        "The proportion of scheduled preventive-maintenance tasks completed according to the applicable schedule. Angela named it as a performance signal; the exact reporting period and treatment of overdue work were not specified.",
+        "A",
+        "5"
+      ],
+      [
+        "Downtime",
+        "Time a machine is unavailable for intended production. Angela measured it in minutes and checked an event against the machine stop and first good part; consistent start and end points are essential.",
+        "A",
+        ""
+      ],
+      [
+        "Mean time to repair (MTTR)",
+        "Average time associated with repairing and restoring failed equipment. Teo connected repeated diagnostics with longer MTTR. The plant must specify whether its calculation includes waiting and other non-repair delays.",
+        "T",
+        "5"
+      ],
+      [
+        "Mean time between failures (MTBF)",
+        "Average operating time between failures for a repairable asset, commonly calculated as operating time divided by failure count over a defined period. Angela used it when investigating repeat failures.",
+        "A",
+        "5"
+      ],
+      [
+        "First-time-fix rate",
+        "The proportion of problems resolved by the initial repair without another intervention for the same issue within the chosen assessment window. Angela named the measure but did not define that window.",
+        "A",
+        ""
+      ],
+      [
+        "Backlog age",
+        "How long outstanding maintenance work has remained open, measured from an agreed starting point. Angela used it to judge maintenance performance; a consistent starting timestamp was not established in the interview.",
+        "A",
+        ""
+      ],
+      [
+        "Failure mode / root cause",
+        "A failure mode describes how equipment fails; a root cause is the underlying reason the problem occurs. Angela distinguished identifying the failure from verifying that its underlying cause had actually been corrected.",
+        "A, R",
+        "6"
+      ],
+      [
+        "Root-cause analysis",
+        "A structured investigation of why a problem occurred and what would prevent recurrence. Angela wanted the original sensor-event history preserved so repeated alarms and subsequent work could support that analysis.",
+        "A",
+        "6"
+      ]
+    ]
+  ],
+  [
+    "Safety and authorization",
+    [
+      [
+        "Environmental health and safety (EHS)",
+        "The plant function concerned with workplace hazards, worker health and safety, and environmental responsibilities. Rob's role included safe maintenance practices, inspection evidence, near misses, and separate reporting of chemical spills.",
+        "R",
+        ""
+      ],
+      [
+        "Hazard assessment",
+        "Identification and evaluation of conditions that could harm people during a task. Rob used maintenance information to assess hazards and determine the controls, permits, or inspections needed before proceeding.",
+        "A, R",
+        ""
+      ],
+      [
+        "Lockout/tagout (LOTO)",
+        "Control of hazardous energy during servicing using established isolation procedures and applicable locks or tags. It protects against unexpected energization or energy release. A digital record documents the control; it is not the physical control itself.",
+        "T, A, R",
+        "7"
+      ],
+      [
+        "Energy isolation / isolation status",
+        "Separation or control of equipment's hazardous energy sources, and the recorded condition of that isolation. Rob needed the applicable isolation points, responsible people, and timing to remain clear across shifts.",
+        "R",
+        "7"
+      ],
+      [
+        "Safety hold",
+        "A visible restriction preventing equipment release while required safety conditions, evidence, or authorization are incomplete. Angela and Rob stated that production pressure must not silently override such a hold.",
+        "A, R",
+        ""
+      ],
+      [
+        "Return-to-service authorization",
+        "The recorded approval to release maintained equipment back to operation after required checks and controls. It is distinct from entering repair notes or marking a routine work order complete.",
+        "A, R",
+        ""
+      ],
+      [
+        "Work permit",
+        "A documented authorization and set of conditions for specified work. Rob wanted permits linked to the machine, work order, relevant time, and safety evidence rather than left in disconnected paper records.",
+        "R",
+        ""
+      ],
+      [
+        "Confined space",
+        "A space large enough for a person to enter and work in, with limited or restricted entry or exit, that is not designed for continuous occupancy. Rob mentioned confined-space decisions as one use of maintenance safety information.",
+        "R",
+        "8"
+      ],
+      [
+        "Hot work",
+        "Work that can introduce an ignition source, such as welding or cutting. Rob mentioned hot-work decisions among activities that require suitable hazard and permit information.",
+        "R",
+        "9"
+      ],
+      [
+        "Near miss",
+        "An incident that could have caused harm but did not do so. Rob required a formal report with basic facts, a named owner, and supervisor acknowledgment; his stated plant reporting deadline was 24 hours.",
+        "R",
+        ""
+      ],
+      [
+        "Environmental report",
+        "A separate record of an environmentally relevant event. Rob specifically required a chemical spill during maintenance to have its own report rather than exist only as a repair-log note.",
+        "R",
+        ""
+      ],
+      [
+        "Safety-part equipment",
+        "Angela's phrase for equipment requiring heightened repair traceability because of safety implications. She required the failure mode, technician, parts, corrective action, inspection, and restart approver; the precise equipment classification was not defined.",
+        "A",
+        ""
+      ]
+    ]
+  ],
+  [
+    "Sensor events, alerts, and escalation",
+    [
+      [
+        "Sensor event / alarm",
+        "A sensor event records an observed condition; an alarm signals a condition requiring attention. Stakeholders wanted the original machine evidence linked to maintenance work and its subsequent decisions.",
+        "A, R",
+        ""
+      ],
+      [
+        "Alert threshold / persistence / severity",
+        "A threshold is a triggering limit; persistence describes how long a condition continues; severity expresses its importance. Angela proposed using these together to identify actionable alerts and reduce nuisance work.",
+        "A",
+        ""
+      ],
+      [
+        "Alert triage",
+        "Review of an alert to decide its urgency and next action. Angela assigned immediate triage of critical conditions to the maintenance lead and placed lower-severity conditions in a monitored queue.",
+        "A",
+        ""
+      ],
+      [
+        "Alert fatigue",
+        "Reduced attention caused by excessive or repetitive alerts. Angela wanted nuisance alerts controlled and repeated events grouped so staff could focus on actionable conditions.",
+        "A",
+        ""
+      ],
+      [
+        "Alert signature",
+        "The identifying pattern or type of an alert used to recognize related events. Angela combined this with the asset and time window when deciding whether new events belonged to an existing incident.",
+        "A",
+        ""
+      ],
+      [
+        "Time window",
+        "The bounded period used to select or associate events. Angela used it for alert correlation; Rob needed consistent time information to connect records during an inspection.",
+        "A, R",
+        ""
+      ],
+      [
+        "Alert-to-work-order correlation",
+        "Association of related alerts with a maintenance incident or work order using the asset, alert signature, and time window. Subsequent related events should link to existing work rather than create duplicate tasks.",
+        "A",
+        ""
+      ],
+      [
+        "Hysteresis",
+        "Use of different activation and reset thresholds to avoid repeated on/off switching near a limit. Angela mentioned it as one way to prevent noisy sensor conditions from generating duplicate work.",
+        "A",
+        "10"
+      ],
+      [
+        "Debounce interval",
+        "A time-based filter requiring an input or condition to remain stable for a configured interval before accepting a change. It reduces brief fluctuations; unlike hysteresis, its primary distinction is time rather than threshold separation.",
+        "A",
+        "11"
+      ],
+      [
+        "Alarm suppression",
+        "Configured control of notifications for conditions that should not currently generate an actionable alert. Angela wanted suppression rules to reduce noise while preserving the underlying sensor-event history.",
+        "A",
+        ""
+      ],
+      [
+        "Acknowledgment",
+        "A recorded indication that a person has received or taken responsibility for an alert or handoff. Acknowledging an alarm does not establish that the fault or hazard has been resolved.",
+        "A, R",
+        ""
+      ],
+      [
+        "Disposition",
+        "The recorded decision about what to do with an alert, such as immediate maintenance, monitoring, or inclusion in a future PM window. Angela wanted actionable alerts to have an explicit disposition.",
+        "A",
+        ""
+      ],
+      [
+        "Service-level agreement (SLA)",
+        "The agreed response expectations for actionable alerts. Angela used it for acknowledgment and disposition deadlines that trigger escalation; no numerical response target was supplied.",
+        "A",
+        ""
+      ],
+      [
+        "Escalation",
+        "Moving an unresolved issue to a responsible person with greater authority or capacity. Angela cited overdue restoration, critical equipment, and safety or quality risk as escalation triggers and wanted the reason, timing, owner, and next action recorded.",
+        "A",
+        ""
+      ],
+      [
+        "Exception view",
+        "A supervisory view focused on conditions requiring intervention, such as overdue reason codes, missing owners, unresolved downtime, or missed revisit times. Angela wanted it instead of manual review of every repair.",
+        "A",
+        ""
+      ]
+    ]
+  ],
+  [
+    "Evidence and record integrity",
+    [
+      [
+        "Traceability",
+        "The ability to follow an event from the identified machine and fault through diagnosis, people, parts, corrective action, verification, and approval. Stakeholders needed these links for handoffs, management decisions, and inspections.",
+        "T, A, R",
+        ""
+      ],
+      [
+        "Immutable sensor-event history",
+        "Preserved original sensor evidence that cannot be silently overwritten or erased. Angela allowed duplicate work orders to be merged but required the original alerts and their connections to remain available.",
+        "A",
+        ""
+      ],
+      [
+        "Audit trail",
+        "A history showing who changed a record, what changed, and when. Rob required corrections to remain visible so inspection evidence could not be quietly rewritten.",
+        "R",
+        ""
+      ],
+      [
+        "Record retention",
+        "Keeping records readable and retrievable for the required period. Rob said equipment retirement or staff changes must not remove inspection evidence; he did not specify a numerical retention duration.",
+        "R",
+        ""
+      ],
+      [
+        "Inspection export",
+        "A reviewable copy of linked evidence that an inspector can examine without broad access to the operational system. Rob wanted maintenance, isolation, alarms, and corrective actions retrievable under the equipment record.",
+        "R",
+        ""
+      ]
+    ]
+  ]
+]

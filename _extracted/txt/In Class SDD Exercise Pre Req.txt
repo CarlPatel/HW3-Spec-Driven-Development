@@ -1,0 +1,39 @@
+In-Class SDD Exercise: Prerequisites & Installation
+
+For Windows, macOS, and Linux
+
+Step 1: Install prerequisites
+
+Ensure the following are installed:
+     Python 3.11+
+     uv package manager
+     Git (recommended)
+     AI coding agent: GitHub Copilot (preferred), Claude Code, or another GitHub Spec
+         Kit-supported agent1
+               GitHub Copilot: Create a GitHub account, sign in through VS Code, and activate
+                   Copilot Free if you don't already have access.
+               Other agents: Install your preferred agent and complete its authentication/setup
+                   process.
+     Code editor: Visual Studio Code (optional, recommended for GitHub Copilot).
+
+Important: Make sure your AI coding agent is installed, signed in, and working before class.
+
+Step 2: Install GitHub Spec Kit
+
+Open PowerShell (Windows) or Terminal (macOS/Linux) and run:
+
+   None
+
+  uv tool install specify-cli
+
+Step 3: Verify installation
+
+   None
+
+  specify version
+
+If the command displays the installed version, Spec Kit is installed successfully.
+Reference: Official GitHub Spec Kit Installation Guide
+
+1 https://github.github.com/spec-kit/integrations/cli.html#command-invocation
+

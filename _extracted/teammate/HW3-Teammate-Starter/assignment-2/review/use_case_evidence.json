@@ -1,0 +1,307 @@
+{
+  "UC-1": [
+    {
+      "file": "teo-initial.csv",
+      "record": 7,
+      "Timestamp": "2026-10-28T00:59:52.304Z",
+      "Speaker": "Stakeholder",
+      "Speech": "I compare the temperature reading with the parts coming out and check whether the heater cycles properly. If the temperature keeps wandering while the controls look steady, that points to the heater band."
+    },
+    {
+      "file": "teo-initial.csv",
+      "record": 9,
+      "Timestamp": "2026-10-28T01:00:17.854Z",
+      "Speaker": "Stakeholder",
+      "Speech": "The hard part is doing it quickly with gloves on while the floor’s making a racket. I’d want the tablet to show the live temperature against the normal range, and let me attach a quick photo or voice note instead of typing everything."
+    },
+    {
+      "file": "teo-initial.csv",
+      "record": 21,
+      "Timestamp": "2026-10-28T01:02:46.799Z",
+      "Speaker": "Stakeholder",
+      "Speech": "I checked the shift handoff and the CMMS history to see what Day Shift had already swapped or tested. Then I went to the parts crib, checked the heater-band bin against Press 7’s part number, and pulled one before going back to the press."
+    },
+    {
+      "file": "teo-follow-up-2.csv",
+      "record": 11,
+      "Timestamp": "2026-10-28T01:31:05.537Z",
+      "Speaker": "Stakeholder",
+      "Speech": "I note the asset ID, fault symptoms, setpoint versus actual temperature, part number, and the corrective action—heater band replaced, connections checked, verification run completed. I also write down the machine-specific tricks that aren’t in the manual, but those notes are my working knowledge, not something I want turned into company property by default."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 23,
+      "Timestamp": "2026-10-28T17:34:09.701Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Well, yes—near misses have to be reported within 24 hours even if nobody was hurt; a lucky escape is still a warning. Lockout/tagout records need to show who applied the lock, when, and who released it, and they must stay available for inspections. Tablets also can’t become a distraction around moving machinery, and any chemical spill during maintenance needs a separate environmental report, not just a note in the repair log."
+    }
+  ],
+  "UC-2": [
+    {
+      "file": "teo-initial.csv",
+      "record": 21,
+      "Timestamp": "2026-10-28T01:02:46.799Z",
+      "Speaker": "Stakeholder",
+      "Speech": "I checked the shift handoff and the CMMS history to see what Day Shift had already swapped or tested. Then I went to the parts crib, checked the heater-band bin against Press 7’s part number, and pulled one before going back to the press."
+    },
+    {
+      "file": "teo-follow-up-2.csv",
+      "record": 9,
+      "Timestamp": "2026-10-28T01:30:30.890Z",
+      "Speaker": "Stakeholder",
+      "Speech": "I stopped Press 7 and got the lockout/tagout confirmed before opening anything. Then I checked the band and its connections, replaced the weak one, and ran parts until the temperature held steady; the tablet should let me mark that safety check and record the readings right there."
+    },
+    {
+      "file": "teo-follow-up-2.csv",
+      "record": 11,
+      "Timestamp": "2026-10-28T01:31:05.537Z",
+      "Speaker": "Stakeholder",
+      "Speech": "I note the asset ID, fault symptoms, setpoint versus actual temperature, part number, and the corrective action—heater band replaced, connections checked, verification run completed. I also write down the machine-specific tricks that aren’t in the manual, but those notes are my working knowledge, not something I want turned into company property by default."
+    },
+    {
+      "file": "teo-follow-up-2.csv",
+      "record": 17,
+      "Timestamp": "2026-10-28T01:32:31.268Z",
+      "Speaker": "Stakeholder",
+      "Speech": "I need the last fault code, the corrective action, and the verification status on the work order. For parts, give me the exact part number, stock quantity, and crib location, plus any approved substitute—otherwise I’m hunting through bins while the press is down."
+    },
+    {
+      "file": "teo-follow-up-2.csv",
+      "record": 21,
+      "Timestamp": "2026-10-28T01:33:22.867Z",
+      "Speaker": "Stakeholder",
+      "Speech": "I checked the band and its connections again, then ran a verification cycle while watching the actual temperature and the parts. Once it held steady, I wrote the readings and what I’d replaced in my notebook and left the missing part details for the handoff."
+    }
+  ],
+  "UC-3": [
+    {
+      "file": "angela-initial.csv",
+      "record": 10,
+      "Timestamp": "2026-10-28T13:32:47.328Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Well, the last one was Press 14, a bottleneck with no practical backup. The outgoing supervisor showed me the stop time, the sensor alarm, the technician’s diagnosis, the parts already produced, and the expected repair time; I checked the open work order, confirmed production had been rerouted, and spoke with the incoming supervisor before accepting the handover. I also made sure the downtime was recorded in minutes against a reason code, because technicians often leave that blank and then we can’t tell whether we had an electrical failure, tooling problem, or operator issue."
+    },
+    {
+      "file": "angela-initial.csv",
+      "record": 12,
+      "Timestamp": "2026-10-28T13:33:20.301Z",
+      "Speaker": "Stakeholder",
+      "Speech": "I stopped the handover long enough to get the technician to enter the reason before the repair was closed, then checked that the downtime minutes matched the machine stop and first good part. The system should make the reason code mandatory when a work order is completed and show missing fields to the supervisor, rather than letting incomplete records disappear into the next shift."
+    },
+    {
+      "file": "angela-initial.csv",
+      "record": 19,
+      "Timestamp": "2026-10-28T13:34:52.902Z",
+      "Speaker": "Stakeholder",
+      "Speech": "A successful handover means no ambiguity on machine status, ownership of open work orders, estimated restoration time, or production impact. I also expect the downtime event, alarm history, diagnosis, corrective action, and reason code to be traceable, with the next shift knowing exactly what to monitor and when to escalate."
+    },
+    {
+      "file": "angela-initial.csv",
+      "record": 31,
+      "Timestamp": "2026-10-28T13:37:46.015Z",
+      "Speaker": "Stakeholder",
+      "Speech": "The main point is that maintenance data has to be accurate enough to drive decisions, not just satisfy an audit. I need to see downtime in minutes, the root cause, ownership, and production impact across all three shifts; otherwise I’m managing by anecdotes instead of facts."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 21,
+      "Timestamp": "2026-10-28T17:33:39.894Z",
+      "Speaker": "Stakeholder",
+      "Speech": "A required digital handoff with the critical fields completed and acknowledged by the incoming supervisor would help most. No equipment gets released while isolation status, alarms, permits, and unresolved hazards are blank."
+    }
+  ],
+  "UC-4": [
+    {
+      "file": "angela-initial.csv",
+      "record": 8,
+      "Timestamp": "2026-10-28T13:31:57.701Z",
+      "Speaker": "Stakeholder",
+      "Speech": "A machine is critical when it’s a bottleneck, has no practical backup, or its failure stops an entire production cell. I also treat machines with a history of long downtime or high-impact quality issues as critical, even if production can technically route around them."
+    },
+    {
+      "file": "angela-initial.csv",
+      "record": 14,
+      "Timestamp": "2026-10-28T13:33:54.358Z",
+      "Speaker": "Stakeholder",
+      "Speech": "It makes the next few hours guesswork: I may hold a technician on the wrong problem, schedule the wrong spare, or prioritize a machine for the wrong reason. I’d want the shift view to flag missing reason codes immediately and show downtime, alarm data, current status, and production impact together so I can make a decision without chasing three people."
+    },
+    {
+      "file": "angela-initial.csv",
+      "record": 19,
+      "Timestamp": "2026-10-28T13:34:52.902Z",
+      "Speaker": "Stakeholder",
+      "Speech": "A successful handover means no ambiguity on machine status, ownership of open work orders, estimated restoration time, or production impact. I also expect the downtime event, alarm history, diagnosis, corrective action, and reason code to be traceable, with the next shift knowing exactly what to monitor and when to escalate."
+    },
+    {
+      "file": "angela-initial.csv",
+      "record": 21,
+      "Timestamp": "2026-10-28T13:35:19.832Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Escalation means moving an unresolved issue to the maintenance lead, production supervisor, or me when it exceeds the target restoration time, affects a critical machine, or creates a safety or quality risk. The record should show who owns it, the escalation time, the reason, and the next action."
+    }
+  ],
+  "UC-5": [
+    {
+      "file": "angela-initial.csv",
+      "record": 23,
+      "Timestamp": "2026-10-28T13:35:53.834Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Safety and compliance require a documented lockout/tagout status, hazard assessment, and clear release authority before a machine returns to service. For safety-part equipment, the repair record must be fully traceable—failure mode, technician, parts, corrective action, inspection, and the person who approved the restart—because customers audit those records."
+    },
+    {
+      "file": "angela-initial.csv",
+      "record": 25,
+      "Timestamp": "2026-10-28T13:36:11.712Z",
+      "Speaker": "Stakeholder",
+      "Speech": "We don’t restart it; incomplete documentation means the hold stays in place, regardless of production pressure."
+    },
+    {
+      "file": "angela-initial.csv",
+      "record": 29,
+      "Timestamp": "2026-10-28T13:37:14.563Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Clear ownership helps: the supervisor confirms who is responsible for each missing item, and the system shows the hold visibly instead of burying it in a work order. I also back the person who stops the restart; nobody should be penalized for following the procedure."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 13,
+      "Timestamp": "2026-10-28T17:31:15.628Z",
+      "Speaker": "Stakeholder",
+      "Speech": "The maintenance technician enters the work order and corrective-action details, while the shift supervisor validates the hazard controls before closeout. Safety-critical records, including isolation status and return-to-service authorization, must be updated before equipment release, not at the end of the shift."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 21,
+      "Timestamp": "2026-10-28T17:33:39.894Z",
+      "Speaker": "Stakeholder",
+      "Speech": "A required digital handoff with the critical fields completed and acknowledged by the incoming supervisor would help most. No equipment gets released while isolation status, alarms, permits, and unresolved hazards are blank."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 27,
+      "Timestamp": "2026-10-28T17:44:38.682Z",
+      "Speaker": "Stakeholder",
+      "Speech": "The record has to identify the equipment, the specific isolation points, the person who applied each lock, the date and time, and the person who authorized and performed release; changes also need an audit trail so nobody can quietly rewrite history. I want the technician and supervisor acknowledgments tied to the work order, along with any permit, photos, alarm information, and return-to-service decision. A near miss still needs reporting within 24 hours, tablets must not distract operators, and a chemical spill gets its own environmental report."
+    }
+  ],
+  "UC-6": [
+    {
+      "file": "rob-interview.csv",
+      "record": 23,
+      "Timestamp": "2026-10-28T17:34:09.701Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Well, yes—near misses have to be reported within 24 hours even if nobody was hurt; a lucky escape is still a warning. Lockout/tagout records need to show who applied the lock, when, and who released it, and they must stay available for inspections. Tablets also can’t become a distraction around moving machinery, and any chemical spill during maintenance needs a separate environmental report, not just a note in the repair log."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 29,
+      "Timestamp": "2026-10-28T17:45:20.933Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Well, the handoff shouldn’t be the final place a near miss lives. Whoever hears it needs to open a report with the basic facts—what happened, where, when, and who was involved—and the supervisor needs to acknowledge it before the 24-hour deadline. A verbal mention without a recorded follow-up is how warnings disappear."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 31,
+      "Timestamp": "2026-10-28T17:45:57.392Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Well, make reporting part of the normal handoff instead of a separate favor someone has to remember. Keep the required facts short, assign it to a named person, and have the supervisor acknowledge it; if it isn’t recorded, it isn’t closed. People take it seriously when they know the record is reviewed and the deadline is real."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 33,
+      "Timestamp": "2026-10-28T17:46:28.516Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Let me think... review the facts first: what happened, what controls were in place, and what we can change so it doesn’t happen again. The person reporting it shouldn’t be punished for speaking up; accountability belongs with correcting unsafe conditions and verifying the follow-through."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 35,
+      "Timestamp": "2026-10-28T17:46:57.049Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Yes—once the review identifies a corrective action, someone needs to own it and we need to verify it was completed. Otherwise we’re just documenting the same hazard and waiting for it to hurt somebody."
+    }
+  ],
+  "UC-7": [
+    {
+      "file": "rob-interview.csv",
+      "record": 23,
+      "Timestamp": "2026-10-28T17:34:09.701Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Well, yes—near misses have to be reported within 24 hours even if nobody was hurt; a lucky escape is still a warning. Lockout/tagout records need to show who applied the lock, when, and who released it, and they must stay available for inspections. Tablets also can’t become a distraction around moving machinery, and any chemical spill during maintenance needs a separate environmental report, not just a note in the repair log."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 27,
+      "Timestamp": "2026-10-28T17:44:38.682Z",
+      "Speaker": "Stakeholder",
+      "Speech": "The record has to identify the equipment, the specific isolation points, the person who applied each lock, the date and time, and the person who authorized and performed release; changes also need an audit trail so nobody can quietly rewrite history. I want the technician and supervisor acknowledgments tied to the work order, along with any permit, photos, alarm information, and return-to-service decision. A near miss still needs reporting within 24 hours, tablets must not distract operators, and a chemical spill gets its own environmental report."
+    }
+  ],
+  "UC-8": [
+    {
+      "file": "rob-interview.csv",
+      "record": 9,
+      "Timestamp": "2026-10-28T17:30:09.217Z",
+      "Speaker": "Stakeholder",
+      "Speech": "I use maintenance data for hazard assessments, lockout/tagout verification, confined-space or hot-work decisions, and determining whether equipment can be returned to service. I also look at recurring failure modes and sensor alarms to decide whether we need an immediate shutdown, corrective action, or a formal safety inspection."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 11,
+      "Timestamp": "2026-10-28T17:30:42.356Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Well, the alarm came in during a maintenance check, and we stopped the work while the technician and supervisor looked into it. We verified the hazard, checked whether the equipment was isolated, and decided it couldn’t go back into service until the issue was addressed and the records were updated."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 17,
+      "Timestamp": "2026-10-28T17:32:26.552Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Well, I stopped the job and documented the hazard instead of letting the production schedule decide for us. The supervisor backed that decision, and we reviewed the work permit and equipment history before anything moved. I also made sure the sensor alarm was preserved in the record, because recurring alarms can point to a bigger problem. Production lost time, but nobody got hurt—that’s the standard."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 19,
+      "Timestamp": "2026-10-28T17:33:12.862Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Usually it’s the exact failure description, what was already tried, the current isolation status, and whether the sensor alarm is still active. We also need the technician’s name, the time the equipment was locked out, and confirmation of who released it—those records matter during an inspection. Sometimes the permit, photos, or parts replaced don’t make it across the shift handoff. We’ve also had to stop work when a near miss was mentioned casually but never entered into the record."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 49,
+      "Timestamp": "2026-10-28T17:50:37.717Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Good. Make sure the safety-critical items don’t get buried in general maintenance notes. If a control can prevent an injury or prove what happened during an inspection, it needs to be unmistakable."
+    }
+  ],
+  "UC-9": [
+    {
+      "file": "rob-interview.csv",
+      "record": 27,
+      "Timestamp": "2026-10-28T17:44:38.682Z",
+      "Speaker": "Stakeholder",
+      "Speech": "The record has to identify the equipment, the specific isolation points, the person who applied each lock, the date and time, and the person who authorized and performed release; changes also need an audit trail so nobody can quietly rewrite history. I want the technician and supervisor acknowledgments tied to the work order, along with any permit, photos, alarm information, and return-to-service decision. A near miss still needs reporting within 24 hours, tablets must not distract operators, and a chemical spill gets its own environmental report."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 37,
+      "Timestamp": "2026-10-28T17:47:27.669Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Let’s cover inspections and record retrieval next. When an inspector asks about a machine, I need to find the complete maintenance, isolation, alarm, and corrective-action history without chasing people across shifts. If the record is incomplete, we can’t prove the work was safe."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 41,
+      "Timestamp": "2026-10-28T17:48:39.537Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Well, I’d make the equipment identifier and time window mandatory on every maintenance record, permit, handoff, and sensor event. Then the full history should be tied together under that equipment record, so an inspector can retrieve the work, isolation, alarms, and corrective actions without relying on someone’s memory."
+    },
+    {
+      "file": "rob-interview.csv",
+      "record": 43,
+      "Timestamp": "2026-10-28T17:49:15.529Z",
+      "Speaker": "Stakeholder",
+      "Speech": "Well, records need to remain readable and retrievable for the full inspection period, not disappear when equipment is retired or someone changes jobs. I also need a clear history of corrections—who changed what and when—plus an export an inspector can review without needing access to our entire operating system."
+    }
+  ]
+}

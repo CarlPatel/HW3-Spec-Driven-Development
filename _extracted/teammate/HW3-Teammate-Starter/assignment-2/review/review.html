@@ -1,0 +1,409 @@
+<!doctype html><html><meta charset="utf-8"><title>Requirements Analysis review</title><style>body{font:16px/1.5 system-ui;max-width:1100px;margin:36px auto;padding:0 24px;color:#18212b} table{border-collapse:collapse;width:100%}td,th{padding:9px;border:1px solid #bbb;text-align:left;vertical-align:top}h1,h2{color:#153c56}mark{background:#fff59d}code{font-size:14px}.small{font-size:13px;color:#475569}li{margin:6px 0}</style><body>
+<h1>Requirements Analysis: review copy</h1><p>AI-generated draft based on Teo, Angela, and Rob interviews. Yellow marks an interpretation not explicitly stated in the source. Personal reflection is intentionally absent.</p>
+<h2>Combined goal catalog</h2><table><tr><th>ID</th><th>Goal</th><th>Type / category</th><th>Agent and evidence</th></tr>
+<tr><td>G-1</td><td>Soft[Reduce production lost while diagnosing, repairing, and restoring faulty equipment]</td><td>Soft<br>non-functional</td><td>Refined below<br><span class="small">A@13:34:16.376; A@13:36:49.533; T0@01:04:46.785; T2@01:34:41.523</span></td></tr>
+<tr><td>G-2</td><td>Soft[Minimize effort and interruption when recording work on a noisy floor with gloves]</td><td>Soft<br>non-functional</td><td>Refined below<br><span class="small">T0@01:00:17.854; T1@01:17:43.870; T2@01:35:01.447</span></td></tr>
+<tr><td>G-3</td><td>Achieve[Mechanic obtains evidence to distinguish a heater fault from other faults]</td><td>Achieve<br>functional</td><td>Refined below<br><span class="small">T0@00:59:52.304; T2@01:30:04.038</span></td></tr>
+<tr><td>G-4</td><td>Achieve[Tablet displays live actual temperature, setpoint, and normal range for the selected press]</td><td>Achieve<br>functional</td><td>Maintenance system<br><span class="small">T0@01:00:17.854; T1@01:15:07.221</span></td></tr>
+<tr><td>G-5</td><td>Achieve[Mechanic compares temperature, part quality, and heater cycling before diagnosing the fault]</td><td>Achieve<br>functional</td><td>Mechanic<br><span class="small">T0@00:59:52.304; T1@01:14:44.345</span></td></tr>
+<tr><td>G-6</td><td>Achieve[Shared handover links asset fault, downtime, alarms, diagnosis, corrective action, reason code, parts, and verification]</td><td>Achieve<br>functional</td><td>Refined below<br><span class="small">A@13:34:52.902; T2@01:31:36.166; T2@01:34:15.324</span></td></tr>
+<tr><td>G-7</td><td>Achieve[Repair record identifies the asset, fault symptoms, and last fault code]</td><td>Achieve<br>functional</td><td>Mechanic<br><span class="small">T2@01:31:05.537; T2@01:32:31.268</span></td></tr>
+<tr><td>G-8</td><td>Achieve[Repair record contains actual temperature and setpoint]</td><td>Achieve<br>functional</td><td>Mechanic<br><span class="small">T0@01:04:05.776; T2@01:31:05.537</span></td></tr>
+<tr><td>G-9</td><td>Achieve[Repair record states tests, corrective action, installed part number, and verification result]</td><td>Achieve<br>functional</td><td>Mechanic<br><span class="small">T0@01:04:05.776; T2@01:31:05.537; T2@01:32:31.268</span></td></tr>
+<tr><td>G-10</td><td>Achieve[Fault and change are captured before the mechanic moves on]</td><td>Achieve<br>functional</td><td>Mechanic<br><span class="small">T1@01:15:57.589; T1@01:17:43.870</span></td></tr>
+<tr><td>G-11</td><td>Achieve[Mechanic attaches quick evidence without typing the entire account]</td><td>Achieve<br>functional</td><td>Refined below<br><span class="small">T0@01:00:17.854; T1@01:15:07.221</span></td></tr>
+<tr><td>G-12</td><td>Achieve[Mechanic attaches a photo of the finding]</td><td>Achieve<br>functional</td><td>Mechanic<br><span class="small">T0@01:00:17.854</span></td></tr>
+<tr><td>G-13</td><td>Achieve[Mechanic attaches a short voice note of the finding]</td><td>Achieve<br>functional</td><td>Mechanic<br><span class="small">T0@01:00:17.854</span></td></tr>
+<tr><td>G-14</td><td>Achieve[Mechanic retrieves earlier troubleshooting to avoid repeating checks]</td><td>Achieve<br>functional</td><td>Refined below<br><span class="small">T0@01:02:46.799; T2@01:31:36.166</span></td></tr>
+<tr><td>G-15</td><td>Achieve[Mechanic reads the shift handoff and open fault history]</td><td>Achieve<br>functional</td><td>Mechanic<br><span class="small">T0@01:02:46.799; T2@01:31:36.166</span></td></tr>
+<tr><td>G-16</td><td>Achieve[Mechanic retrieves closed work orders and recorded part numbers from CMMS]</td><td>Achieve<br>functional</td><td>Mechanic<br><span class="small">T0@01:03:15.310</span></td></tr>
+<tr><td>G-17</td><td>Achieve[Mechanic locates a suitable replacement part without hunting through bins]</td><td>Achieve<br>functional</td><td>Refined below<br><span class="small">T2@01:32:31.268</span></td></tr>
+<tr><td>G-18</td><td>Achieve[Parts view provides exact part number, stock quantity, crib location, and approved substitutes]</td><td>Achieve<br>functional</td><td>Maintenance system<br><span class="small">T2@01:32:31.268</span></td></tr>
+<tr><td>G-19</td><td>Achieve[Press repair includes isolation confirmation, corrective work, and a verification run]</td><td>Achieve<br>functional</td><td>Refined below<br><span class="small">T2@01:30:30.890</span></td></tr>
+<tr><td>G-20</td><td>Maintain[Press is stopped and lockout/tagout is confirmed before the mechanic opens equipment]</td><td>Maintain<br>non-functional</td><td>Mechanic<br><span class="small">T2@01:30:30.890</span></td></tr>
+<tr><td>G-21</td><td>Achieve[Tablet records the confirmed safety check at the machine]</td><td>Achieve<br>functional</td><td>Mechanic<br><span class="small">T2@01:30:30.890</span></td></tr>
+<tr><td>G-22</td><td>Achieve[Mechanic checks connections, replaces the weak band, and verifies stable temperature and good parts]</td><td>Achieve<br>functional</td><td>Mechanic<br><span class="small">T2@01:30:30.890; T2@01:33:22.867</span></td></tr>
+<tr><td>G-23</td><td>Avoid[Machine-specific personal working knowledge becomes company property by default]</td><td>Avoid<br>non-functional</td><td>Refined below<br><span class="small">T2@01:31:05.537</span></td></tr>
+<tr><td>G-24</td><td><mark style="background-color:#fff59d">Maintain[Personal notes remain private unless the mechanic explicitly selects content to share]</mark></td><td>Maintain<br>non-functional</td><td>Maintenance system<br><span class="small">T2@01:31:05.537</span></td></tr>
+<tr><td>G-25</td><td>Soft[Improve maintenance and production decisions using accurate facts across shifts]</td><td>Soft<br>non-functional</td><td>Refined below<br><span class="small">A@13:33:54.358; A@13:37:46.015</span></td></tr>
+<tr><td>G-26</td><td>Achieve[Incoming supervisor receives an unambiguous machine and open-work handover]</td><td>Achieve<br>functional</td><td>Refined below<br><span class="small">A@13:34:52.902</span></td></tr>
+<tr><td>G-27</td><td>Achieve[Shift view shows machine status, work ownership, restoration estimate, and production impact]</td><td>Achieve<br>functional</td><td>Maintenance system<br><span class="small">A@13:33:54.358; A@13:34:52.902</span></td></tr>
+<tr><td>G-29</td><td>Achieve[Outgoing and incoming supervisors agree what to monitor and when to escalate]</td><td>Achieve<br>functional</td><td>Shift supervisor<br><span class="small">A@13:34:52.902</span></td></tr>
+<tr><td>G-30</td><td>Maintain[Completed maintenance records contain a reason and accurate downtime minutes]</td><td>Maintain<br>non-functional</td><td>Refined below<br><span class="small">A@13:32:47.328; A@13:33:20.301</span></td></tr>
+<tr><td>G-31</td><td>Maintain[Work-order completion requires a reason code]</td><td>Maintain<br>functional</td><td>Maintenance system<br><span class="small">A@13:33:20.301</span></td></tr>
+<tr><td>G-32</td><td>Achieve[Supervisor sees missing reason codes and other required fields immediately]</td><td>Achieve<br>functional</td><td>Maintenance system<br><span class="small">A@13:33:20.301; A@13:33:54.358</span></td></tr>
+<tr><td>G-33</td><td>Achieve[Supervisor verifies downtime minutes against machine stop and first good part times]</td><td>Achieve<br>functional</td><td>Shift supervisor<br><span class="small">A@13:33:20.301</span></td></tr>
+<tr><td>G-34</td><td>Achieve[Supervisor identifies critical machines from bottleneck, backup, cell, downtime, and quality impact]</td><td>Achieve<br>functional</td><td>Shift supervisor<br><span class="small">A@13:31:57.701</span></td></tr>
+<tr><td>G-35</td><td>Achieve[Unresolved maintenance issues receive an escalation when required]</td><td>Achieve<br>functional</td><td>Refined below<br><span class="small">A@13:35:19.832</span></td></tr>
+<tr><td>G-36</td><td>Achieve[Issue is escalated if [restoration target exceeded, critical equipment affected, or safety or quality at risk]]</td><td>Achieve<br>functional</td><td>Shift supervisor<br><span class="small">A@13:35:19.832</span></td></tr>
+<tr><td>G-37</td><td>Achieve[Escalation record identifies owner, time, reason, and next action]</td><td>Achieve<br>functional</td><td>Shift supervisor<br><span class="small">A@13:35:19.832</span></td></tr>
+<tr><td>G-38</td><td>Maintain[Hazard controls and complete safety records are verified and release is authorized before equipment returns to service]</td><td>Maintain<br>non-functional</td><td>Refined below<br><span class="small">A@13:35:53.834; A@13:36:11.712; R@17:31:15.628; R@17:33:39.894</span></td></tr>
+<tr><td>G-39</td><td>Achieve[Repair record contains lockout/tagout status, hazard assessment, and release authority]</td><td>Achieve<br>functional</td><td>Mechanic<br><span class="small">A@13:35:53.834</span></td></tr>
+<tr><td>G-40</td><td>Achieve[Safety-part repair is traceable to failure mode, technician, parts, action, inspection, and restart approver]</td><td>Achieve<br>functional</td><td>Maintenance system<br><span class="small">A@13:35:53.834</span></td></tr>
+<tr><td>G-41</td><td>Maintain[Equipment stays on hold if [release documentation or isolation, alarm, permit, or hazard fields are incomplete, or hazards remain unresolved]]</td><td>Maintain<br>non-functional</td><td>Shift supervisor<br><span class="small">A@13:36:11.712; A@13:36:49.533; R@17:33:39.894; R@17:50:15.782</span></td></tr>
+<tr><td>G-42</td><td>Achieve[Supervisor assigns an owner to each missing release item and sees the hold clearly]</td><td>Achieve<br>functional</td><td>Shift supervisor<br><span class="small">A@13:37:14.563</span></td></tr>
+<tr><td>G-44</td><td>Achieve[Equipment and shift view ties downtime, root cause, ownership, and impact across all three shifts]</td><td>Achieve<br>functional</td><td>Maintenance system<br><span class="small">A@13:37:46.015; A@13:38:09.416</span></td></tr>
+<tr><td>G-45</td><td>Avoid[Personnel are penalized for stopping an unsafe restart in accordance with procedure]</td><td>Avoid<br>non-functional</td><td>Plant management<br><span class="small">A@13:37:14.563</span></td></tr>
+<tr><td>G-46</td><td>Soft[Minimize maintenance injuries and demonstrate safe work during inspections]</td><td>Soft<br>non-functional</td><td>Refined below<br><span class="small">R@17:29:34.313; R@17:47:27.669</span></td></tr>
+<tr><td>G-48</td><td>Achieve[Safety coordinator assesses hazard, active alarms, isolation, and applicable work permits]</td><td>Achieve<br>functional</td><td>Safety coordinator<br><span class="small">R@17:30:09.217; R@17:32:26.552</span></td></tr>
+<tr><td>G-49</td><td>Achieve[Isolation record states equipment, isolation points, each lock applier, date/time, and release authorizer and performer]</td><td>Achieve<br>functional</td><td>Mechanic<br><span class="small">R@17:44:38.682</span></td></tr>
+<tr><td>G-50</td><td>Achieve[Return-to-service authorization and technician/supervisor acknowledgments are recorded before release]</td><td>Achieve<br>functional</td><td>Shift supervisor<br><span class="small">R@17:31:15.628; R@17:44:38.682</span></td></tr>
+<tr><td>G-51</td><td>Achieve[Supervisor validates hazard controls before closeout]</td><td>Achieve<br>functional</td><td>Shift supervisor<br><span class="small">R@17:31:15.628</span></td></tr>
+<tr><td>G-53</td><td>Achieve[Incoming supervisor acknowledges a digital handoff with all critical fields completed]</td><td>Achieve<br>functional</td><td>Shift supervisor<br><span class="small">R@17:33:39.894</span></td></tr>
+<tr><td>G-54</td><td>Achieve[Work order retains permits, photos, alarm information, replaced parts, and release decision]</td><td>Achieve<br>functional</td><td>Maintenance system<br><span class="small">R@17:33:12.862; R@17:44:38.682</span></td></tr>
+<tr><td>G-55</td><td>Maintain[Record corrections preserve who changed what and when]</td><td>Maintain<br>non-functional</td><td>Maintenance system<br><span class="small">R@17:44:38.682; R@17:49:15.529</span></td></tr>
+<tr><td>G-56</td><td>Achieve[Inspector can retrieve complete equipment maintenance and safety history without chasing people]</td><td>Achieve<br>functional</td><td>Refined below<br><span class="small">R@17:47:27.669</span></td></tr>
+<tr><td>G-57</td><td>Maintain[Maintenance, permit, handoff, and sensor records include a consistent equipment identifier and time window]</td><td>Maintain<br>functional</td><td>Maintenance system<br><span class="small">R@17:48:39.537</span></td></tr>
+<tr><td>G-58</td><td>Achieve[Equipment record joins maintenance, isolation, alarms, permits, and corrective-action history]</td><td>Achieve<br>functional</td><td>Maintenance system<br><span class="small">R@17:48:39.537</span></td></tr>
+<tr><td>G-59</td><td>Maintain[Records remain readable and retrievable for the inspection period despite retirement or staff changes]</td><td>Maintain<br>non-functional</td><td>Maintenance system<br><span class="small">R@17:49:15.529</span></td></tr>
+<tr><td>G-60</td><td>Achieve[Safety coordinator exports inspectable records without granting access to the entire operating system]</td><td>Achieve<br>functional</td><td>Safety coordinator<br><span class="small">R@17:49:15.529</span></td></tr>
+<tr><td>G-61</td><td>Achieve[Near misses are recorded, acknowledged, reviewed, and followed through]</td><td>Achieve<br>functional</td><td>Refined below<br><span class="small">R@17:45:20.933; R@17:46:57.049</span></td></tr>
+<tr><td>G-62</td><td>Achieve[Named reporter records what happened, where, when, and who within 24 hours of a near miss]</td><td>Achieve<br>functional</td><td>Reporter<br><span class="small">R@17:34:09.701; R@17:45:20.933; R@17:45:57.392</span></td></tr>
+<tr><td>G-63</td><td>Achieve[Supervisor acknowledges a near-miss report before its 24-hour deadline]</td><td>Achieve<br>functional</td><td>Shift supervisor<br><span class="small">R@17:45:20.933</span></td></tr>
+<tr><td>G-64</td><td>Achieve[Safety review considers facts and controls without punishing the reporter for speaking up]</td><td>Achieve<br>functional</td><td>Safety coordinator<br><span class="small">R@17:46:28.516</span></td></tr>
+<tr><td>G-65</td><td>Achieve[Corrective action has a named owner and verified completion]</td><td>Achieve<br>functional</td><td>Safety coordinator<br><span class="small">R@17:46:57.049</span></td></tr>
+<tr><td>G-66</td><td>Achieve[Separate environmental report is created if [a chemical spill occurs during maintenance]]</td><td>Achieve<br>functional</td><td>Reporter<br><span class="small">R@17:34:09.701; R@17:44:38.682</span></td></tr>
+<tr><td>G-67</td><td>Avoid[Tablet use distracts personnel around moving machinery]</td><td>Avoid<br>non-functional</td><td>Mechanic<br><span class="small">R@17:34:09.701</span></td></tr>
+<tr><td>G-68</td><td>Maintain[Safety-critical controls remain prominent and distinguishable from general maintenance notes]</td><td>Maintain<br>non-functional</td><td>Maintenance system<br><span class="small">R@17:49:43.711; R@17:50:37.717</span></td></tr>
+<tr><td>G-69</td><td>Achieve[Work is stopped and hazard documented if [an alarm indicates a hazard requiring investigation]]</td><td>Achieve<br>functional</td><td>Shift supervisor<br><span class="small">R@17:30:42.356; R@17:32:26.552</span></td></tr>
+<tr><td>G-70</td><td>Achieve[Safety coordinator reviews recurring alarms and failure modes for shutdown, action, or inspection]</td><td>Achieve<br>functional</td><td>Safety coordinator<br><span class="small">R@17:30:09.217; R@17:32:26.552</span></td></tr>
+<tr><td>G-71</td><td><mark style="background-color:#fff59d">Soft[Improve safe maintenance continuity with usable, reliable cross-shift records]</mark></td><td>Soft<br>non-functional</td><td>Refined below<br><span class="small">T2@01:34:41.523; A@13:37:46.015; R@17:29:34.313</span></td></tr>
+<tr><td>G-72</td><td><mark style="background-color:#fff59d">Maintain[Mechanic confirms voice-note content before it is published to the shared repair record]</mark></td><td>Maintain<br>non-functional</td><td>Mechanic<br><span class="small">T0@01:00:17.854</span></td></tr>
+<tr><td>G-73</td><td><mark style="background-color:#fff59d">Maintain[A release request is rejected and missing items shown if [the safety-release checks are not all satisfied]]</mark></td><td>Maintain<br>non-functional</td><td>Maintenance system<br><span class="small">A@13:36:11.712; R@17:33:39.894</span></td></tr>
+<tr><td>G-74</td><td><mark style="background-color:#fff59d">Maintain[Capture uses a safe stationary interaction point if [machinery is moving nearby]]</mark></td><td>Maintain<br>non-functional</td><td>Mechanic<br><span class="small">R@17:34:09.701; T1@01:17:43.870</span></td></tr>
+<tr><td>G-75</td><td><mark style="background-color:#fff59d">Achieve[System flags missing or stale telemetry if [a current temperature reading cannot be obtained]]</mark></td><td>Achieve<br>functional</td><td>Maintenance system<br><span class="small">T0@01:00:17.854</span></td></tr>
+<tr><td>G-76</td><td><mark style="background-color:#fff59d">Achieve[Required shared repair facts are recorded without automatically copying personal notebook content]</mark></td><td>Achieve<br>functional</td><td>Mechanic<br><span class="small">T2@01:31:05.537; R@17:44:38.682</span></td></tr>
+<tr><td>G-77</td><td><mark style="background-color:#fff59d">Achieve[Safety coordinator configures the applicable inspection retention period before records are scheduled for disposal]</mark></td><td>Achieve<br>functional</td><td>Safety coordinator<br><span class="small">R@17:49:15.529</span></td></tr>
+</table><h2>Use cases</h2>
+<h3>UC-1: Diagnose a press fault and capture findings</h3><p><b>Actors:</b> Mechanic, Maintenance system</p>
+<h4>Preconditions</h4><ol>
+<li>A press is showing a fault or producing bad parts.</li>
+<li><mark style="background-color:#fff59d">The mechanic uses the tablet from a safe stationary position away from moving machinery.</mark></li>
+</ol>
+<h4>Flow of events</h4><ol>
+<li><code>UC-1@1</code> <mark style="background-color:#fff59d">The mechanic selects the affected asset record.</mark></li>
+<li><code>UC-1@2</code> The mechanic reviews the shift handoff, prior troubleshooting, closed work orders, and recorded part numbers.</li>
+<li><code>UC-1@3</code> The system displays actual temperature, setpoint, and normal range together.</li>
+<li><code>UC-1@4</code> <mark style="background-color:#fff59d">If a live reading is unavailable or stale, the system flags that condition instead of presenting it as current; the mechanic obtains a current reading before relying on it.</mark></li>
+<li><code>UC-1@5</code> The mechanic compares temperature behavior with part quality and heater cycling to form the diagnosis.</li>
+<li><code>UC-1@6</code> The mechanic records the asset, symptom or fault code, actual reading, and setpoint.</li>
+<li><code>UC-1@7</code> The mechanic attaches a quick photo or short voice note rather than typing the entire account.</li>
+<li><code>UC-1@8</code> <mark style="background-color:#fff59d">If a voice note is used, the mechanic confirms that its content accurately represents the finding before publishing it.</mark></li>
+<li><code>UC-1@9</code> <mark style="background-color:#fff59d">The mechanic records the required shared facts separately from personal notebook content; personal notes are private unless the mechanic explicitly selects content to share.</mark></li>
+<li><code>UC-1@10</code> The mechanic captures the finding and any change before moving on, using the briefest practical interaction.</li>
+</ol>
+<h4>Postconditions</h4><ol>
+<li>The shared record contains the identified fault, measured values, and captured evidence.</li>
+<li><mark style="background-color:#fff59d">Personal working notes have not been copied into the shared record without the mechanic selecting them.</mark></li>
+</ol>
+<h4>Non-functional requirements</h4><ol>
+<li>Capture should require little effort with gloves and in noise.</li>
+<li>Tablet use must not distract personnel around moving machinery.</li>
+<li><mark style="background-color:#fff59d">An unavailable live reading is visibly distinguished from a current reading.</mark></li>
+</ol>
+<h3>UC-2: Locate a replacement part, repair, and verify the press</h3><p><b>Actors:</b> Mechanic, Maintenance system</p>
+<h4>Preconditions</h4><ol>
+<li>The mechanic has identified a suspected press fault and needs a replacement part.</li>
+<li><mark style="background-color:#fff59d">Physical work follows the plant safety procedure; a software record is not proof of physical isolation.</mark></li>
+</ol>
+<h4>Flow of events</h4><ol>
+<li><code>UC-2@1</code> The mechanic retrieves the exact part number, stock quantity, crib location, and any approved substitute.</li>
+<li><code>UC-2@2</code> The mechanic checks the crib bin against the press part number and obtains the matching part.</li>
+<li><code>UC-2@3</code> The mechanic stops the press and confirms lockout/tagout before opening equipment.</li>
+<li><code>UC-2@4</code> The mechanic records the confirmed safety check on the tablet.</li>
+<li><code>UC-2@5</code> The mechanic checks the heater band and connections, replaces the weak band, and records what was tested or changed and the installed part number.</li>
+<li><code>UC-2@6</code> The mechanic performs the verification run and records actual temperature, part quality, and whether verification passed.</li>
+<li><code>UC-2@7</code> <mark style="background-color:#fff59d">If verification fails, the mechanic records the failure and leaves the issue open for further diagnosis; a successful repair is not declared.</mark></li>
+</ol>
+<h4>Postconditions</h4><ol>
+<li>The work order records tests, corrective action, installed part, measured values, and verification status.</li>
+<li>The outcome is available for the next shift to avoid repeating undocumented checks.</li>
+</ol>
+<h4>Non-functional requirements</h4><ol>
+<li>Isolation must be confirmed before equipment is opened.</li>
+<li>Repair evidence must remain traceable to the equipment and work order.</li>
+</ol>
+<h3>UC-3: Complete a work order and acknowledge the shift handover</h3><p><b>Actors:</b> Mechanic, Outgoing supervisor, Incoming supervisor, Maintenance system</p>
+<h4>Preconditions</h4><ol>
+<li>A maintenance work order or unresolved machine issue must be handed to the next shift.</li>
+</ol>
+<h4>Flow of events</h4><ol>
+<li><code>UC-3@1</code> The outgoing supervisor reviews stopped machines, open repairs, machine status, work ownership, expected restoration, and production impact.</li>
+<li><code>UC-3@2</code> The system presents linked downtime, alarms, diagnosis, corrective action, reason code, parts, readings, and verification details.</li>
+<li><code>UC-3@3</code> The supervisor checks downtime minutes against the machine stop and first good part.</li>
+<li><code>UC-3@4</code> If the work order is being completed, the system requires a reason code; missing codes or other required fields are shown to the supervisor.</li>
+<li><code>UC-3@5</code> The supervisor obtains the missing reason before completion, and assigns responsibility for missing safety-release items.</li>
+<li><code>UC-3@6</code> The outgoing and incoming supervisors agree the open-work owner, what to monitor, and when to escalate.</li>
+<li><code>UC-3@7</code> The incoming supervisor acknowledges the digital handoff after the critical fields are complete.</li>
+<li><code>UC-3@8</code> The system associates the handover facts with the equipment, time window, and shift for access across all three shifts.</li>
+</ol>
+<h4>Postconditions</h4><ol>
+<li>The next shift has an acknowledged handover with explicit machine status and work ownership.</li>
+<li>A completed work order includes its reason code and checked downtime minutes; unresolved issues remain identified.</li>
+</ol>
+<h4>Non-functional requirements</h4><ol>
+<li>Missing required data must be visible instead of disappearing into the next shift.</li>
+<li>Maintenance data must be accurate enough to support decisions.</li>
+</ol>
+<h3>UC-4: Prioritize and escalate an unresolved machine issue</h3><p><b>Actors:</b> Shift supervisor, Maintenance lead, Production supervisor, Angela</p>
+<h4>Preconditions</h4><ol>
+<li>A machine issue remains unresolved and its production or safety impact needs review.</li>
+</ol>
+<h4>Flow of events</h4><ol>
+<li><code>UC-4@1</code> The supervisor checks whether the machine is a bottleneck, lacks a practical backup, stops a production cell, or has a history of long downtime or high-impact quality issues.</li>
+<li><code>UC-4@2</code> The supervisor reviews the restoration estimate, current status, and production impact.</li>
+<li><code>UC-4@3</code> If the restoration target is exceeded, critical equipment is affected, or a safety or quality risk exists, the supervisor escalates to the maintenance lead, production supervisor, or Angela.</li>
+<li><code>UC-4@4</code> The escalation record identifies its owner, time, reason, and next action.</li>
+<li><code>UC-4@5</code> The supervisor includes monitoring and escalation expectations in the handover.</li>
+</ol>
+<h4>Postconditions</h4><ol>
+<li>An issue meeting an escalation condition has a named escalation owner and next action.</li>
+<li>The next shift can see the current escalation state.</li>
+</ol>
+<h4>Non-functional requirements</h4><ol>
+<li>Priority should reflect actual equipment and production impact rather than an unclassified alarm alone.</li>
+</ol>
+<h3>UC-5: Review safety hold and authorize return to service</h3><p><b>Actors:</b> Mechanic, Shift supervisor, Authorized release person, Maintenance system</p>
+<h4>Preconditions</h4><ol>
+<li>A repaired or held machine is being considered for return to service.</li>
+</ol>
+<h4>Flow of events</h4><ol>
+<li><code>UC-5@1</code> The technician records the failure, corrective action, replaced parts, readings, verification outcome, and safety documentation.</li>
+<li><code>UC-5@2</code> The isolation record identifies the equipment, isolation points, each lock applier, date and time, and release authorizer and performer.</li>
+<li><code>UC-5@3</code> The supervisor checks hazard assessment, isolation, alarm status, applicable permits, inspection, and unresolved hazards and validates the controls.</li>
+<li><code>UC-5@4</code> The supervisor identifies the person responsible for each missing release item; the hold remains visible.</li>
+<li><code>UC-5@5</code> If required fields or release documentation are incomplete, or a hazard is unresolved, equipment remains on hold despite production pressure.</li>
+<li><code>UC-5@6</code> <mark style="background-color:#fff59d">If a release request is attempted while checks are incomplete, the system rejects the request and displays the missing items.</mark></li>
+<li><code>UC-5@7</code> If the required controls and records are complete and hazards addressed, the authorized person records the return-to-service authorization and the technician/supervisor acknowledgments before equipment release.</li>
+<li><code>UC-5@8</code> The system retains the permit, photos, alarms, release decision, and history of record changes with the work order.</li>
+</ol>
+<h4>Postconditions</h4><ol>
+<li>Equipment is either held with visible outstanding items or released following recorded approval and validated controls.</li>
+<li>The decision, responsible persons, and supporting records are traceable.</li>
+</ol>
+<h4>Non-functional requirements</h4><ol>
+<li>Production pressure must not override the safety hold.</li>
+<li>Personnel must not be penalized for following the procedure and stopping an unsafe restart.</li>
+<li><mark style="background-color:#fff59d">The system records and checks authorization; it does not itself apply locks or physically prove isolation.</mark></li>
+</ol>
+<h3>UC-6: Report and follow through on a near miss</h3><p><b>Actors:</b> Reporter, Shift supervisor, Safety coordinator, Corrective-action owner</p>
+<h4>Preconditions</h4><ol>
+<li>A near miss is observed or mentioned during a handoff, even if nobody is injured.</li>
+</ol>
+<h4>Flow of events</h4><ol>
+<li><code>UC-6@1</code> The person hearing or observing the near miss opens a report with what happened, where, when, and who was involved, within 24 hours.</li>
+<li><code>UC-6@2</code> A named person owns the report and the supervisor acknowledges it before the 24-hour deadline.</li>
+<li><code>UC-6@3</code> The report is treated as part of normal handover and is not closed merely because the event was mentioned verbally.</li>
+<li><code>UC-6@4</code> The safety coordinator reviews the facts, existing controls, and changes needed to prevent recurrence without punishing the reporter for speaking up.</li>
+<li><code>UC-6@5</code> A named person owns any resulting corrective action, and its completion is verified.</li>
+</ol>
+<h4>Postconditions</h4><ol>
+<li>The near miss has a recorded, acknowledged report and reviewed facts.</li>
+<li>Any identified corrective action has an owner and verified completion before that action is treated as complete.</li>
+</ol>
+<h4>Non-functional requirements</h4><ol>
+<li>Reporting and supervisor acknowledgment occur within the stakeholder-specified 24 hours.</li>
+<li>Required reporting facts should be brief and review should focus on unsafe conditions rather than blame.</li>
+</ol>
+<h3>UC-7: Create a separate environmental spill report</h3><p><b>Actors:</b> Reporter, Safety coordinator</p>
+<h4>Preconditions</h4><ol>
+<li>A chemical spill occurs during maintenance.</li>
+</ol>
+<h4>Flow of events</h4><ol>
+<li><code>UC-7@1</code> The reporter creates a separate environmental report for the chemical spill instead of recording it only as a repair-log note.</li>
+<li><code>UC-7@2</code> <mark style="background-color:#fff59d">The reporter references the affected equipment and maintenance time window so the spill report can be found alongside the maintenance context.</mark></li>
+</ol>
+<h4>Postconditions</h4><ol>
+<li>The spill is documented in a separate environmental report.</li>
+</ol>
+<h4>Non-functional requirements</h4><ol>
+<li>The environmental report remains distinct from ordinary repair notes.</li>
+</ol>
+<h3>UC-8: Investigate a safety alarm or recurring failure</h3><p><b>Actors:</b> Mechanic, Shift supervisor, Safety coordinator</p>
+<h4>Preconditions</h4><ol>
+<li>A sensor alarm or recurring failure calls for a maintenance safety decision.</li>
+</ol>
+<h4>Flow of events</h4><ol>
+<li><code>UC-8@1</code> The supervisor stops affected work and documents the hazard if the alarm requires investigation.</li>
+<li><code>UC-8@2</code> The technician and supervisor verify the hazard, isolation, and whether the alarm is still active; the safety coordinator reviews the permit and equipment history.</li>
+<li><code>UC-8@3</code> The alarm information is preserved with the maintenance record.</li>
+<li><code>UC-8@4</code> The safety coordinator reviews recurring alarms and failure modes and determines whether shutdown, corrective action, or a formal safety inspection is needed.</li>
+<li><code>UC-8@5</code> The equipment remains unreleased until the hazard is addressed and required records and authorization are complete.</li>
+</ol>
+<h4>Postconditions</h4><ol>
+<li>The alarm and hazard decision are recorded and an unsafe release has been prevented.</li>
+</ol>
+<h4>Non-functional requirements</h4><ol>
+<li>Safety-critical findings must be prominent rather than buried in general maintenance notes.</li>
+<li>Tablet use must not distract personnel around moving machinery.</li>
+</ol>
+<h3>UC-9: Retrieve and export an inspectable equipment history</h3><p><b>Actors:</b> Safety coordinator, Inspector, Maintenance system</p>
+<h4>Preconditions</h4><ol>
+<li>An inspector requests maintenance and safety evidence for equipment and a time period.</li>
+</ol>
+<h4>Flow of events</h4><ol>
+<li><code>UC-9@1</code> <mark style="background-color:#fff59d">The safety coordinator enters the equipment identifier and requested time window.</mark></li>
+<li><code>UC-9@2</code> The system retrieves the linked maintenance, isolation, alarms, permits, photos, corrective actions, acknowledgments, and return-to-service history.</li>
+<li><code>UC-9@3</code> The coordinator reviews who changed what and when, retaining the history of corrections.</li>
+<li><code>UC-9@4</code> The coordinator retrieves readable records for the full inspection period even if equipment has been retired or personnel have changed jobs.</li>
+<li><code>UC-9@5</code> <mark style="background-color:#fff59d">If the applicable inspection retention period has not been configured, the safety coordinator defines it before any record disposal is scheduled; no arbitrary duration is substituted.</mark></li>
+<li><code>UC-9@6</code> The coordinator exports the requested records in a form the inspector can review without access to the entire operating system.</li>
+</ol>
+<h4>Postconditions</h4><ol>
+<li>The inspector can review a complete equipment history and correction history without relying on staff memory.</li>
+</ol>
+<h4>Non-functional requirements</h4><ol>
+<li>Records remain readable and retrievable for the full applicable inspection period.</li>
+<li>Export does not require granting broad access to the operating system.</li>
+</ol>
+<h2>Traceability matrix</h2><p>Readable transpose of matrix.json (which is stored as 2 x P).</p><table><tr><th>Use case / step</th><th>Goal</th></tr>
+<tr><td>UC-1</td><td>G-1</td></tr>
+<tr><td>UC-1</td><td>G-2</td></tr>
+<tr><td>UC-1</td><td>G-3</td></tr>
+<tr><td>UC-1</td><td>G-6</td></tr>
+<tr><td>UC-1</td><td>G-23</td></tr>
+<tr><td>UC-1</td><td>G-67</td></tr>
+<tr><td>UC-1</td><td>G-74</td></tr>
+<tr><td>UC-1@1</td><td>G-7</td></tr>
+<tr><td>UC-1@1</td><td>G-57</td></tr>
+<tr><td>UC-1@2</td><td>G-14</td></tr>
+<tr><td>UC-1@2</td><td>G-15</td></tr>
+<tr><td>UC-1@2</td><td>G-16</td></tr>
+<tr><td>UC-1@3</td><td>G-4</td></tr>
+<tr><td>UC-1@4</td><td>G-75</td></tr>
+<tr><td>UC-1@5</td><td>G-3</td></tr>
+<tr><td>UC-1@5</td><td>G-5</td></tr>
+<tr><td>UC-1@6</td><td>G-7</td></tr>
+<tr><td>UC-1@6</td><td>G-8</td></tr>
+<tr><td>UC-1@7</td><td>G-11</td></tr>
+<tr><td>UC-1@7</td><td>G-12</td></tr>
+<tr><td>UC-1@7</td><td>G-13</td></tr>
+<tr><td>UC-1@8</td><td>G-72</td></tr>
+<tr><td>UC-1@9</td><td>G-23</td></tr>
+<tr><td>UC-1@9</td><td>G-24</td></tr>
+<tr><td>UC-1@9</td><td>G-76</td></tr>
+<tr><td>UC-1@10</td><td>G-2</td></tr>
+<tr><td>UC-1@10</td><td>G-10</td></tr>
+<tr><td>UC-2</td><td>G-1</td></tr>
+<tr><td>UC-2</td><td>G-6</td></tr>
+<tr><td>UC-2</td><td>G-19</td></tr>
+<tr><td>UC-2@1</td><td>G-17</td></tr>
+<tr><td>UC-2@1</td><td>G-18</td></tr>
+<tr><td>UC-2@2</td><td>G-17</td></tr>
+<tr><td>UC-2@2</td><td>G-18</td></tr>
+<tr><td>UC-2@3</td><td>G-19</td></tr>
+<tr><td>UC-2@3</td><td>G-20</td></tr>
+<tr><td>UC-2@4</td><td>G-21</td></tr>
+<tr><td>UC-2@5</td><td>G-9</td></tr>
+<tr><td>UC-2@5</td><td>G-22</td></tr>
+<tr><td>UC-2@6</td><td>G-8</td></tr>
+<tr><td>UC-2@6</td><td>G-9</td></tr>
+<tr><td>UC-2@6</td><td>G-22</td></tr>
+<tr><td>UC-2@7</td><td>G-9</td></tr>
+<tr><td>UC-2@7</td><td>G-38</td></tr>
+<tr><td>UC-2@7</td><td>G-41</td></tr>
+<tr><td>UC-3</td><td>G-6</td></tr>
+<tr><td>UC-3</td><td>G-25</td></tr>
+<tr><td>UC-3</td><td>G-26</td></tr>
+<tr><td>UC-3</td><td>G-30</td></tr>
+<tr><td>UC-3</td><td>G-44</td></tr>
+<tr><td>UC-3@1</td><td>G-26</td></tr>
+<tr><td>UC-3@1</td><td>G-27</td></tr>
+<tr><td>UC-3@2</td><td>G-6</td></tr>
+<tr><td>UC-3@2</td><td>G-7</td></tr>
+<tr><td>UC-3@2</td><td>G-8</td></tr>
+<tr><td>UC-3@2</td><td>G-9</td></tr>
+<tr><td>UC-3@2</td><td>G-54</td></tr>
+<tr><td>UC-3@3</td><td>G-30</td></tr>
+<tr><td>UC-3@3</td><td>G-33</td></tr>
+<tr><td>UC-3@4</td><td>G-31</td></tr>
+<tr><td>UC-3@4</td><td>G-32</td></tr>
+<tr><td>UC-3@5</td><td>G-31</td></tr>
+<tr><td>UC-3@5</td><td>G-42</td></tr>
+<tr><td>UC-3@6</td><td>G-27</td></tr>
+<tr><td>UC-3@6</td><td>G-29</td></tr>
+<tr><td>UC-3@7</td><td>G-53</td></tr>
+<tr><td>UC-3@8</td><td>G-44</td></tr>
+<tr><td>UC-3@8</td><td>G-57</td></tr>
+<tr><td>UC-4</td><td>G-25</td></tr>
+<tr><td>UC-4</td><td>G-34</td></tr>
+<tr><td>UC-4</td><td>G-35</td></tr>
+<tr><td>UC-4@1</td><td>G-34</td></tr>
+<tr><td>UC-4@2</td><td>G-27</td></tr>
+<tr><td>UC-4@3</td><td>G-35</td></tr>
+<tr><td>UC-4@3</td><td>G-36</td></tr>
+<tr><td>UC-4@4</td><td>G-37</td></tr>
+<tr><td>UC-4@5</td><td>G-29</td></tr>
+<tr><td>UC-5</td><td>G-38</td></tr>
+<tr><td>UC-5</td><td>G-41</td></tr>
+<tr><td>UC-5</td><td>G-45</td></tr>
+<tr><td>UC-5</td><td>G-46</td></tr>
+<tr><td>UC-5</td><td>G-68</td></tr>
+<tr><td>UC-5@1</td><td>G-7</td></tr>
+<tr><td>UC-5@1</td><td>G-8</td></tr>
+<tr><td>UC-5@1</td><td>G-9</td></tr>
+<tr><td>UC-5@1</td><td>G-39</td></tr>
+<tr><td>UC-5@1</td><td>G-40</td></tr>
+<tr><td>UC-5@1</td><td>G-54</td></tr>
+<tr><td>UC-5@2</td><td>G-49</td></tr>
+<tr><td>UC-5@3</td><td>G-38</td></tr>
+<tr><td>UC-5@3</td><td>G-48</td></tr>
+<tr><td>UC-5@3</td><td>G-51</td></tr>
+<tr><td>UC-5@4</td><td>G-42</td></tr>
+<tr><td>UC-5@4</td><td>G-68</td></tr>
+<tr><td>UC-5@5</td><td>G-38</td></tr>
+<tr><td>UC-5@5</td><td>G-41</td></tr>
+<tr><td>UC-5@6</td><td>G-73</td></tr>
+<tr><td>UC-5@7</td><td>G-38</td></tr>
+<tr><td>UC-5@7</td><td>G-50</td></tr>
+<tr><td>UC-5@7</td><td>G-51</td></tr>
+<tr><td>UC-5@8</td><td>G-40</td></tr>
+<tr><td>UC-5@8</td><td>G-54</td></tr>
+<tr><td>UC-5@8</td><td>G-55</td></tr>
+<tr><td>UC-6</td><td>G-46</td></tr>
+<tr><td>UC-6</td><td>G-61</td></tr>
+<tr><td>UC-6</td><td>G-64</td></tr>
+<tr><td>UC-6</td><td>G-65</td></tr>
+<tr><td>UC-6@1</td><td>G-61</td></tr>
+<tr><td>UC-6@1</td><td>G-62</td></tr>
+<tr><td>UC-6@2</td><td>G-62</td></tr>
+<tr><td>UC-6@2</td><td>G-63</td></tr>
+<tr><td>UC-6@3</td><td>G-61</td></tr>
+<tr><td>UC-6@3</td><td>G-53</td></tr>
+<tr><td>UC-6@4</td><td>G-64</td></tr>
+<tr><td>UC-6@5</td><td>G-65</td></tr>
+<tr><td>UC-7</td><td>G-66</td></tr>
+<tr><td>UC-7@1</td><td>G-66</td></tr>
+<tr><td>UC-7@2</td><td>G-57</td></tr>
+<tr><td>UC-7@2</td><td>G-58</td></tr>
+<tr><td>UC-8</td><td>G-46</td></tr>
+<tr><td>UC-8</td><td>G-48</td></tr>
+<tr><td>UC-8</td><td>G-67</td></tr>
+<tr><td>UC-8</td><td>G-68</td></tr>
+<tr><td>UC-8</td><td>G-69</td></tr>
+<tr><td>UC-8</td><td>G-70</td></tr>
+<tr><td>UC-8@1</td><td>G-69</td></tr>
+<tr><td>UC-8@2</td><td>G-48</td></tr>
+<tr><td>UC-8@2</td><td>G-49</td></tr>
+<tr><td>UC-8@2</td><td>G-69</td></tr>
+<tr><td>UC-8@3</td><td>G-54</td></tr>
+<tr><td>UC-8@4</td><td>G-70</td></tr>
+<tr><td>UC-8@5</td><td>G-38</td></tr>
+<tr><td>UC-8@5</td><td>G-41</td></tr>
+<tr><td>UC-9</td><td>G-55</td></tr>
+<tr><td>UC-9</td><td>G-56</td></tr>
+<tr><td>UC-9</td><td>G-57</td></tr>
+<tr><td>UC-9</td><td>G-58</td></tr>
+<tr><td>UC-9</td><td>G-59</td></tr>
+<tr><td>UC-9</td><td>G-60</td></tr>
+<tr><td>UC-9@1</td><td>G-56</td></tr>
+<tr><td>UC-9@1</td><td>G-57</td></tr>
+<tr><td>UC-9@2</td><td>G-54</td></tr>
+<tr><td>UC-9@2</td><td>G-56</td></tr>
+<tr><td>UC-9@2</td><td>G-58</td></tr>
+<tr><td>UC-9@3</td><td>G-55</td></tr>
+<tr><td>UC-9@4</td><td>G-59</td></tr>
+<tr><td>UC-9@5</td><td>G-77</td></tr>
+<tr><td>UC-9@6</td><td>G-60</td></tr>
+<tr><td>None</td><td>G-71</td></tr>
+</table></body></html>

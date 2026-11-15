@@ -1,0 +1,78 @@
+Interviewer: Can you tell me about the plants you have at home and how you currently take
+care of them?
+
+Stakeholder: My roommate and I have a few plants around our apartment. We both take care
+of them, but neither of us is particularly good at remembering when they need attention. Right
+now, we have a handwritten chart on our fridge where we write down when each plant was last
+watered.
+
+Interviewer: Is the chart working for you?
+
+Stakeholder: Not really. Sometimes one of us waters a plant but forgets to update the chart.
+Other times, we both assume the other person has watered it, and it ends up not getting
+watered for several days. We've also accidentally watered the same plant twice.
+
+Interviewer: What would make tracking watering easier?
+
+Stakeholder: I'd like to see all our plants in one place, when each was last watered, and when it
+needs to be watered next. Ideally, either of us should be able to update it whenever we water
+something.
+
+Interviewer: Do all your plants need watering at the same frequency?
+
+Stakeholder: No, that's another problem. Some need water more frequently than others. I'd like
+to set a watering schedule for each plant rather than have the same schedule for everything.
+
+Interviewer: Apart from watering, is there anything else you struggle with?
+
+Stakeholder: Sunlight is a big one. We sometimes move plants outside or near the balcony to
+get some sun, but then forget to bring them back inside. It would be helpful to track when we
+moved a plant outside and when we should bring it back.
+
+Interviewer: How would you decide when a plant needs to be brought back inside?
+
+Stakeholder: I think we could just specify how long we want to leave it outside. Different plants
+might need different amounts of time, so I'd rather set that ourselves.
+
+Interviewer: How would you like the application to remind you about these things?
+
+Stakeholder: A dashboard showing what needs attention would be useful. Maybe something
+that clearly shows which plants need watering and which ones are still outside. Notifications
+would be nice too, but I don't think we need those immediately.
+
+Interviewer: Since both you and your roommate take care of the plants, how should that work?
+Stakeholder: We should both be able to see the same information and update it. If my
+roommate waters a plant, I should be able to see that it was watered so I don't do it again. It
+might also be useful to know who last took care of a plant.
+
+Interviewer: What happens if you forget to water a plant on its scheduled day?
+
+Stakeholder: It should probably show that it's overdue until someone waters it. I wouldn't want it
+to automatically mark anything as done.
+
+Interviewer: Would you want the application to automatically determine how much water or
+sunlight each plant needs?
+
+Stakeholder: Not for now. We can enter that information ourselves. I mostly want something
+that helps us stay organized rather than having to look at the fridge chart every day.
+
+Interviewer: What's the most important thing you'd want from the first version?
+
+Stakeholder: Just being able to add our plants, keep track of watering and sunlight, and see
+what needs attention. If we can get those things working, it would already be a big improvement.
+https://mermaid.live/edit#pako:eNplVFFvmzAQ_iuW-0o6sJ2GoKnS1mrRHvYyVXvY2IP
+BJlgFGxlIm0X97zubJBBAihyf7_vu7ruzTzg3QuIEpzbVRWXe8pLbDr18dXsE3y78k-Jdm
+KDvdWPNQaLS9K0sTSU-Z_bTY1Nx3aGcW4lqrvle1lJ3Kf7r4FeKyFFECfrBle7gN0EqX
+Rhb804ZfUZ5BHEIkqAXy_NX7_7GO2mV3iOed-qgOiXbKYA6AHUhXBIe0fa6UvuyQ_K
+9MW1v5dSfOX-WoCdjrFAayAcMVC-Fr2dRxFDFPdTxU-aAQr6C1uOURl050WYaKiIDkI
+wCQNkCihA9rzzc69fmpRR9da1rFMNHJmPkW0HkASS_EYMM8rmI3wUcquKI-iY3Nbh
+7LNcCQS-t6CW68MyjUh-Vuqi-C-itlHpas-85sABV37VK3OhLyYCepjAnaEGuSqBMosya
+3nVK6QnP2CufCbufT9CkWch6YW5UYGSAQQpfDkYJJPqmUvml1caiWrXthWAxVuMF
+QKvVI7RxbiBzA50b2O0AnXmihWVkImfqaGEZfeg5WrSwjD7snEC0sJBpTnnF2_ZZFqix
+qub2iApVVcmdyCQvZNB21rzK5I6sH6jMgtxUxiZ3kaQ85guGveHVGS6JjIvwCn9gGxZf4
+WERbcgS3vbZhKHw35VhyzjN4gsDpSxarxdlONXPZczsUbAjwY4GoIGLMT-F4wjOiXNz
+frBSWBmsjFwScyAc4L1VAied7WWAawkPl9vikyNMMbwANQxvAn9hLvv3leD2deWzTn
+Ew8fnFreKZv-kJOg3ZpLgwuvvGa1UdB44XXpqap9idf6T6A8I3XP82pr5k4G8NTgpetbDr
+GwGz_az43vLRRWoh7ZPpdYcTFkeeAycn_I4TSuF-0njNNnEcbWNKA3zEySqO7sP1dk
+NJFMbhZssePgL8z0eFx2-zBVe63oQbRraMfvwHPkTvsg
+

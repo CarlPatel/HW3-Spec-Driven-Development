@@ -1,0 +1,256 @@
+[
+  {
+    "uc_name": "Diagnose a press fault and capture findings",
+    "uc_id": "UC-1",
+    "actors": [
+      "Mechanic",
+      "Maintenance system"
+    ],
+    "pre_conditions": [
+      "A press is showing a fault or producing bad parts.",
+      "<mark style=\"background-color:#fff59d\">The mechanic uses the tablet from a safe stationary position away from moving machinery.</mark>"
+    ],
+    "flow_of_events": [
+      "<mark style=\"background-color:#fff59d\">The mechanic selects the affected asset record.</mark>",
+      "The mechanic reviews the shift handoff, prior troubleshooting, closed work orders, and recorded part numbers.",
+      "The system displays actual temperature, setpoint, and normal range together.",
+      "<mark style=\"background-color:#fff59d\">If a live reading is unavailable or stale, the system flags that condition instead of presenting it as current; the mechanic obtains a current reading before relying on it.</mark>",
+      "The mechanic compares temperature behavior with part quality and heater cycling to form the diagnosis.",
+      "The mechanic records the asset, symptom or fault code, actual reading, and setpoint.",
+      "The mechanic attaches a quick photo or short voice note rather than typing the entire account.",
+      "<mark style=\"background-color:#fff59d\">If a voice note is used, the mechanic confirms that its content accurately represents the finding before publishing it.</mark>",
+      "<mark style=\"background-color:#fff59d\">The mechanic records the required shared facts separately from personal notebook content; personal notes are private unless the mechanic explicitly selects content to share.</mark>",
+      "The mechanic captures the finding and any change before moving on, using the briefest practical interaction."
+    ],
+    "post_conditions": [
+      "The shared record contains the identified fault, measured values, and captured evidence.",
+      "<mark style=\"background-color:#fff59d\">Personal working notes have not been copied into the shared record without the mechanic selecting them.</mark>"
+    ],
+    "non_functional": [
+      "Capture should require little effort with gloves and in noise.",
+      "Tablet use must not distract personnel around moving machinery.",
+      "<mark style=\"background-color:#fff59d\">An unavailable live reading is visibly distinguished from a current reading.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Locate a replacement part, repair, and verify the press",
+    "uc_id": "UC-2",
+    "actors": [
+      "Mechanic",
+      "Maintenance system"
+    ],
+    "pre_conditions": [
+      "The mechanic has identified a suspected press fault and needs a replacement part.",
+      "<mark style=\"background-color:#fff59d\">Physical work follows the plant safety procedure; a software record is not proof of physical isolation.</mark>"
+    ],
+    "flow_of_events": [
+      "The mechanic retrieves the exact part number, stock quantity, crib location, and any approved substitute.",
+      "The mechanic checks the crib bin against the press part number and obtains the matching part.",
+      "The mechanic stops the press and confirms lockout/tagout before opening equipment.",
+      "The mechanic records the confirmed safety check on the tablet.",
+      "The mechanic checks the heater band and connections, replaces the weak band, and records what was tested or changed and the installed part number.",
+      "The mechanic performs the verification run and records actual temperature, part quality, and whether verification passed.",
+      "<mark style=\"background-color:#fff59d\">If verification fails, the mechanic records the failure and leaves the issue open for further diagnosis; a successful repair is not declared.</mark>"
+    ],
+    "post_conditions": [
+      "The work order records tests, corrective action, installed part, measured values, and verification status.",
+      "The outcome is available for the next shift to avoid repeating undocumented checks."
+    ],
+    "non_functional": [
+      "Isolation must be confirmed before equipment is opened.",
+      "Repair evidence must remain traceable to the equipment and work order."
+    ]
+  },
+  {
+    "uc_name": "Complete a work order and acknowledge the shift handover",
+    "uc_id": "UC-3",
+    "actors": [
+      "Mechanic",
+      "Outgoing supervisor",
+      "Incoming supervisor",
+      "Maintenance system"
+    ],
+    "pre_conditions": [
+      "A maintenance work order or unresolved machine issue must be handed to the next shift."
+    ],
+    "flow_of_events": [
+      "The outgoing supervisor reviews stopped machines, open repairs, machine status, work ownership, expected restoration, and production impact.",
+      "The system presents linked downtime, alarms, diagnosis, corrective action, reason code, parts, readings, and verification details.",
+      "The supervisor checks downtime minutes against the machine stop and first good part.",
+      "If the work order is being completed, the system requires a reason code; missing codes or other required fields are shown to the supervisor.",
+      "The supervisor obtains the missing reason before completion, and assigns responsibility for missing safety-release items.",
+      "The outgoing and incoming supervisors agree the open-work owner, what to monitor, and when to escalate.",
+      "The incoming supervisor acknowledges the digital handoff after the critical fields are complete.",
+      "The system associates the handover facts with the equipment, time window, and shift for access across all three shifts."
+    ],
+    "post_conditions": [
+      "The next shift has an acknowledged handover with explicit machine status and work ownership.",
+      "A completed work order includes its reason code and checked downtime minutes; unresolved issues remain identified."
+    ],
+    "non_functional": [
+      "Missing required data must be visible instead of disappearing into the next shift.",
+      "Maintenance data must be accurate enough to support decisions."
+    ]
+  },
+  {
+    "uc_name": "Prioritize and escalate an unresolved machine issue",
+    "uc_id": "UC-4",
+    "actors": [
+      "Shift supervisor",
+      "Maintenance lead",
+      "Production supervisor",
+      "Angela"
+    ],
+    "pre_conditions": [
+      "A machine issue remains unresolved and its production or safety impact needs review."
+    ],
+    "flow_of_events": [
+      "The supervisor checks whether the machine is a bottleneck, lacks a practical backup, stops a production cell, or has a history of long downtime or high-impact quality issues.",
+      "The supervisor reviews the restoration estimate, current status, and production impact.",
+      "If the restoration target is exceeded, critical equipment is affected, or a safety or quality risk exists, the supervisor escalates to the maintenance lead, production supervisor, or Angela.",
+      "The escalation record identifies its owner, time, reason, and next action.",
+      "The supervisor includes monitoring and escalation expectations in the handover."
+    ],
+    "post_conditions": [
+      "An issue meeting an escalation condition has a named escalation owner and next action.",
+      "The next shift can see the current escalation state."
+    ],
+    "non_functional": [
+      "Priority should reflect actual equipment and production impact rather than an unclassified alarm alone."
+    ]
+  },
+  {
+    "uc_name": "Review safety hold and authorize return to service",
+    "uc_id": "UC-5",
+    "actors": [
+      "Mechanic",
+      "Shift supervisor",
+      "Authorized release person",
+      "Maintenance system"
+    ],
+    "pre_conditions": [
+      "A repaired or held machine is being considered for return to service."
+    ],
+    "flow_of_events": [
+      "The technician records the failure, corrective action, replaced parts, readings, verification outcome, and safety documentation.",
+      "The isolation record identifies the equipment, isolation points, each lock applier, date and time, and release authorizer and performer.",
+      "The supervisor checks hazard assessment, isolation, alarm status, applicable permits, inspection, and unresolved hazards and validates the controls.",
+      "The supervisor identifies the person responsible for each missing release item; the hold remains visible.",
+      "If required fields or release documentation are incomplete, or a hazard is unresolved, equipment remains on hold despite production pressure.",
+      "<mark style=\"background-color:#fff59d\">If a release request is attempted while checks are incomplete, the system rejects the request and displays the missing items.</mark>",
+      "If the required controls and records are complete and hazards addressed, the authorized person records the return-to-service authorization and the technician/supervisor acknowledgments before equipment release.",
+      "The system retains the permit, photos, alarms, release decision, and history of record changes with the work order."
+    ],
+    "post_conditions": [
+      "Equipment is either held with visible outstanding items or released following recorded approval and validated controls.",
+      "The decision, responsible persons, and supporting records are traceable."
+    ],
+    "non_functional": [
+      "Production pressure must not override the safety hold.",
+      "Personnel must not be penalized for following the procedure and stopping an unsafe restart.",
+      "<mark style=\"background-color:#fff59d\">The system records and checks authorization; it does not itself apply locks or physically prove isolation.</mark>"
+    ]
+  },
+  {
+    "uc_name": "Report and follow through on a near miss",
+    "uc_id": "UC-6",
+    "actors": [
+      "Reporter",
+      "Shift supervisor",
+      "Safety coordinator",
+      "Corrective-action owner"
+    ],
+    "pre_conditions": [
+      "A near miss is observed or mentioned during a handoff, even if nobody is injured."
+    ],
+    "flow_of_events": [
+      "The person hearing or observing the near miss opens a report with what happened, where, when, and who was involved, within 24 hours.",
+      "A named person owns the report and the supervisor acknowledges it before the 24-hour deadline.",
+      "The report is treated as part of normal handover and is not closed merely because the event was mentioned verbally.",
+      "The safety coordinator reviews the facts, existing controls, and changes needed to prevent recurrence without punishing the reporter for speaking up.",
+      "A named person owns any resulting corrective action, and its completion is verified."
+    ],
+    "post_conditions": [
+      "The near miss has a recorded, acknowledged report and reviewed facts.",
+      "Any identified corrective action has an owner and verified completion before that action is treated as complete."
+    ],
+    "non_functional": [
+      "Reporting and supervisor acknowledgment occur within the stakeholder-specified 24 hours.",
+      "Required reporting facts should be brief and review should focus on unsafe conditions rather than blame."
+    ]
+  },
+  {
+    "uc_name": "Create a separate environmental spill report",
+    "uc_id": "UC-7",
+    "actors": [
+      "Reporter",
+      "Safety coordinator"
+    ],
+    "pre_conditions": [
+      "A chemical spill occurs during maintenance."
+    ],
+    "flow_of_events": [
+      "The reporter creates a separate environmental report for the chemical spill instead of recording it only as a repair-log note.",
+      "<mark style=\"background-color:#fff59d\">The reporter references the affected equipment and maintenance time window so the spill report can be found alongside the maintenance context.</mark>"
+    ],
+    "post_conditions": [
+      "The spill is documented in a separate environmental report."
+    ],
+    "non_functional": [
+      "The environmental report remains distinct from ordinary repair notes."
+    ]
+  },
+  {
+    "uc_name": "Investigate a safety alarm or recurring failure",
+    "uc_id": "UC-8",
+    "actors": [
+      "Mechanic",
+      "Shift supervisor",
+      "Safety coordinator"
+    ],
+    "pre_conditions": [
+      "A sensor alarm or recurring failure calls for a maintenance safety decision."
+    ],
+    "flow_of_events": [
+      "The supervisor stops affected work and documents the hazard if the alarm requires investigation.",
+      "The technician and supervisor verify the hazard, isolation, and whether the alarm is still active; the safety coordinator reviews the permit and equipment history.",
+      "The alarm information is preserved with the maintenance record.",
+      "The safety coordinator reviews recurring alarms and failure modes and determines whether shutdown, corrective action, or a formal safety inspection is needed.",
+      "The equipment remains unreleased until the hazard is addressed and required records and authorization are complete."
+    ],
+    "post_conditions": [
+      "The alarm and hazard decision are recorded and an unsafe release has been prevented."
+    ],
+    "non_functional": [
+      "Safety-critical findings must be prominent rather than buried in general maintenance notes.",
+      "Tablet use must not distract personnel around moving machinery."
+    ]
+  },
+  {
+    "uc_name": "Retrieve and export an inspectable equipment history",
+    "uc_id": "UC-9",
+    "actors": [
+      "Safety coordinator",
+      "Inspector",
+      "Maintenance system"
+    ],
+    "pre_conditions": [
+      "An inspector requests maintenance and safety evidence for equipment and a time period."
+    ],
+    "flow_of_events": [
+      "<mark style=\"background-color:#fff59d\">The safety coordinator enters the equipment identifier and requested time window.</mark>",
+      "The system retrieves the linked maintenance, isolation, alarms, permits, photos, corrective actions, acknowledgments, and return-to-service history.",
+      "The coordinator reviews who changed what and when, retaining the history of corrections.",
+      "The coordinator retrieves readable records for the full inspection period even if equipment has been retired or personnel have changed jobs.",
+      "<mark style=\"background-color:#fff59d\">If the applicable inspection retention period has not been configured, the safety coordinator defines it before any record disposal is scheduled; no arbitrary duration is substituted.</mark>",
+      "The coordinator exports the requested records in a form the inspector can review without access to the entire operating system."
+    ],
+    "post_conditions": [
+      "The inspector can review a complete equipment history and correction history without relying on staff memory."
+    ],
+    "non_functional": [
+      "Records remain readable and retrievable for the full applicable inspection period.",
+      "Export does not require granting broad access to the operating system."
+    ]
+  }
+]
