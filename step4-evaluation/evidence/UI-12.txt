@@ -1,0 +1,156 @@
+Repair note saved with automatic author and time and latest-next-action summary
+
+- banner:
+  - generic: P
+  - text: PRESSROOM
+  - generic: MAINTENANCE WORKSPACE
+  - generic: V1 / DEMO
+  - text: Working as
+  - combobox "Working as":
+    - option "Teo Salinas · Technician · Night" [selected]
+    - option "Maya Chen · Technician · Day"
+    - option "Eli Brooks · Technician · Swing"
+    - option "Jordan Lee · Operator · Day"
+    - option "Sam Rivera · Shift Supervisor · Day"
+    - option "Riley Park · Shift Supervisor · Night"
+    - option "Alex Morgan · Shift Supervisor · Swing"
+- complementary:
+  - generic: FLOOR OVERVIEW
+  - heading "Keep the next shift moving." [level=1]:
+    - text: Keep the next
+    - text: shift moving.
+  - paragraph:
+    - text: One record from the first stop
+    - text: to the next good part.
+  - strong: "3"
+  - text: Open repairs
+  - strong: "1"
+  - text: Locked out
+  - text: MACHINES
+  - generic: 6 assets
+  - button "All machines"
+  - button "Open repairs"
+  - navigation "Machines":
+    - button "Press 17 Atlas · Line A Running":
+      - text: Press 17
+      - generic: Atlas · Line A
+      - generic: Running
+    - button "Report stop"
+    - button "Press 12 Red Fox · Line A Locked out":
+      - text: Press 12
+      - generic: Red Fox · Line A
+      - generic: Locked out
+    - paragraph: Inspect pressure drop; electrical isolation still needed
+    - text: Night · Teo Salinas
+    - generic: Awaiting acknowledgment
+    - button "Molder 8 Molder 8 · Line B Open":
+      - text: Molder 8
+      - generic: Molder 8 · Line B
+      - generic: Open
+    - paragraph: Pressure test before restart
+    - text: Night · Teo Salinas
+    - generic: Awaiting acknowledgment
+    - button "Press 3 Old Blue · Line B Open":
+      - text: Press 3
+      - generic: Old Blue · Line B
+      - generic: Open
+    - paragraph: Pressure test before restart
+    - text: Night · Teo Salinas
+    - generic: Current shift
+    - button "Press 21 Orion · Line C Running":
+      - text: Press 21
+      - generic: Orion · Line C
+      - generic: Running
+    - button "Report stop"
+    - button "Press 6 Scout · Line C Running":
+      - text: Press 6
+      - generic: Scout · Line C
+      - generic: Running
+    - button "Report stop"
+  - text: Mock plant · 6 assets
+  - text: Records reset when you reload.
+- main:
+  - text: DEMO CLOCK · DAY SHIFT
+  - strong: Nov 15, 06:10 AM
+  - button "+15 min"
+  - button "+1 hour"
+  - button "Next shift"
+  - generic "Set time"
+  - button "Reset demo"
+  - status: Record updated.
+  - generic: LINE B / IM-003 · MANUAL REPORTING
+  - heading "Press 3 Old Blue" [level=2]
+  - generic: Open
+  - generic: NEXT ACTION
+  - heading "Pressure test before restart" [level=3]
+  - generic: Teo Salinas · Night shift
+  - generic: DOWNTIME
+  - strong: 0 min
+  - text: ● Clock running
+  - text: SHIFT HANDOVER
+  - generic: Current shift
+  - paragraph: "Worked on: Teo Salinas"
+  - paragraph: "Tests: Seal inspected; no leak under test"
+  - generic: ENERGY ISOLATION
+  - paragraph: Record each source. Verify zero energy separately.
+  - text: Hydraulic
+  - generic: No lock currently applied
+  - button "Lock applied"
+  - text: Electrical
+  - generic: No lock currently applied
+  - button "Lock applied"
+  - text: DOWNTIME EVENT
+  - generic: r4
+  - term: Stop
+  - definition: Nov 15, 06:10 AM
+  - term: Source
+  - definition: manual – no sensor
+  - term: First good part
+  - definition: —
+  - text: Reason code
+  - combobox "Reason code":
+    - option "Choose at closure" [selected]
+    - option "Hydraulic"
+    - option "Electrical/Heater"
+    - option "Mechanical"
+    - option "Material"
+    - option "Setup/Changeover"
+    - option "Operator"
+    - option "Safety hold"
+    - option "Other"
+  - button "Save reason"
+  - text: First good part time
+  - textbox "First good part time": 2026-11-15T06:10
+  - button "Confirm first good part"
+  - generic: Operator role · supervisor release required after LOTO
+  - button "Close event"
+  - generic: "Required at closure: reason, stop, first good part and released lockout."
+  - text: ADD REPAIR ENTRY
+  - generic: Technician · auto-stamped
+  - text: What was found
+  - textbox "What was found":
+    - /placeholder: A short note is enough
+  - text: Done / tested
+  - textbox "Done / tested":
+    - /placeholder: A short note is enough
+  - text: Temporary repair
+  - textbox "Temporary repair":
+    - /placeholder: A short note is enough
+  - text: Next action / what to watch
+  - textbox "Next action / what to watch":
+    - /placeholder: A short note is enough
+  - text: Optional photo
+  - button "Optional photo"
+  - button "Save entry"
+  - text: EVENT TIMELINE
+  - generic: Who · what · when
+  - time: Nov 15, 06:10 AM
+  - text: Stop reported · Teo Salinas
+  - paragraph: manual – no sensor
+  - time: Nov 15, 06:10 AM
+  - text: Teo Salinas · Night
+  - paragraph: "Done / tested: Seal inspected; no leak under test"
+  - paragraph: "Next action: Pressure test before restart"
+  - generic: MACHINE HISTORY
+  - paragraph: Closed events will appear here. Closing does not mean the fix is verified.
+  - generic: Prototype only · Simulated sensors, identities and safety records. Physical isolation procedures remain outside this demo.

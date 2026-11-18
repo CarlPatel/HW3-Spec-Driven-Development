@@ -1,0 +1,21 @@
+functional_requirement,requirement,checks,assessment
+FR-001,REQ-01,UI-18; existing REQ-01 test,Sensor event opens; F-03 applies after production resumes.
+FR-002,REQ-01,UI-09; existing REQ-01 test,Manual no-sensor path opens without data warnings.
+FR-003,REQ-01,UI-18/19; PROBE-03,Duplicate invariant works literally; definition of open event loses a second production stop.
+FR-004,REQ-02,UI-13/16; existing REQ-02 test,Whole-minute running/frozen calculation passes; F-02/F-03 limit record validity.
+FR-005,REQ-02,UI-14/15; existing REQ-02 test,Operator and early/future guards pass; no release-relative timestamp guard is specified.
+FR-006,REQ-03,UI-10/17; existing REQ-03 and REQ-06/09 tests,Missing fields and specified FR-020 closure dependency enforced.
+FR-007,REQ-03,UI-17; existing REQ-03 test,Fixed list enforced; arbitrary code rejected by domain test.
+FR-008,REQ-04,UI-11/12; existing REQ-04/05 test; app.js photo handler,"Text and empty refusal observed; photo-only unit-tested, browser photo path not tested."
+FR-009,REQ-04,UI-12; existing REQ-04/05 test,"Automatic identity, time and demo user-shift stamps observed."
+FR-010,REQ-05,UI-12/16/20/30; source inspection,Summary and history visible. Verification badge is rendered for closed events; open events have no explicit verification-state badge.
+FR-011,REQ-05,UI-20–22; UI-32/33; app.js render source inspection,Open-only filter retains the two active repairs with metadata; All machines restores six assets.
+FR-012,REQ-06,UI-01/20; existing REQ-06/09 test,Lock capture is nonblocking; separate verification state recorded in domain tests/seeded UI.
+FR-013,REQ-06,UI-06/08; existing REQ-06/09 test,Cross-person removal preserves applier/remover stamps.
+FR-014,REQ-06,UI-04/05/06; existing REQ-06/09 test,Supervisor-only current authorization and all-applied-lock removal enforced; F-01 remains.
+FR-015,REQ-06,UI-03/07; existing REQ-06 tests,Current-state gate and hold flag work; backdated production timing remains unspecified.
+FR-016,REQ-07,UI-02/20/23; existing REQ-07/09 tests,Role/current-shift acknowledgment and lock snapshot validated; F-04 eligibility ambiguity.
+FR-017,REQ-07,UI-21/22/24; PROBE-04,06:29/06:30 boundary works; current-shift note removes overdue state without acknowledgment.
+FR-018,REQ-08,UI-25/26/29/30; existing REQ-08 tests; PROBE-05,Specified time/category algorithm works; full-shift-running claim is not established.
+FR-019,REQ-08,UI-27/28; existing REQ-08 tests,Matching pre-deadline stop links/reopens even with late reason entry; different-code assumption needs validation.
+FR-020,REQ-09,UI-02/08/20; existing REQ-09 tests; PROBE-01,Written active-lock/historical-release clauses enforced; removed unverified lock evidence is omitted.

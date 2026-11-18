@@ -137,3 +137,25 @@ G1.9 implements both definitions in I-2: first good part ends downtime; the next
 full shift verifies the fix. C-2 remains unresolved: V1 includes LOTO hold in the
 single downtime clock and flags it. All other documented conflicts remain preserved.
 This is alignment with the existing expanded spec, not a V2 evaluation or learning log.
+
+## V2 requirements refinement — 2026-11-18
+
+Based on supplied traceability.md and findings F-01–F-05, with user-approved prototype
+assumptions. V1 model remains preserved on branch v1 and in versions/v1/goal-model.md.
+
+- G1.1 / G1.1.1 / G1.1.3: refine into one active stop interval per machine plus
+  independently pending administrative closeout records (F-03). Late coding no
+  longer suppresses a new breakdown; REQ-01/02 depend on this lifecycle distinction.
+- G2.1 / G2.1.1 / G3.4: complete evidence includes all applicable sources and each
+  historical lock cycle's verification and removal. Supervisor exclusions need a
+  reason. Chronology is part of completeness, not just current permission (F-01/02).
+- G1.3.5: responsibility acceptance is an explicit dated-shift obligation, distinct
+  from adding a work note. Critical isolation changes require reacceptance (F-04).
+- G1.9: absence of matching category is weaker than a recorded full operating shift;
+  verification depends on production intervals and all intervening stops (F-05).
+
+These refinements preserve original goal IDs, owners and evidence. C-1/C-4/C-6 remain
+compromises, C-2 remains unresolved, and I-2 keeps both resumption and durability.
+The user approved mock defaults, not real stakeholder safety policy. No new goals
+for real sensors, authentication, persistence or retrospective corrections are added.
+See specs/003-v2-record-integrity/spec.md for revised FRs and acceptance scenarios.

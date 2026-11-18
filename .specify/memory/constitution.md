@@ -1,3 +1,4 @@
+<!-- 1.2.0: user-approved V2 refinements F-01–F-05; preserve V1 and unresolved conflicts. -->
 <!-- 1.1.0 amendment: align scope with existing 002 V1 specification; preserve original 001 draft. -->
 <!--
 Sync Impact Report
@@ -16,7 +17,7 @@ Sync Impact Report
 ### I. Sprint Scope Only
 
 The prototype MUST implement only the requirements selected for the sprint in
-`docs/goal-model.md` (REQ-01 to REQ-09; authoritative scope: specs/002-maintenance-reliability-safety/spec.md). The goal model has other goals, but they MUST NOT be
+`docs/goal-model.md` (REQ-01 to REQ-09; V2 authoritative scope: specs/003-v2-record-integrity/spec.md; V1: specs/002-maintenance-reliability-safety/spec.md). The goal model has other goals, but they MUST NOT be
 built unless the spec is revised first. Any behavior the agent adds beyond the spec MUST be
 removed or written down as an explicit assumption.
 Rationale: the sprint shows that a small, coherent slice works. It is not meant to cover the
@@ -81,4 +82,4 @@ This constitution overrides agent defaults. Amendments must be recorded with a v
 (MAJOR: principle removed or redefined; MINOR: principle added; PATCH: wording). Every review
 of spec, plan, tasks, and code checks Principles I, II, and VI.
 
-**Version**: 1.1.0 | **Ratified**: 2026-11-15 | **Last Amended**: 2026-11-15
+**Version**: 1.2.0 | **Ratified**: 2026-11-15 | **Last Amended**: 2026-11-18

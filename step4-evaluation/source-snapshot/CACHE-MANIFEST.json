@@ -1,0 +1,121 @@
+{
+  "commit": "bef8e6c0bfae46af486e561841c32f9c8d159b88",
+  "retrieved": "2026-11-15",
+  "files": [
+    {
+      "path": "scripts/build.mjs",
+      "blob_sha": "4bd1463639ba3493e52106ea6949b2db89b5ab54",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/scripts/build.mjs"
+    },
+    {
+      "path": "scripts/prepare-pages.mjs",
+      "blob_sha": "47a36a04a281cc6a6666f2814ad6fc31b1c955cf",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/scripts/prepare-pages.mjs"
+    },
+    {
+      "path": "scripts/serve.mjs",
+      "blob_sha": "d8c681c6c29f6575d550b1d7023452e44c8f5c5a",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/scripts/serve.mjs"
+    },
+    {
+      "path": "frontend/index.html",
+      "blob_sha": "013d408a356a59f2b38075d662d28bd407e9542e",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/frontend/index.html"
+    },
+    {
+      "path": "frontend/styles.css",
+      "blob_sha": "ced18c4cc31ffcdf679ebc441960a6eaa887f6f6",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/frontend/styles.css"
+    },
+    {
+      "path": "_extracted/carl/Assignment 1/transcript-261028-1816 Angela.csv",
+      "blob_sha": "790d6b23b2cf44c9101aa6042ed1e96788fde428",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/_extracted/carl/Assignment%201/transcript-261028-1816%20Angela.csv"
+    },
+    {
+      "path": "_extracted/carl/Assignment 1/transcript-261028-1816 Rob.csv",
+      "blob_sha": "a4afa7b1bacb228e928e646f2ffe50bf1ec72a02",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/_extracted/carl/Assignment%201/transcript-261028-1816%20Rob.csv"
+    },
+    {
+      "path": "_extracted/carl/Assignment 1/transcript-261028-1816 Teo.csv",
+      "blob_sha": "f04326a7f95139a5c7282bbdd9be5b91427c663d",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/_extracted/carl/Assignment%201/transcript-261028-1816%20Teo.csv"
+    },
+    {
+      "path": "_extracted/teammate/HW3-Teammate-Starter/stakeholder-interviews/angela-initial.csv",
+      "blob_sha": "74bf61fac6f4d9590171a48c96d84b04b25e6ca5",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/_extracted/teammate/HW3-Teammate-Starter/stakeholder-interviews/angela-initial.csv"
+    },
+    {
+      "path": "_extracted/teammate/HW3-Teammate-Starter/stakeholder-interviews/rob-interview.csv",
+      "blob_sha": "7f86df50be275e27172ab4181c74d64b96f164b9",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/_extracted/teammate/HW3-Teammate-Starter/stakeholder-interviews/rob-interview.csv"
+    },
+    {
+      "path": "_extracted/teammate/HW3-Teammate-Starter/stakeholder-interviews/teo-follow-up-1.csv",
+      "blob_sha": "98bc0ba1c98b7c7aceac4d63331f779e496dd95c",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/_extracted/teammate/HW3-Teammate-Starter/stakeholder-interviews/teo-follow-up-1.csv"
+    },
+    {
+      "path": "_extracted/teammate/HW3-Teammate-Starter/stakeholder-interviews/teo-follow-up-2.csv",
+      "blob_sha": "ab6da132c8e5127d3364165fca02e0073528c513",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/_extracted/teammate/HW3-Teammate-Starter/stakeholder-interviews/teo-follow-up-2.csv"
+    },
+    {
+      "path": "_extracted/teammate/HW3-Teammate-Starter/stakeholder-interviews/teo-initial.csv",
+      "blob_sha": "5f902c5673b4011d4da7f5314b5fe5b74fe314c6",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/_extracted/teammate/HW3-Teammate-Starter/stakeholder-interviews/teo-initial.csv"
+    },
+    {
+      "path": "transcript-261026-2138.csv",
+      "blob_sha": "c93e0f4b3b54077cd25957fe958f211a4184ff14",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/transcript-261026-2138.csv"
+    },
+    {
+      "path": "transcript-261026-2218.csv",
+      "blob_sha": "f3f366980cd6ad5b88ae2243ef488c0095728245",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/transcript-261026-2218.csv"
+    },
+    {
+      "path": "transcript-261026-2245.csv",
+      "blob_sha": "e2b953b5f1363cfa6371d55ad1cf5a7011f11d74",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/transcript-261026-2245.csv"
+    },
+    {
+      "path": "docs/goal-model.md",
+      "blob_sha": "760f66dd38167f838ce5dbc10cf2a2cc6222684b",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/docs/goal-model.md"
+    },
+    {
+      "path": "specs/002-maintenance-reliability-safety/spec.md",
+      "blob_sha": "898085d8680f4f99c09e68759fbec71540f79a8c",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/specs/002-maintenance-reliability-safety/spec.md"
+    },
+    {
+      "path": "docs/implementation-map.md",
+      "blob_sha": "aeda1233c5385615fa1c2daa9ebf44f18cdda4fc",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/docs/implementation-map.md"
+    },
+    {
+      "path": "frontend/domain.js",
+      "blob_sha": "7b0f8ce512bf8464308d2513190c4269b92d9878",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/frontend/domain.js"
+    },
+    {
+      "path": "frontend/app.js",
+      "blob_sha": "267cfa3759c1119f306c941409a96fb3548c01be",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/frontend/app.js"
+    },
+    {
+      "path": "tests/domain.test.js",
+      "blob_sha": "11171ecfef771d97a16de74320c05c1a48e7b927",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/tests/domain.test.js"
+    },
+    {
+      "path": "package.json",
+      "blob_sha": "d0720451b533a88c6002ef676623f459c1f89b61",
+      "source_url": "https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/bef8e6c0bfae46af486e561841c32f9c8d159b88/package.json"
+    }
+  ]
+}
