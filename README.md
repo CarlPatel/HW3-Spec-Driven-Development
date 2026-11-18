@@ -19,8 +19,8 @@ the original version refs and frozen V1 application remain preserved.
 
 ## Requirements and evaluation evidence
 
-- [V1 requirements traceability matrix](traceability.md)
-- [V2 requirements traceability matrix](docs/traceability-v2.md)
+- [V1 requirements traceability matrix on v1](https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/v1/traceability.md) · [main copy](traceability.md)
+- [V2 requirements traceability matrix on v2](https://github.com/CarlPatel/HW3-Spec-Driven-Development/blob/v2/docs/traceability-v2.md) · [main copy](docs/traceability-v2.md)
 - [V1 evaluation findings F-01–F-05](step4-evaluation/findings.md)
 - [Browser observations and evidence](step4-evaluation/evidence/README.md)
 - [Interview evidence locators](evidence/interview-evidence.csv)
