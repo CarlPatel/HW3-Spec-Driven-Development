@@ -70,9 +70,23 @@ is substituted for those checks. C-2 (LOTO hold accounting) remains unresolved.
 
 ## Roles and Responsibilities
 
-- **Timothy Zhang:** Individual contribution details awaiting team confirmation.
-- **Carl Patel:** Repository owner; individual contribution details awaiting team confirmation.
-- **Austin Huang:** Individual contribution details awaiting team confirmation.
+All three members collaborated on Steps 1–2 (requirements selection, merged goals,
+and goal relationships) and jointly authored the supplied learning log.
+
+- **Austin Huang:** Led Steps 1–2 and the consolidation of stakeholder data and goals;
+  set up GitHub Spec Kit and generated the specifications from the combined inputs.
+- **Carl Patel:** Used the specifications to build Prototype V1; implemented Prototype
+  V2 from the evaluation findings and revised requirements; managed repository and
+  deployment organization.
+- **Timothy Zhang:** Led interaction with and evaluation of Prototype V1 and prepared
+  the Requirements Traceability Matrix.
 - **AI assistance:** Technical specification/planning, implementation, technical evaluation
-  and verification support, and repository organization. The supplied learning log is
-  included without rewriting or generating its content.
+  and verification support, and repository organization. The team-supplied learning
+  log is included unchanged; no learning-log text was generated or rewritten here.
+
+## Repository access
+
+The instructor already has access, as confirmed by the team. The repository is
+currently public at the team's request. The assignment specifies a private repository;
+the team will confirm this visibility choice with the instructor. Both prototype
+Pages links are accessible without signing in.
