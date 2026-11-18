@@ -1,34 +1,52 @@
-# Pressroom — V1 / V2 maintenance prototypes
+# 17-626 HW3 — Spec-Driven Development
 
-V2 implements all five requirements refinements from the supplied Step 4 traceability
-matrix. The initial V1 remains frozen and available for comparison. Both versions
-are client-only mock prototypes; data resets on reload. No login or live sensors.
+**Team:** Timothy Zhang, Carl Patel, Austin Huang
+**System:** Pressroom maintenance logging, shift handover, and lockout/tagout records.
 
-## Version history and organization
+## Required submission links
 
-```text
-v1: bef8e6c — original implementation and specification, unchanged
- └─ v2: 2177b9f — original traceability/evaluation + revised spec and goal model
-         d072b14 — updated implementation and checks for findings F-01–F-05
-```
+| Required component | Direct link |
+|---|---|
+| 1. GitHub Version 1 — original model, specification, planning and source | [V1 branch](https://github.com/CarlPatel/HW3-Spec-Driven-Development/tree/v1) · [preserved V1 commit](https://github.com/CarlPatel/HW3-Spec-Driven-Development/tree/bef8e6c0bfae46af486e561841c32f9c8d159b88) |
+| 2. GitHub Version 2 — revised model, specification, planning and source | [V2 branch](https://github.com/CarlPatel/HW3-Spec-Driven-Development/tree/v2) · [preserved V2 commit](https://github.com/CarlPatel/HW3-Spec-Driven-Development/tree/e304dfaaaa851da39d8733af716116b78d66ad8a) |
+| 3. Prototype V1 | [Open V1](https://carlpatel.github.io/HW3-Spec-Driven-Development/v1/) |
+| 4. Prototype V2 | [Open V2](https://carlpatel.github.io/HW3-Spec-Driven-Development/v2/) |
+| 5. Requirements Analysis and Learning Log | [Team-authored learning-log.md](learning-log.md) — requirements selection, relationships, V1 evaluation, revisions and reflection |
 
-V2 is a descendant of V1 in the same repository. On the `v2` branch:
+[Compare both deployed prototypes](https://carlpatel.github.io/HW3-Spec-Driven-Development/).
+All submission artifacts are present on this default branch. V2 descends from V1;
+the original version refs and frozen V1 application remain preserved.
 
-- `traceability.md` preserves your original V1 evaluation matrix exactly.
-- [docs/traceability-v2.md](docs/traceability-v2.md) connects the same requirement IDs
-  and interview evidence to revised V2 requirements, implementation and checks.
-- `frontend/` contains the updated V2 implementation, built from the V1 application.
-- `specs/002-maintenance-reliability-safety/` preserves the original V1 specification.
-- `specs/003-v2-record-integrity/` contains the V2 requirements and planning refinements.
-- `versions/v1/` is the frozen copy used to keep the original `/v1/` prototype available
-  beside `/v2/`; it is not a separately developed replacement for the V1 branch.
+## Requirements and evaluation evidence
 
-Check out `v1` to see the original submission state; check out `v2` to see V1 plus
-the evaluation matrix, revised requirements and updated implementation.
+- [V1 requirements traceability matrix](traceability.md)
+- [V2 requirements traceability matrix](docs/traceability-v2.md)
+- [V1 evaluation findings F-01–F-05](step4-evaluation/findings.md)
+- [Browser observations and evidence](step4-evaluation/evidence/README.md)
+- [Interview evidence locators](evidence/interview-evidence.csv)
+- [V2 technical change map and verification limits](docs/v2-change-map.md)
 
-## Run locally
+## Goal models, specifications and Spec Kit artifacts
 
-Node 20+; no install or secrets.
+| Artifact | V1 | V2 |
+|---|---|---|
+| Goal model and scope/conflict decisions | [Frozen V1 model](versions/v1/goal-model.md) | [Revised model](docs/goal-model.md) |
+| Specification | [002 V1 spec](specs/002-maintenance-reliability-safety/spec.md) | [003 V2 spec](specs/003-v2-record-integrity/spec.md) |
+| Implementation plan | [V1 plan](specs/002-maintenance-reliability-safety/plan.md) | [V2 plan](specs/003-v2-record-integrity/plan.md) |
+| Development tasks | [V1 tasks](specs/002-maintenance-reliability-safety/tasks.md) | [V2 tasks](specs/003-v2-record-integrity/tasks.md) |
+| Data model | [V1 model](specs/002-maintenance-reliability-safety/data-model.md) | [V2 model](specs/003-v2-record-integrity/data-model.md) |
+| Interface contract | [V1 contract](specs/002-maintenance-reliability-safety/contracts/ui.md) | [V2 contract](specs/003-v2-record-integrity/contracts/ui.md) |
+| Run/acceptance walkthrough | [V1 walkthrough](specs/002-maintenance-reliability-safety/quickstart.md) | [V2 walkthrough](specs/003-v2-record-integrity/quickstart.md) |
+| Source | [Frozen V1 app](versions/v1/frontend/) | [V2 app](frontend/) |
+
+[Project constitution](.specify/memory/constitution.md). The earlier 001 draft remains
+preserved as background; 002 is the evaluated V1 baseline and 003 revises it for V2.
+The installed Spec Kit workflow/templates were applied; unavailable PowerShell helper
+execution is disclosed in the plans rather than represented as an executed command.
+
+## Run and check
+
+Node 20+; no package installation or secrets.
 
 ```sh
 npm test
@@ -36,57 +54,25 @@ npm run build
 npm start
 ```
 
-Open http://localhost:4183/ to compare versions, or /v2/ for the revised application.
-The build checks V1 bytes against the frozen baseline before packaging both apps.
+Open http://localhost:4183/ to compare V1 and V2. Both use independent in-memory mock
+records and reset on reload. Demo roles and sensors are simulated. The build checks
+V1 checksums and publishes both apps together. [Pages setup](docs/github-pages.md).
 
-## Assignment navigation
+## Validation and remaining limits
 
-| Deliverable | Link / status |
-|---|---|
-| GitHub V1 | [v1 source](https://github.com/CarlPatel/HW3-Spec-Driven-Development/tree/v1), baseline bef8e6c |
-| GitHub V2 | [v2 source](https://github.com/CarlPatel/HW3-Spec-Driven-Development/tree/v2) |
-| Prototype V1 | [V1 URL recorded in supplied evaluation](https://carlpatel.github.io/HW3-Spec-Driven-Development/v1/); frozen local copy /v1/ |
-| Prototype V2 | Local http://localhost:4183/v2/; expected Pages /HW3-Spec-Driven-Development/v2/ after team deployment |
-| Requirements / learning document | [User-supplied V1 matrix](traceability.md), [original evaluation findings](step4-evaluation/findings.md), [V2 technical change map](docs/v2-change-map.md); learning-log.md must be authored by the team |
-
-Before submission, the team must place this navigation on the default branch and
-replace pending links with actual deployed V2/source URLs. The default branch is not changed by this documentation update; verify the actual
-V2 deployment before replacing pending deployment links.
-
-## Specifications and planning
-
-- [V1 spec and original plan](specs/002-maintenance-reliability-safety/)
-- [V2 revised spec](specs/003-v2-record-integrity/spec.md),
-  [plan](specs/003-v2-record-integrity/plan.md),
-  [tasks](specs/003-v2-record-integrity/tasks.md),
-  [walkthrough](specs/003-v2-record-integrity/quickstart.md)
-- [V2 goal model refinements](docs/goal-model.md), [frozen V1 model](versions/v1/goal-model.md)
-- [V2 traceability matrix](docs/traceability-v2.md) and
-  [technical mapping and validation limits](docs/v2-change-map.md)
-- [Dual-version GitHub Pages instructions](docs/github-pages.md)
-
-## V2 behavior
-
-- F-01: applicable energy-source decisions and historical isolation completeness.
-- F-02: first-good-part time cannot precede recorded removal/release.
-- F-03: fresh stops are recorded after production resumes, even with pending closeout.
-- F-04: explicit incoming-shift acknowledgment persists after ordinary notes;
-  critical isolation changes require reacknowledgment.
-- F-05: repair verification needs an uninterrupted full recorded operating shift.
-  Different-code stops interrupt that evidence; unknown codes remain pending.
-
-The user approved these prototype defaults. Stakeholder policy remains unconfirmed;
-reason categories remain a proxy for fault identity. Human SC-004/005 checks and
-browser photo verification remain outstanding. See the change map for exact limits.
+24 V2 domain acceptance tests and the original 15 V1 tests pass. Saved technical
+results and browser observations are in [V2 evidence](docs/v2-evidence/).
+The application is a prototype, without real authentication, physical safety control,
+live sensors, persistence or offline sync. Stakeholder safety policy and the reason-code
+proxy for fault identity remain unconfirmed. Human SC-004/005 timing/comprehension
+and browser photo selection/display remain outstanding; no full satisfaction claim
+is substituted for those checks. C-2 (LOTO hold accounting) remains unresolved.
 
 ## Roles and Responsibilities
 
-- Carl Patel: repository owner; existing course materials and requirements provided
-  as inputs. Human evaluation and final contribution attribution remain to be recorded.
-- Timothy: teammate identified in the supplied goal-model sources; existing model and
-  interview packet used as requirements input. Confirm full name and contributions.
-- Other group members: names and individual contributions were not supplied; the team
-  must complete attribution before submission.
-- AI development assistance: V1/V2 requirements alignment, technical planning, tasks, application,
-  automated checks and run documentation. V2 refines the five reviewed findings. No learning-log authorship or student
-  evaluation claims are included.
+- **Timothy Zhang:** Individual contribution details awaiting team confirmation.
+- **Carl Patel:** Repository owner; individual contribution details awaiting team confirmation.
+- **Austin Huang:** Individual contribution details awaiting team confirmation.
+- **AI assistance:** Technical specification/planning, implementation, technical evaluation
+  and verification support, and repository organization. The supplied learning log is
+  included without rewriting or generating its content.

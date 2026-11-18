@@ -1,12 +1,12 @@
 # Publish the V1/V2 comparison when ready
 
-No push or deployment is performed by these instructions. Both apps run locally:
+The submission workflow publishes both versions from main. Both apps also run locally:
 `npm start` → http://localhost:4183/; choose /v1/ or /v2/.
 
-1. Push local branch v2 when ready: `git push -u origin v2`.
+1. Publish reviewed submission updates with `git push origin main`.
 2. In Settings → Pages, choose GitHub Actions as source. The checked-in workflow
-   `.github/workflows/pages.yml` now runs on pushes to v2 and publishes BOTH versions.
-3. If the github-pages environment restricts branches, allow v2 in that environment.
+   `.github/workflows/pages.yml` now runs on pushes to main and publishes BOTH versions.
+3. If the github-pages environment restricts branches, allow main in that environment.
 4. Rerun the push-triggered workflow if initial setup blocked it. Manual dispatch
    becomes available once this workflow also exists on the default branch.
 5. Verify the actual deployment output. Expected URLs for this unchanged repository:
@@ -19,12 +19,9 @@ relative and work under the repository subpath. `npm run build` validates V1 fro
 checksums and generates dist/v1 and dist/v2; `node scripts/prepare-pages.mjs` copies
 that entire output to _site. Never deploy just one version over the other.
 
-The older workflow on branch v1 publishes only V1. Avoid pushing/rerunning that
-workflow after the comparison is deployed, since a Pages artifact replaces the whole
-site. Publish subsequent updates from the combined v2 workflow. When merging into
-main for submission, update the workflow branch trigger to main (and avoid competing
-publishing workflows) so the default README and Pages workflow stay consistent.
+The older branch workflows can publish stale content if manually rerun or pushed.
+Use the combined main workflow for the submission. Both v1 and v2 branches remain
+preserved as source versions; main contains the complete submission and learning log.
 
-The default README must link actual successful deployment URLs and both source refs.
-No live V2 deployment is claimed here. Private-repository Pages availability depends
-on the account plan; do not change repository visibility automatically.
+Pages publishes only `_site/`; repository access is separate. Keep the assignment
+repository private and grant the instructor read access if they do not already have it.
