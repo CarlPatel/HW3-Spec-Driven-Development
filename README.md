@@ -4,6 +4,28 @@ V2 implements all five requirements refinements from the supplied Step 4 traceab
 matrix. The initial V1 remains frozen and available for comparison. Both versions
 are client-only mock prototypes; data resets on reload. No login or live sensors.
 
+## Version history and organization
+
+```text
+v1: bef8e6c — original implementation and specification, unchanged
+ └─ v2: 2177b9f — original traceability/evaluation + revised spec and goal model
+         d072b14 — updated implementation and checks for findings F-01–F-05
+```
+
+V2 is a descendant of V1 in the same repository. On the `v2` branch:
+
+- `traceability.md` preserves your original V1 evaluation matrix exactly.
+- [docs/traceability-v2.md](docs/traceability-v2.md) connects the same requirement IDs
+  and interview evidence to revised V2 requirements, implementation and checks.
+- `frontend/` contains the updated V2 implementation, built from the V1 application.
+- `specs/002-maintenance-reliability-safety/` preserves the original V1 specification.
+- `specs/003-v2-record-integrity/` contains the V2 requirements and planning refinements.
+- `versions/v1/` is the frozen copy used to keep the original `/v1/` prototype available
+  beside `/v2/`; it is not a separately developed replacement for the V1 branch.
+
+Check out `v1` to see the original submission state; check out `v2` to see V1 plus
+the evaluation matrix, revised requirements and updated implementation.
+
 ## Run locally
 
 Node 20+; no install or secrets.
@@ -22,14 +44,14 @@ The build checks V1 bytes against the frozen baseline before packaging both apps
 | Deliverable | Link / status |
 |---|---|
 | GitHub V1 | [v1 source](https://github.com/CarlPatel/HW3-Spec-Driven-Development/tree/v1), baseline bef8e6c |
-| GitHub V2 | Local branch v2; [expected source link after push](https://github.com/CarlPatel/HW3-Spec-Driven-Development/tree/v2) |
+| GitHub V2 | [v2 source](https://github.com/CarlPatel/HW3-Spec-Driven-Development/tree/v2) |
 | Prototype V1 | [V1 URL recorded in supplied evaluation](https://carlpatel.github.io/HW3-Spec-Driven-Development/v1/); frozen local copy /v1/ |
 | Prototype V2 | Local http://localhost:4183/v2/; expected Pages /HW3-Spec-Driven-Development/v2/ after team deployment |
 | Requirements / learning document | [User-supplied V1 matrix](traceability.md), [original evaluation findings](step4-evaluation/findings.md), [V2 technical change map](docs/v2-change-map.md); learning-log.md must be authored by the team |
 
 Before submission, the team must place this navigation on the default branch and
-replace pending links with actual deployed V2/source URLs. This local branch has
-not been pushed, and the default branch has not been changed.
+replace pending links with actual deployed V2/source URLs. The default branch is not changed by this documentation update; verify the actual
+V2 deployment before replacing pending deployment links.
 
 ## Specifications and planning
 
@@ -39,7 +61,8 @@ not been pushed, and the default branch has not been changed.
   [tasks](specs/003-v2-record-integrity/tasks.md),
   [walkthrough](specs/003-v2-record-integrity/quickstart.md)
 - [V2 goal model refinements](docs/goal-model.md), [frozen V1 model](versions/v1/goal-model.md)
-- [V2 technical mapping and validation limits](docs/v2-change-map.md)
+- [V2 traceability matrix](docs/traceability-v2.md) and
+  [technical mapping and validation limits](docs/v2-change-map.md)
 - [Dual-version GitHub Pages instructions](docs/github-pages.md)
 
 ## V2 behavior
