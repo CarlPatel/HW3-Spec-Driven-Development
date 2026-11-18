@@ -1,0 +1,6 @@
+
+> press-maintenance-v2@2.0.0 build
+> node scripts/build.mjs
+
+Built comparison site: dist/v1/ (frozen) and dist/v2/ (revised).
+Pages artifact ready: /v1/ and /v2/ preserved together.

@@ -1,0 +1,185 @@
+Browser tab: 1, Title: "Pressroom · Maintenance V2", URL: "http://localhost:4183/v2/".
+1 AXWebArea Pressroom · Maintenance V2, URL: localhost:4183/v2/
+	2 container app
+		3 container
+			4 text P PRESSROOM MAINTENANCE WORKSPACE V2 / DEMO Working as
+			5 pop up button (collapsed, settable) Working as, Value: Jordan Lee · Operator · Day, ID: user, Secondary Actions: Expand
+				6 menu
+					7 Teo Salinas · Technician · Night
+					8 Maya Chen · Technician · Day
+					9 Eli Brooks · Technician · Swing
+					10 (selected) Jordan Lee · Operator · Day
+					11 Sam Rivera · Shift Supervisor · Day
+					12 Riley Park · Shift Supervisor · Night
+					13 Alex Morgan · Shift Supervisor · Swing
+		14 container
+			15 text FLOOR OVERVIEW
+			16 heading Keep the next shift moving., Value: 1
+				17 text Keep the next
+				18 text shift moving.
+			19 text One record from the first stop
+			20 text to the next good part. 4 Unclosed records 1 Locked out MACHINES 6 assets
+			21 button All machines
+			22 button Open repairs
+			23 container Machines
+				24 button Press 17 Atlas · Line A Open
+					25 text Press 17
+					26 text Atlas · Line A
+					27 text Open
+				28 text No next action recorded
+				29 text Day · Jordan Lee
+				30 text Current shift
+				31 button Press 12 Red Fox · Line A Locked out
+					32 text Press 12
+					33 text Red Fox · Line A
+					34 text Locked out
+				35 text Inspect pressure drop; electrical isolation still needed
+				36 text Night · Teo Salinas
+				37 text Not acknowledged
+				38 button Molder 8 Molder 8 · Line B Open
+					39 text Molder 8
+					40 text Molder 8 · Line B
+					41 text Open
+				42 text Pressure test before restart
+				43 text Night · Teo Salinas
+				44 text Not acknowledged
+				45 button Press 3 Old Blue · Line B Running
+					46 text Press 3
+					47 text Old Blue · Line B
+					48 text Running
+				49 button Report stop
+				50 button Press 21 Orion · Line C Running
+					51 text Press 21
+					52 text Orion · Line C
+					53 text Running
+				54 button Report stop
+				55 button Press 6 Scout · Line C Running
+					56 text Press 6
+					57 text Scout · Line C
+					58 text Running
+				59 button Report stop
+			60 text Mock plant · 6 assets
+			61 text Records reset when you reload.
+		62 container
+			63 text DEMO CLOCK · DAY SHIFT Nov 15, 06:40 AM
+			64 button +15 min
+			65 button +1 hour
+			66 button Next shift
+			67 button (collapsed) Set time, Secondary Actions: Expand
+				68 text Set time
+			69 button Reset demo
+			70 text Open event selected.
+			71 text LINE A / IM-017 · SENSOR EQUIPPED
+			72 heading Press 17 Atlas, Value: 2
+				73 text Press 17  Atlas
+			74 text Open
+			75 text NEXT ACTION
+			76 heading No next action recorded, Value: 3
+				77 text No next action recorded
+			78 text Jordan Lee · Day shift
+			79 text DOWNTIME
+			80 container
+				81 text 0  min
+			82 text ● Clock running SHIFT HANDOVER Current shift
+			83 container
+				84 text Worked on:  No repair work recorded
+			85 container
+				86 text Tests:  None recorded
+			87 text ENERGY ISOLATION
+			88 text Record each source. Verify zero energy separately.
+			89 text Hydraulic
+			90 text Applicable
+			91 text No lock currently applied
+			92 button Lock applied
+			93 button (collapsed) Supervisor: source applicability, Secondary Actions: Expand
+				94 text Supervisor: source applicability
+			95 text Electrical
+			96 text Applicable
+			97 text No lock currently applied
+			98 button Lock applied
+			99 button (collapsed) Supervisor: source applicability, Secondary Actions: Expand
+				100 text Supervisor: source applicability
+			101 text DOWNTIME EVENT r5
+			102 definition list
+				103 container Stop
+					104 text Stop
+				105 text Nov 15, 06:40 AM
+				106 container Source
+					107 text Source
+				108 text sensor
+				109 container First good part
+					110 text First good part
+				111 text —
+			112 container reason-form
+				113 container
+					114 text Reason code
+					115 pop up button (collapsed, settable) Reason code, Value: Choose at closure, Secondary Actions: Expand
+						116 menu
+							117 (selected) Choose at closure
+							118 Hydraulic
+							119 Electrical/Heater
+							120 Mechanical
+							121 Material
+							122 Setup/Changeover
+							123 Operator
+							124 Safety hold
+							125 Other
+				126 button Save reason
+			127 container good-form
+				128 container
+					129 text First good part time
+					130 date field (settable) First good part time, Value: 2026-11-15T06:40
+						131 container
+							132 stepper
+							133 stepper
+							134 stepper
+							135 stepper
+							136 stepper
+							137 stepper
+						138 pop up button Show local date and time picker Show local date and time picker
+				139 button Confirm first good part
+				140 text Operator role · supervisor release required after LOTO
+			141 button Close event
+			142 text Required at closure: reason, stop, first good part and released lockout.
+			143 text Awaiting evidence — production not resumed
+			144 container
+				145 text Previous stop 
+				146 button r4
+			147 text ADD REPAIR ENTRY Technician · auto-stamped
+			148 container entry-form
+				149 container
+					150 text What was found
+					151 text entry area (settable) What was found
+				152 container
+					153 text Done / tested
+					154 text entry area (settable) Done / tested
+				155 container
+					156 text Temporary repair
+					157 text entry area (settable) Temporary repair
+				158 container
+					159 text Next action / what to watch
+					160 text entry area (settable) Next action / what to watch
+				161 container
+					162 text Optional photo
+					163 button Optional photo, ID: photo
+				164 button Save entry
+			165 text EVENT TIMELINE Who · what · when
+			166 text Nov 15, 06:40 AM
+			167 text Stop reported  · Jordan Lee
+			168 text sensor
+			169 text Sensor demo
+			170 button Simulate another stop
+			171 text PENDING CLOSEOUT 1 records · production may have resumed
+			172 button View active stop r5
+			173 button r4 · Reason pending · 15 min Awaiting closeout
+				174 text r4 · Reason pending
+				175 text  · 15 min
+				176 text Awaiting closeout
+			177 text MACHINE HISTORY
+			178 text Closed events will appear here. Closing does not mean the fix is verified.
+			179 link Description: Compare frozen V1, Value: localhost:4183/v1/
+			180 text  · 
+			181 link Description: Versions, Value: localhost:4183/
+			182 text Prototype only · Simulated sensors, identities and safety records. Physical isolation procedures remain outside this demo.
+
+The focused UI element is 1 AXWebArea Pressroom · Maintenance V2, URL: localhost:4183/v2/

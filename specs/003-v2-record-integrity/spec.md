@@ -53,8 +53,8 @@ resets on reload, keeps selectable demo identities, and retains the fixed reason
   After first good part a new stop creates a separate interval even if older records
   await reason or closure. Older durations/evidence remain intact and selectable in
   Pending closeout; the new event links to its predecessor. Closure of an older
-  record must not hide the current active stop. Good-part time cannot be backdated
-  before a newer stop record would make the production chronology inconsistent.
+  record must not hide the current active stop. A first-good-part record precedes opening the next stop interval; later correction
+  of first-good-part timestamps is unsupported, preventing overlapping intervals.
 - **FR-025 (REQ-07)**: Each unclosed event that predates the current dated shift
   start owes explicit acknowledgment for that shift, overdue exactly 30 minutes in.
   Notes, removal, verification and reason edits never clear that obligation. Current

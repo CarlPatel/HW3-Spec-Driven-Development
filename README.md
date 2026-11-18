@@ -1,12 +1,12 @@
-# Pressroom — Maintenance Prototype V1
+# Pressroom — V1 / V2 maintenance prototypes
 
-A tablet/desktop prototype for injection-molding maintenance: report a stop, record
-repair work, control LOTO records, hand over to the next shift, and verify a fix.
-Implements the existing **002 V1 specification: 15 goals, REQ-01–REQ-09**.
+V2 implements all five requirements refinements from the supplied Step 4 traceability
+matrix. The initial V1 remains frozen and available for comparison. Both versions
+are client-only mock prototypes; data resets on reload. No login or live sensors.
 
-## Run
+## Run locally
 
-Node 20+; no package installation or account needed.
+Node 20+; no install or secrets.
 
 ```sh
 npm test
@@ -14,52 +14,47 @@ npm run build
 npm start
 ```
 
-Open http://localhost:4173. `dist/` is the deployable static build.
-The demo starts at November 15, 2026, 06:10 in the browser's local timezone.
-Use the user switcher for Technician, Operator and Shift Supervisor roles. The
-clock can advance by minutes, hours, shift boundaries, or a chosen timestamp.
-Reload or Reset demo restores sample data. All data, including photos, lives in memory.
+Open http://localhost:4183/ to compare versions, or /v2/ for the revised application.
+The build checks V1 bytes against the frozen baseline before packaging both apps.
 
 ## Assignment navigation
 
-| Component | V1 status / link |
+| Deliverable | Link / status |
 |---|---|
-| GitHub V1 | [v1 branch](https://github.com/CarlPatel/HW3-Spec-Driven-Development/tree/v1) (see delivery record for push status) |
-| GitHub V2 | Not created; reserved for the subsequent student evaluation/revision steps |
-| Prototype V1 | Local: http://localhost:4173; not deployed (local-only by request); [GitHub Pages setup](docs/github-pages.md) |
-| Prototype V2 | Not created |
-| Requirements selection and goal relationships | [Merged goal model](docs/goal-model.md) |
-| Specification | [Authoritative 002 V1 spec](specs/002-maintenance-reliability-safety/spec.md) |
-| Plan and tasks | [Plan](specs/002-maintenance-reliability-safety/plan.md), [tasks](specs/002-maintenance-reliability-safety/tasks.md) |
-| Implementation reference | [REQ → source map](docs/implementation-map.md) |
-| Learning log and Step 4 evaluation | Student work remaining; no observations or learning-log answers generated |
+| GitHub V1 | [v1 source](https://github.com/CarlPatel/HW3-Spec-Driven-Development/tree/v1), baseline bef8e6c |
+| GitHub V2 | Local branch v2; [expected source link after push](https://github.com/CarlPatel/HW3-Spec-Driven-Development/tree/v2) |
+| Prototype V1 | [V1 URL recorded in supplied evaluation](https://carlpatel.github.io/HW3-Spec-Driven-Development/v1/); frozen local copy /v1/ |
+| Prototype V2 | Local http://localhost:4183/v2/; expected Pages /HW3-Spec-Driven-Development/v2/ after team deployment |
+| Requirements / learning document | [User-supplied V1 matrix](traceability.md), [original evaluation findings](step4-evaluation/findings.md), [V2 technical change map](docs/v2-change-map.md); learning-log.md must be authored by the team |
 
-The older [001 draft](specs/001-maintenance-event-logging/spec.md) remains preserved.
-The 002 clarifications record exact shift-boundary behavior and delayed repeat-fault
-classification; unresolved stakeholder assumptions and conflicts remain visible.
+Before submission, the team must place this navigation on the default branch and
+replace pending links with actual deployed V2/source URLs. This local branch has
+not been pushed, and the default branch has not been changed.
 
-## Demo walkthrough
+## Specifications and planning
 
-1. Old Blue: Report stop opens an event without required fields or sensor warnings.
-2. Press 17: simulate a sensor stop twice; the same event remains selected.
-3. Technician: apply a lock and verify zero energy. Operator: attempt first good part
-   and see the release gate. Technician: record removal. Supervisor: authorize release.
-4. Operator: confirm first good part. Technician: choose a reason, then close.
-   Missing fields are listed if closure is attempted early.
-5. Molder 8: inspect the next action/tests; select Maya (Day), acknowledge handover.
-   Advance beyond 06:30 to see unacknowledged open repairs highlighted.
-6. Close a coded repair and advance through its next full shift. A matching reason
-   on a new stop before the verification deadline reopens the earlier repair with
-   links in both directions. Code selection classifies the repeat using stop time.
+- [V1 spec and original plan](specs/002-maintenance-reliability-safety/)
+- [V2 revised spec](specs/003-v2-record-integrity/spec.md),
+  [plan](specs/003-v2-record-integrity/plan.md),
+  [tasks](specs/003-v2-record-integrity/tasks.md),
+  [walkthrough](specs/003-v2-record-integrity/quickstart.md)
+- [V2 goal model refinements](docs/goal-model.md), [frozen V1 model](versions/v1/goal-model.md)
+- [V2 technical mapping and validation limits](docs/v2-change-map.md)
+- [Dual-version GitHub Pages instructions](docs/github-pages.md)
 
-## Validation and limitations
+## V2 behavior
 
-15 automated acceptance-rule tests cover REQ-01–09. Browser checks cover note entry,
-manual stop, handover, lockout refusal, release roles, closure and verification at
-tablet width. See [quickstart](specs/002-maintenance-reliability-safety/quickstart.md).
-Student evaluation is still needed for comprehension and 30-second entry criteria.
-This is a mock prototype, without authentication, a backend, live sensors, persistence,
-or enforcement of physical safety procedures. Demo roles are selectable by anyone.
+- F-01: applicable energy-source decisions and historical isolation completeness.
+- F-02: first-good-part time cannot precede recorded removal/release.
+- F-03: fresh stops are recorded after production resumes, even with pending closeout.
+- F-04: explicit incoming-shift acknowledgment persists after ordinary notes;
+  critical isolation changes require reacknowledgment.
+- F-05: repair verification needs an uninterrupted full recorded operating shift.
+  Different-code stops interrupt that evidence; unknown codes remain pending.
+
+The user approved these prototype defaults. Stakeholder policy remains unconfirmed;
+reason categories remain a proxy for fault identity. Human SC-004/005 checks and
+browser photo verification remain outstanding. See the change map for exact limits.
 
 ## Roles and Responsibilities
 
@@ -69,13 +64,6 @@ or enforcement of physical safety procedures. Demo roles are selectable by anyon
   interview packet used as requirements input. Confirm full name and contributions.
 - Other group members: names and individual contributions were not supplied; the team
   must complete attribution before submission.
-- AI development assistance: V1 scope alignment, technical planning, tasks, application,
-  automated checks and run documentation. No learning-log authorship or student
+- AI development assistance: V1/V2 requirements alignment, technical planning, tasks, application,
+  automated checks and run documentation. V2 refines the five reviewed findings. No learning-log authorship or student
   evaluation claims are included.
-
-## Host later on GitHub Pages
-
-A ready-to-use workflow is in `.github/workflows/pages.yml`. It publishes only
-the built application at `/HW3-Spec-Driven-Development/v1/`. Follow
-[the hosting guide](docs/github-pages.md) when ready. No push or deployment was
-performed. The unused Sites hosting configuration has been removed.

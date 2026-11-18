@@ -1,0 +1,9 @@
+{
+  "baseline": "bef8e6c0bfae46af486e561841c32f9c8d159b88",
+  "files": {
+    "index.html": "c517c84e71b4edb17c421795364d9cf64387b61d9a84185efbd1305795fc1415",
+    "styles.css": "0f459fe2fda96087bfcb955e10ca47cf2e1f83a39531ef3c25fdf84854fb7a46",
+    "domain.js": "0a26636589071ccd92cb256f6e754ca7e568d2bdbdea6910a2415a7cd325a6e5",
+    "app.js": "673769e1bc4293890fefebc2933ccad9dc02aa9c0188f2a472eef641f0a6f60f"
+  }
+}

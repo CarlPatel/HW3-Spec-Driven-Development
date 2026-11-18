@@ -1,48 +1,30 @@
-# Publish V1 to GitHub Pages when ready
+# Publish the V1/V2 comparison when ready
 
-Everything remains local. No branch was pushed and no site was deployed.
+No push or deployment is performed by these instructions. Both apps run locally:
+`npm start` → http://localhost:4183/; choose /v1/ or /v2/.
 
-## One-time setup
+1. Push local branch v2 when ready: `git push -u origin v2`.
+2. In Settings → Pages, choose GitHub Actions as source. The checked-in workflow
+   `.github/workflows/pages.yml` now runs on pushes to v2 and publishes BOTH versions.
+3. If the github-pages environment restricts branches, allow v2 in that environment.
+4. Rerun the push-triggered workflow if initial setup blocked it. Manual dispatch
+   becomes available once this workflow also exists on the default branch.
+5. Verify the actual deployment output. Expected URLs for this unchanged repository:
+   - https://carlpatel.github.io/HW3-Spec-Driven-Development/v1/
+   - https://carlpatel.github.io/HW3-Spec-Driven-Development/v2/
 
-1. From your original repository folder, confirm `git branch --show-current` says
-   `v1`, then push when you choose: `git push -u origin v1`.
-2. In GitHub, open repository **Settings → Pages → Build and deployment** and
-   select **GitHub Actions** as the source. Private-repository Pages availability
-   depends on your account plan; keep the assignment repository private.
-3. Open **Actions → Publish V1 to GitHub Pages**. The first push runs this workflow;
-   if it failed before Pages was enabled, rerun that workflow after step 2.
-4. If GitHub blocks deployment because `v1` is not an allowed environment branch,
-   open **Settings → Environments → github-pages** and allow `v1` under deployment
-   branches, then rerun.
-5. Use the successful deployment's actual URL. With the repository name unchanged
-   and no custom domain, the expected V1 path is:
-   `https://carlpatel.github.io/HW3-Spec-Driven-Development/v1/`.
-   This is an expected address, not a claim that deployment is live.
+Only the built comparison index and app assets are uploaded from `_site/`. Class
+PDFs, interviews, specs and evaluation evidence are excluded. Asset/module URLs are
+relative and work under the repository subpath. `npm run build` validates V1 frozen
+checksums and generates dist/v1 and dist/v2; `node scripts/prepare-pages.mjs` copies
+that entire output to _site. Never deploy just one version over the other.
 
-The workflow runs on pushes to `v1`. Manual dispatch is also declared; GitHub's
-Run workflow control requires the workflow to exist on the default branch, so
-rerun the push-triggered run while the workflow exists only on `v1`.
+The older workflow on branch v1 publishes only V1. Avoid pushing/rerunning that
+workflow after the comparison is deployed, since a Pages artifact replaces the whole
+site. Publish subsequent updates from the combined v2 workflow. When merging into
+main for submission, update the workflow branch trigger to main (and avoid competing
+publishing workflows) so the default README and Pages workflow stay consistent.
 
-## What gets published
-
-The workflow tests, builds `dist/`, prepares `_site/v1/`, and uploads **only `_site/`**.
-The repository root, interview transcripts, assignment PDFs, model files and
-Spec Kit documents are not part of the Pages artifact. The root page redirects
-to `./v1/`; all application assets and module imports use relative URLs, so the
-repository-name subpath needs no configuration. No secrets or external services
-are needed by the app. Reload resets mock data as specified.
-
-To inspect the exact hosting artifact locally:
-
-```sh
-npm test
-npm run build
-node scripts/prepare-pages.mjs
-```
-
-Later V2 work must publish both `_site/v1/` and `_site/v2/` in one Pages deployment
-if both URLs must remain available. A Pages deployment replaces the entire prior
-artifact; preserve the frozen V1 build when adding V2.
-
-References: [GitHub custom Pages workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages),
-[publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+The default README must link actual successful deployment URLs and both source refs.
+No live V2 deployment is claimed here. Private-repository Pages availability depends
+on the account plan; do not change repository visibility automatically.

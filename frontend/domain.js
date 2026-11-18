@@ -33,38 +33,242 @@ export function createState(now=+new Date(2026,10,15,6,10),seed=true){
  return s;
 }
 export function machine(s,id){const m=s.machines.find(m=>m.id===id);need(m,'Machine not found');return m;}
-export const openFor=(s,machineId)=>s.events.find(e=>e.machineId===machineId&&e.closedAt===null);
-const editable=e=>need(e.closedAt===null,'This event is closed and read-only.');
-const role=(u,roles)=>need(roles.includes(u.role),`Requires ${roles.join(' or ')} role.`);
-const stamp=(s,u)=>({user:{...u},at:s.now,shift:u.shift});
-// REQ-01–03
-export function openEvent(s,machineId,source,u){
- const m=machine(s,machineId);need(source==='manual'||source==='sensor','Unknown stop source');
- if(source==='sensor')need(m.sensors,'This machine has no sensors; use Report stop.');else role(u,['Technician','Operator']);
- const existing=openFor(s,machineId);if(existing)return existing;
- const e={id:id(s),machineId,stoppedAt:s.now,source:source==='sensor'?'sensor':m.sensors?'manual':'manual – no sensor',openedBy:{...u},openedShift:u.shift,firstGoodAt:null,closedAt:null,reason:'',entries:[],locks:[],releases:[],release:null,acknowledgments:[],includedLotoHold:false,repeatOf:null,reopenedBy:null};s.events.push(e);return e;
+// REQ-01/02, F-03: production intervals and administrative closeout are distinct.
+export const openRecords = (s, machineId) => s.events.filter(e => e.machineId === machineId && e.closedAt === null);
+export const activeFor = (s, machineId) => s.events.find(e => e.machineId === machineId && e.firstGoodAt === null);
+export const openFor = (s, machineId) => activeFor(s, machineId) || openRecords(s, machineId).at(-1);
+const editable = e => need(e.closedAt === null, 'This event is closed and read-only.');
+const role = (u, roles) => need(roles.includes(u.role), `Requires ${roles.join(' or ')} role.`);
+const stamp = (s, u) => ({user: {...u}, at: s.now, shift: u.shift});
+
+export function openEvent(s, machineId, source, u) {
+  const m = machine(s, machineId);
+  need(source === 'manual' || source === 'sensor', 'Unknown stop source');
+  if (source === 'sensor') need(m.sensors, 'This machine has no sensors; use Report stop.');
+  else role(u, ['Technician', 'Operator']);
+  const active = activeFor(s, machineId);
+  if (active) return active;
+  const previous = s.events.filter(e => e.machineId === machineId).at(-1);
+  const e = {
+    id: id(s), machineId, stoppedAt: s.now,
+    source: source === 'sensor' ? 'sensor' : m.sensors ? 'manual' : 'manual – no sensor',
+    openedBy: {...u}, openedShift: u.shift, firstGoodAt: null, closedAt: null, reason: '',
+    entries: [], locks: [], releases: [], release: null, acknowledgments: [],
+    sourceDecisions: [], includedLotoHold: false,
+    previousEventId: previous?.id ?? null, repeatOf: null, reopenedBy: null
+  };
+  s.events.push(e);
+  reconcileRepeats(s);
+  return e;
 }
-export const downtime=(s,e)=>Math.floor(((e.firstGoodAt??s.now)-e.stoppedAt)/60000);
-export function setReason(s,e,u,value){editable(e);role(u,['Technician']);need(REASONS.includes(value),'Select a listed reason code.');e.reason=value;reconcileRepeats(s);}
-export function activeLocks(e){return e.locks.filter(l=>l.removedAt===null);}
-export const releaseBlocked=e=>e.includedLotoHold&&(activeLocks(e).length>0||!e.release);
-export function confirmGood(s,e,u,at=s.now){editable(e);role(u,['Operator']);need(e.firstGoodAt===null,'First good part is already recorded.');need(Number.isFinite(at)&&at>=e.stoppedAt,'First good part cannot precede stop time.');need(at<=s.now,'First good part cannot be in the future.');need(!releaseBlocked(e),'Release not authorized');e.firstGoodAt=at;e.firstGoodBy={...u};}
-export function closeMissing(e){return [...(!e.reason?['Reason code']:[]),...(!Number.isFinite(e.stoppedAt)?['Stop time']:[]),...(e.firstGoodAt===null?['First good part']:[]),...(releaseBlocked(e)?['Lockout not released']:[])];}
-export function closeEvent(s,e,u){editable(e);role(u,['Technician']);const missing=closeMissing(e);need(!missing.length,`Missing: ${missing.join('; ')}`);e.closedAt=s.now;e.closedBy={...u};reconcileRepeats(s);}
-// REQ-06/09: guards live here as well as the UI.
-export function applyLock(s,e,u,source){editable(e);role(u,['Technician']);need(e.firstGoodAt===null,'Close the completed event and report a new stop before applying new locks.');need(machine(s,e.machineId).energySources.includes(source),'Unknown energy source');need(!activeLocks(e).some(l=>l.source===source),'Lock already applied');
- const l={id:id(s),source,appliedBy:{...u},appliedAt:s.now,zeroEnergy:false,verifiedBy:null,verifiedAt:null,removedBy:null,removedAt:null};e.locks.push(l);e.includedLotoHold=true;e.release=null;return l;}
-function lockFor(e,lockId){const l=e.locks.find(l=>l.id===lockId);need(l&&l.removedAt===null,'Active lock not found');return l;}
-export function verifyZero(s,e,u,lockId){editable(e);role(u,['Technician']);const l=lockFor(e,lockId);need(!l.zeroEnergy,'Zero energy is already verified');l.zeroEnergy=true;l.verifiedBy={...u};l.verifiedAt=s.now;}
-export function removeLock(s,e,u,lockId){editable(e);role(u,['Technician']);const l=lockFor(e,lockId);l.removedBy={...u};l.removedAt=s.now;}
-export function authorizeRelease(s,e,u){editable(e);role(u,['Shift Supervisor']);need(e.includedLotoHold,'No lockout requires release');need(!e.release,'Release already authorized');const active=activeLocks(e);need(!active.length,`Locks still applied: ${active.map(l=>l.source).join(', ')}`);e.release=stamp(s,u);e.releases.push(e.release);}
-// REQ-04/05/07/09
-export function addEntry(s,e,u,fields){editable(e);role(u,['Technician']);const data=Object.fromEntries(['found','tested','temporary','next'].map(k=>[k,String(fields[k]??'').trim()]));need(Object.values(data).some(Boolean)||fields.photo,'Add text or a photo.');const entry={...data,photo:fields.photo??null,...stamp(s,u)};e.entries.push(entry);return entry;}
-export function summary(e){const entries=e.entries;return {next:[...entries].reverse().find(n=>n.next)?.next||'No next action recorded',tested:entries.filter(n=>n.tested).map(n=>n.tested),people:[...new Set([...entries.map(n=>n.user.name),...e.locks.flatMap(l=>[l.appliedBy.name,l.removedBy?.name,l.verifiedBy?.name].filter(Boolean))])],last:entries.at(-1)?.user.name||e.openedBy.name,shift:entries.at(-1)?.shift||e.openedShift};}
-function workTime(e){return Math.max(e.stoppedAt,...e.entries.map(n=>n.at),...e.locks.map(l=>l.appliedAt));}
-export function handover(s,e){const sh=shiftAt(s.now),prior=workTime(e)<sh.start;const ack=e.acknowledgments.find(a=>a.shiftStart===sh.start);return {prior,ack,label:ack?'Acknowledged':prior?(s.now-sh.start>=30*60000?'Not acknowledged':'Awaiting acknowledgment'):'Current shift',overdue:prior&&!ack&&s.now-sh.start>=30*60000};}
-export function acknowledge(s,e,u){editable(e);role(u,['Technician','Shift Supervisor']);const sh=shiftAt(s.now);need(u.shift===sh.name,'Select a user on the current clock shift.');const h=handover(s,e);need(h.prior,'No previous-shift handover to acknowledge.');need(!h.ack,'Already acknowledged this shift');const missing=activeLocks(e).filter(l=>!l.zeroEnergy);need(!missing.length,`Missing: ${missing.map(l=>`Zero-energy verification – ${l.source}`).join('; ')}`);const a={...stamp(s,u),shiftStart:sh.start,locks:activeLocks(e).map(l=>({source:l.source,applier:l.appliedBy.name}))};e.acknowledgments.push(a);return a;}
-// REQ-08: repeat links preserve one-open-event invariant and original closure record.
-export function reconcileRepeats(s){for(const e of s.events){e.repeatOf=null;e.reopenedBy=null;}for(const e of s.events){if(e.closedAt===null)continue;const repeat=s.events.filter(n=>n.machineId===e.machineId&&n.stoppedAt>=e.closedAt&&n.id!==e.id&&n.stoppedAt<verificationEnd(e.firstGoodAt)&&n.reason&&n.reason===e.reason).sort((a,b)=>a.stoppedAt-b.stoppedAt)[0];if(repeat){e.reopenedBy=repeat.id;repeat.repeatOf=e.id;}}}
-export function verification(s,e){if(e.closedAt===null)return 'Not yet closed';if(e.reopenedBy)return 'Reopened – repeat fault';const end=verificationEnd(e.firstGoodAt);const pending=s.events.some(n=>n.id!==e.id&&n.machineId===e.machineId&&n.stoppedAt>=e.closedAt&&n.stoppedAt<end&&!n.reason);return s.now>=end&&!pending?`Verified – ran full ${shiftAt(end-1).name} shift`:'Awaiting verification';}
-export function advanceClock(s,to){need(Number.isFinite(to)&&to>=s.now,'Demo clock can only advance.');s.now=to;reconcileRepeats(s);}
+export const downtime = (s, e) => Math.floor(((e.firstGoodAt ?? s.now) - e.stoppedAt) / 60000);
+export const activeLocks = e => e.locks.filter(l => l.removedAt === null);
+
+// REQ-06/09, F-01: applicability is explicit; no exclusion can hide lock history.
+export function sourceDecision(e, source) {
+  return e.sourceDecisions.filter(d => d.source === source).at(-1);
+}
+export function sourceApplicable(e, source) {
+  return sourceDecision(e, source)?.applicable ?? true;
+}
+export function setSourceApplicable(s, e, u, source, applicable, reason = '') {
+  editable(e);
+  role(u, ['Shift Supervisor']);
+  need(e.firstGoodAt === null, 'Isolation decisions are fixed after first good part.');
+  need(machine(s, e.machineId).energySources.includes(source), 'Unknown energy source');
+  need(typeof applicable === 'boolean', 'Choose Applicable or Not applicable.');
+  need(applicable || String(reason).trim(), 'A reason is required to exclude an energy source.');
+  need(applicable || !e.locks.some(l => l.source === source), 'Cannot exclude a source with recorded lock history.');
+  const decision = {source, applicable, reason: String(reason).trim(), ...stamp(s, u)};
+  e.sourceDecisions.push(decision);
+  e.release = null;
+  return decision;
+}
+export function isolationMissing(s, e, phase = 'release') {
+  if (!e.includedLotoHold) return [];
+  const missing = [];
+  for (const source of machine(s, e.machineId).energySources) {
+    if (sourceApplicable(e, source) && !e.locks.some(l => l.source === source)) {
+      missing.push(`Applicable source not recorded – ${source}`);
+    }
+  }
+  for (const l of e.locks) {
+    const tag = `${l.source} (${l.id})`;
+    if (!l.appliedBy?.name || !Number.isFinite(l.appliedAt)) missing.push(`Application identity/time – ${tag}`);
+    if (!l.zeroEnergy || !l.verifiedBy?.name || !Number.isFinite(l.verifiedAt)) {
+      missing.push(`Zero-energy verification identity/time – ${tag}`);
+    }
+    if (phase !== 'handover' && (l.removedAt === null || !l.removedBy?.name)) missing.push(`Lock removal – ${tag}`);
+    if (l.appliedAt < e.stoppedAt ||
+        (l.verifiedAt !== null && l.verifiedAt < l.appliedAt) ||
+        (l.removedAt !== null && (l.removedAt < l.appliedAt || (l.verifiedAt !== null && l.removedAt < l.verifiedAt)))) {
+      missing.push(`Invalid isolation chronology – ${tag}`);
+    }
+  }
+  return missing;
+}
+export const releaseBlocked = e => e.includedLotoHold && (activeLocks(e).length > 0 || !e.release);
+export function setReason(s, e, u, value) {
+  editable(e); role(u, ['Technician']);
+  need(REASONS.includes(value), 'Select a listed reason code.');
+  e.reason = value; reconcileRepeats(s);
+}
+// REQ-02/06, F-02: check event time as well as permission at recording time.
+export function confirmGood(s, e, u, at = s.now) {
+  editable(e); role(u, ['Operator']);
+  need(e.firstGoodAt === null, 'First good part is already recorded.');
+  need(Number.isFinite(at) && at >= e.stoppedAt, 'First good part cannot precede stop time.');
+  need(at <= s.now, 'First good part cannot be in the future.');
+  need(!releaseBlocked(e), 'Release not authorized');
+  if (e.includedLotoHold) {
+    const missing = isolationMissing(s, e);
+    need(!missing.length, `Missing: ${missing.join('; ')}`);
+    need(at >= e.release.at && e.locks.every(l => at >= l.removedAt), 'First good part cannot precede lock removal or authorized release.');
+  }
+  e.firstGoodAt = at; e.firstGoodBy = {...u}; reconcileRepeats(s);
+}
+export function closeMissing(e, s) {
+  return [
+    ...(!e.reason ? ['Reason code'] : []),
+    ...(!Number.isFinite(e.stoppedAt) ? ['Stop time'] : []),
+    ...(e.firstGoodAt === null ? ['First good part'] : []),
+    ...(s ? isolationMissing(s, e) : []),
+    ...(releaseBlocked(e) ? ['Lockout not released'] : [])
+  ];
+}
+export function closeEvent(s, e, u) {
+  editable(e); role(u, ['Technician']);
+  const missing = closeMissing(e, s);
+  need(!missing.length, `Missing: ${missing.join('; ')}`);
+  e.closedAt = s.now; e.closedBy = {...u}; reconcileRepeats(s);
+}
+export function applyLock(s, e, u, source) {
+  editable(e); role(u, ['Technician']);
+  need(e.firstGoodAt === null, 'Report a new stop before applying new locks.');
+  need(machine(s, e.machineId).energySources.includes(source), 'Unknown energy source');
+  need(sourceApplicable(e, source), 'Supervisor must mark this source Applicable before locking it.');
+  need(!activeLocks(e).some(l => l.source === source), 'Lock already applied');
+  const l = {id: id(s), source, appliedBy: {...u}, appliedAt: s.now, zeroEnergy: false,
+    verifiedBy: null, verifiedAt: null, removedBy: null, removedAt: null};
+  e.locks.push(l); e.includedLotoHold = true; e.release = null; return l;
+}
+function lockFor(e, lockId) {
+  const l = e.locks.find(l => l.id === lockId);
+  need(l && l.removedAt === null, 'Active lock not found; removed locks cannot be retrospectively verified.');
+  return l;
+}
+export function verifyZero(s, e, u, lockId) {
+  editable(e); role(u, ['Technician']);
+  const l = lockFor(e, lockId);
+  need(!l.zeroEnergy, 'Zero energy is already verified');
+  need(s.now >= l.appliedAt, 'Verification cannot precede application.');
+  l.zeroEnergy = true; l.verifiedBy = {...u}; l.verifiedAt = s.now;
+}
+export function removeLock(s, e, u, lockId) {
+  editable(e); role(u, ['Technician']);
+  const l = lockFor(e, lockId);
+  need(s.now >= (l.verifiedAt ?? l.appliedAt), 'Removal cannot precede recorded isolation.');
+  // Capture actual removal even when prior verification is missing. Never invent evidence.
+  l.removedBy = {...u}; l.removedAt = s.now;
+}
+export function authorizeRelease(s, e, u) {
+  editable(e); role(u, ['Shift Supervisor']);
+  need(e.includedLotoHold, 'No lockout requires release');
+  need(!e.release, 'Release already authorized');
+  const missing = isolationMissing(s, e);
+  need(!missing.length, `Missing: ${missing.join('; ')}`);
+  need(e.locks.every(l => l.removedAt <= s.now), 'Release cannot precede lock removal.');
+  e.release = stamp(s, u); e.releases.push(e.release);
+}
+// REQ-04/05: note capture and provenance remain unchanged.
+export function addEntry(s, e, u, fields) {
+  editable(e); role(u, ['Technician']);
+  const data = Object.fromEntries(['found', 'tested', 'temporary', 'next'].map(k => [k, String(fields[k] ?? '').trim()]));
+  need(Object.values(data).some(Boolean) || fields.photo, 'Add text or a photo.');
+  const entry = {...data, photo: fields.photo ?? null, ...stamp(s, u)};
+  e.entries.push(entry); return entry;
+}
+export function summary(e) {
+  return {
+    next: [...e.entries].reverse().find(n => n.next)?.next || 'No next action recorded',
+    tested: e.entries.filter(n => n.tested).map(n => n.tested),
+    people: [...new Set([...e.entries.map(n => n.user.name), ...e.locks.flatMap(l => [l.appliedBy.name, l.removedBy?.name, l.verifiedBy?.name].filter(Boolean))])],
+    last: e.entries.at(-1)?.user.name || e.openedBy.name,
+    shift: e.entries.at(-1)?.shift || e.openedShift
+  };
+}
+// REQ-07, F-04: notes cannot satisfy responsibility acceptance.
+function isolationFingerprint(e) {
+  return JSON.stringify({locks: e.locks, sourceDecisions: e.sourceDecisions});
+}
+export function handover(s, e) {
+  const sh = shiftAt(s.now), prior = e.closedAt === null && e.stoppedAt < sh.start;
+  const fingerprint = isolationFingerprint(e);
+  const ack = [...e.acknowledgments].reverse().find(a => a.shiftStart === sh.start && a.isolationFingerprint === fingerprint);
+  const changed = prior && !ack && e.acknowledgments.some(a => a.shiftStart === sh.start);
+  return {prior, ack, label: ack ? 'Acknowledged' : prior ?
+    (s.now - sh.start >= 30 * 60000 ? 'Not acknowledged' : changed ? 'Reacknowledgment required' : 'Awaiting acknowledgment') : 'Current shift',
+    overdue: prior && !ack && s.now - sh.start >= 30 * 60000};
+}
+export function acknowledge(s, e, u) {
+  editable(e); role(u, ['Technician', 'Shift Supervisor']);
+  const sh = shiftAt(s.now), h = handover(s, e);
+  need(u.shift === sh.name, 'Select a user on the current clock shift.');
+  need(h.prior, 'No previous-shift handover to acknowledge.');
+  need(!h.ack, 'Already acknowledged the current isolation state this shift');
+  const missing = isolationMissing(s, e, 'handover');
+  need(!missing.length, `Missing: ${missing.join('; ')}`);
+  const a = {...stamp(s, u), shiftStart: sh.start, isolationFingerprint: isolationFingerprint(e),
+    locks: activeLocks(e).map(l => ({source: l.source, applier: l.appliedBy.name}))};
+  e.acknowledgments.push(a); return a;
+}
+// REQ-08, F-03/F-05: establish full operating evidence before claiming verification.
+function nextFullShift(at) {
+  const sh = shiftAt(at);
+  return at === sh.start ? sh : shiftAt(sh.end);
+}
+export function verificationEvidence(s, e) {
+  if (e.firstGoodAt === null) return {kind: 'stopped', label: 'Awaiting evidence — production not resumed'};
+  const subsequent = s.events.filter(n => n.machineId === e.machineId && n.id !== e.id &&
+    n.stoppedAt >= e.firstGoodAt && s.events.indexOf(n) > s.events.indexOf(e)).sort((a, b) => a.stoppedAt - b.stoppedAt);
+  let resume = e.firstGoodAt, candidate = nextFullShift(resume), interrupted = false;
+  const relevant = [];
+  for (const n of subsequent) {
+    // A stop at the end cannot invalidate a completed operating shift.
+    if (n.stoppedAt >= candidate.end) break;
+    relevant.push(n);
+    interrupted = true;
+    if (n.firstGoodAt === null) {
+      const unknown = relevant.some(n => !n.reason);
+      const repeat = e.reason && relevant.find(n => n.reason === e.reason);
+      return {kind: repeat ? 'repeat' : unknown || !e.reason ? 'pending' : 'interrupted', repeat,
+        label: repeat ? 'Reopened – repeat fault' : unknown || !e.reason ? 'Awaiting evidence — uncoded stop or repair' : 'No matching recurrence observed — awaiting a full operating shift'};
+    }
+    resume = n.firstGoodAt;
+    candidate = nextFullShift(resume);
+    // A zero-duration stop at the exact shift start still interrupts that shift.
+    if (n.stoppedAt === candidate.start) candidate = shiftAt(candidate.end);
+  }
+  const repeat = e.reason && relevant.find(n => n.reason === e.reason);
+  if (repeat) return {kind: 'repeat', repeat, candidate, label: 'Reopened – repeat fault'};
+  if (!e.reason || relevant.some(n => !n.reason)) return {kind: 'pending', candidate, label: 'Awaiting evidence — uncoded stop or repair'};
+  if (s.now >= candidate.end) return {kind: 'verified', candidate, label: `Verified – recorded full ${candidate.name} shift`};
+  return {kind: interrupted ? 'interrupted' : 'pending', candidate,
+    label: interrupted ? 'No matching recurrence observed — awaiting a full operating shift' : 'Awaiting evidence — full operating shift pending'};
+}
+export function reconcileRepeats(s) {
+  for (const e of s.events) { e.repeatOf = null; e.reopenedBy = null; }
+  for (const e of s.events) {
+    const result = verificationEvidence(s, e);
+    if (result.repeat) { e.reopenedBy = result.repeat.id; result.repeat.repeatOf = e.id; }
+  }
+}
+export function verification(s, e) {
+  const evidence = verificationEvidence(s, e);
+  if (evidence.kind === 'repeat' || e.firstGoodAt === null) return evidence.label;
+  return e.closedAt === null ? 'Awaiting closeout' : evidence.label;
+}
+export function advanceClock(s, to) {
+  need(Number.isFinite(to) && to >= s.now, 'Demo clock can only advance.');
+  s.now = to; reconcileRepeats(s);
+}

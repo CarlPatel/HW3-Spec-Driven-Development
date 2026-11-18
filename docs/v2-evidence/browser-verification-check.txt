@@ -1,0 +1,138 @@
+Browser tab: 1, Title: "Pressroom · Maintenance V2", URL: "http://localhost:4183/v2/".
+0 AXWebArea Pressroom · Maintenance V2, URL: localhost:4183/v2/
+	1 container app
+		2 container
+			3 text P PRESSROOM MAINTENANCE WORKSPACE V2 / DEMO Working as
+			4 pop up button (collapsed, settable) Working as, Value: Maya Chen · Technician · Day, ID: user, Secondary Actions: Expand
+				5 menu
+					6 Teo Salinas · Technician · Night
+					7 (selected) Maya Chen · Technician · Day
+					8 Eli Brooks · Technician · Swing
+					9 Jordan Lee · Operator · Day
+					10 Sam Rivera · Shift Supervisor · Day
+					11 Riley Park · Shift Supervisor · Night
+					12 Alex Morgan · Shift Supervisor · Swing
+		13 container
+			14 text FLOOR OVERVIEW
+			15 heading Keep the next shift moving., Value: 1
+				16 text Keep the next
+				17 text shift moving.
+			18 text One record from the first stop
+			19 text to the next good part. 3 Unclosed records 1 Locked out MACHINES 6 assets
+			20 button All machines
+			21 button Open repairs
+			22 container Machines
+				23 button Press 17 Atlas · Line A Open
+					24 text Press 17
+					25 text Atlas · Line A
+					26 text Open
+				27 text No next action recorded
+				28 text Day · Maya Chen
+				29 text Awaiting acknowledgment
+				30 button Press 12 Red Fox · Line A Locked out
+					31 text Press 12
+					32 text Red Fox · Line A
+					33 text Locked out
+				34 text Inspect pressure drop; electrical isolation still needed
+				35 text Night · Teo Salinas
+				36 text Awaiting acknowledgment
+				37 button Molder 8 Molder 8 · Line B Open
+					38 text Molder 8
+					39 text Molder 8 · Line B
+					40 text Open
+				41 text Pressure test before restart
+				42 text Night · Teo Salinas
+				43 text Awaiting acknowledgment
+				44 button Press 3 Old Blue · Line B Running
+					45 text Press 3
+					46 text Old Blue · Line B
+					47 text Running
+				48 button Report stop
+				49 button Press 21 Orion · Line C Running
+					50 text Press 21
+					51 text Orion · Line C
+					52 text Running
+				53 button Report stop
+				54 button Press 6 Scout · Line C Running
+					55 text Press 6
+					56 text Scout · Line C
+					57 text Running
+				58 button Report stop
+			59 text Mock plant · 6 assets
+			60 text Records reset when you reload.
+		61 container
+			62 text DEMO CLOCK · NIGHT SHIFT Nov 15, 10:00 PM
+			63 button +15 min
+			64 button +1 hour
+			65 button Next shift
+			66 button (collapsed) Set time, Secondary Actions: Expand
+				67 text Set time
+			68 button Reset demo
+			69 text Record updated.
+			70 text LINE A / IM-017 · SENSOR EQUIPPED
+			71 heading Press 17 Atlas, Value: 2
+				72 text Press 17  Atlas
+			73 text Handled
+			74 button Report new stop
+			75 button Simulate sensor stop
+			76 text NEXT ACTION
+			77 heading No next action recorded, Value: 3
+				78 text No next action recorded
+			79 text Teo Salinas · Night shift
+			80 text DOWNTIME
+			81 container
+				82 text 15  min
+			83 text Clock stopped · first good part SHIFT HANDOVER Closed record
+			84 container
+				85 text Worked on:  No repair work recorded
+			86 container
+				87 text Tests:  None recorded
+			88 text ENERGY ISOLATION
+			89 text Record each source. Verify zero energy separately.
+			90 text Hydraulic
+			91 text Applicable
+			92 text No lock currently applied
+			93 text Electrical
+			94 text Applicable
+			95 text No lock currently applied
+			96 text DOWNTIME EVENT r4
+			97 definition list
+				98 container Stop
+					99 text Stop
+				100 text Nov 15, 06:10 AM
+				101 container Source
+					102 text Source
+				103 text sensor
+				104 container First good part
+					105 text First good part
+				106 text Nov 15, 06:25 AM
+			107 heading Hydraulic, Value: 3
+				108 text Hydraulic
+			109 text No matching recurrence observed — awaiting a full operating shift
+			110 text No matching recurrence observed — awaiting a full operating shift
+			111 text No matching recurrence observed — awaiting a full operating shift
+			112 text EVENT TIMELINE Who · what · when
+			113 text Nov 15, 06:25 AM
+			114 container
+				115 text First good part confirmed  · Jordan Lee
+			116 text Nov 15, 06:25 AM
+			117 container
+				118 text Event closed  · Hydraulic · Maya Chen
+			119 text Nov 15, 06:10 AM
+			120 text Stop reported  · Teo Salinas
+			121 text sensor
+			122 text PENDING CLOSEOUT 0 records · production may have resumed
+			123 button View active stop r5
+			124 text No resumed intervals awaiting paperwork.
+			125 text MACHINE HISTORY
+			126 button Hydraulic · Nov 15, 06:10 AM · 15 min No matching recurrence observed — awaiting a full operating shift
+				127 text Hydraulic
+				128 text  · Nov 15, 06:10 AM · 15 min
+				129 text No matching recurrence observed — awaiting a full operating shift
+			130 button Back to current repair
+			131 link Description: Compare frozen V1, Value: localhost:4183/v1/
+			132 text  · 
+			133 link Description: Versions, Value: localhost:4183/
+			134 text Prototype only · Simulated sensors, identities and safety records. Physical isolation procedures remain outside this demo.
+
+The focused UI element is 0 AXWebArea Pressroom · Maintenance V2, URL: localhost:4183/v2/

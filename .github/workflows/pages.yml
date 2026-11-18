@@ -1,8 +1,8 @@
-name: Publish V1 to GitHub Pages
+name: Publish V1 and V2 to GitHub Pages
 
 on:
   push:
-    branches: [v1]
+    branches: [v2]
   workflow_dispatch:
 
 permissions:
@@ -24,7 +24,7 @@ jobs:
         run: npm test
       - name: Build static application
         run: npm run build
-      - name: Keep V1 at a versioned path
+      - name: Package both prototype versions
         run: node scripts/prepare-pages.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4

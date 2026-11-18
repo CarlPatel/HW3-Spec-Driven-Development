@@ -10,11 +10,12 @@ exposes records, missing fields, applicability and separate closeout/active stop
 ## Constitution gate
 PASS: revised spec precedes behavior; REQ/goal/evidence links preserved; mock-only;
 no blocking form before capture; safety evidence checked at handover/release/close;
-C-2 and unconfirmed stakeholder policy remain explicit. Recheck after implementation.
+C-2 and unconfirmed stakeholder policy remain explicit. Post-implementation recheck: PASS;
+all five approved refinements remain within the mock scope and link to acceptance checks.
 
 ## Design
 F-01: source decisions[], complete historical lock validator with phase-specific gates.
-F-02: production chronology checked against release/removal and subsequent stops.
+F-02: production chronology checked against release/removal; new stops only open after production resumption.
 F-03: activeFor vs openRecords selectors; predecessor links; pending closeout UI.
 F-04: obligation from stoppedAt < dated shift start; acknowledgment stores critical
 isolation fingerprint, leaving prior snapshots intact; notes don't affect obligation.

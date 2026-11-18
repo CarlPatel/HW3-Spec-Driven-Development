@@ -1,0 +1,36 @@
+
+> press-maintenance-v2@2.0.0 test
+> node --test tests/*.test.js
+
+✔ REQ-01: no-field sensor/manual stops and active interval deduplication (1.520375ms)
+✔ REQ-02: running/frozen whole minutes and invalid timestamp refusals (0.299208ms)
+✔ REQ-03: fixed code list, missing fields and early code preservation (0.283542ms)
+✔ F-01: removed unverified lock retains missing verifier evidence and blocks release/closeout (0.305375ms)
+✔ F-01: applicable sources are required at handover and release (0.252584ms)
+✔ F-01: only supervisor may exclude untouched source with explicit stamped reason (0.291333ms)
+✔ F-01: exclusion cannot hide history and excluded source cannot be locked (0.174792ms)
+✔ REQ-06/09: valid active isolation can be handed over; historical per-cycle completeness persists (0.263917ms)
+✔ F-02: production cannot precede release; equality is allowed (0.722292ms)
+✔ F-01/F-02: each relock cycle needs verification and invalidates release (0.331583ms)
+✔ F-03: new stop after good part is captured while reason/closure remain pending (0.227667ms)
+✔ F-03/08: pending closeout participates in repeat classification independently of closure time (0.115833ms)
+✔ REQ-04/05: photo-only entry, empty refusal, stamps and latest next-action summary (0.485625ms)
+✔ F-04: overdue explicit handover persists across current-shift notes (0.151167ms)
+✔ F-04: critical isolation change requires reacknowledgment and retains previous snapshot (0.090458ms)
+✔ REQ-07: dated midnight shifts and current-shift events have no inherited obligation (0.051292ms)
+✔ REQ-08: full-shift boundaries and normal operating evidence (0.323834ms)
+✔ F-05: different-reason ongoing stop cannot establish a full operating shift (0.148959ms)
+✔ F-05: unrelated stopped shift waits for resumption and next uninterrupted full shift (0.114208ms)
+✔ F-05: matching recurrence after original interrupted deadline still reopens before evidence completes (0.112709ms)
+✔ F-05: unknown classification stays pending; late matching reason retains stop time (0.065708ms)
+✔ F-05: stop exactly at verification end does not invalidate completed operating shift (0.0605ms)
+✔ F-05: correcting open reason recalculates repeat links without inventing operation (0.066084ms)
+✔ REQ-01–09: closed mutation, role violations and backward clock remain refused (0.119292ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 60.504084

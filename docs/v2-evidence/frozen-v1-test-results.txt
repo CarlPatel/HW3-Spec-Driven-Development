@@ -1,0 +1,23 @@
+✔ REQ-01: sensor/manual no-input stop; duplicate stop reuses event (1.743208ms)
+✔ REQ-02: running and completed downtime equals whole minutes; rejects early/future time (0.256833ms)
+✔ REQ-03: missing list, fixed reason list, stored early code and complete close (0.235291ms)
+✔ REQ-06/09: every safety gate, role refusal, cross-user removal and release stamp (0.35075ms)
+✔ REQ-06: relocking invalidates previous release and retains release history (0.106167ms)
+✔ REQ-04/05: photo-only saves, whitespace empty refuses, summary keeps latest nonempty next action (0.483833ms)
+✔ REQ-07: 06:29/06:30 boundary and current-shift acknowledgment stamps; operator refused (0.30325ms)
+✔ REQ-09: incomplete active lock blocks handover, verified lock snapshot includes applier (0.236167ms)
+✔ REQ-07: midnight and dated shift occurrences, current-shift events not overdue (0.325125ms)
+✔ REQ-08: full-shift exact boundaries and midnight (0.282583ms)
+✔ REQ-08: awaiting at 13:59; verifies at 14:00 without repeat (0.185334ms)
+✔ REQ-08: matching repeat links both ways even when reason assigned after deadline (0.094208ms)
+✔ REQ-08: other reason or stop at verification deadline does not reopen (0.454333ms)
+✔ REQ-01–09: closed records cannot be modified; invalid roles and clock refused (0.136416ms)
+✔ REQ-08: correcting an open repeat reason recalculates links (0.105125ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 58.030083
