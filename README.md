@@ -11,7 +11,7 @@
 | 2. GitHub Version 2 — revised model, specification, planning and source | [V2 branch](https://github.com/CarlPatel/HW3-Spec-Driven-Development/tree/v2) · [preserved V2 commit](https://github.com/CarlPatel/HW3-Spec-Driven-Development/tree/e304dfaaaa851da39d8733af716116b78d66ad8a) |
 | 3. Prototype V1 | [Open V1](https://carlpatel.github.io/HW3-Spec-Driven-Development/v1/) |
 | 4. Prototype V2 | [Open V2](https://carlpatel.github.io/HW3-Spec-Driven-Development/v2/) |
-| 5. Requirements Analysis and Learning Log | [Team-authored learning-log.md](learning-log.md) — requirements selection, relationships, V1 evaluation, revisions and reflection |
+| 5. Requirements Analysis and Learning Log | [learning-log.md](learning-log.md) — requirements selection, relationships, V1 evaluation, revisions and reflection |
 
 [Compare both deployed prototypes](https://carlpatel.github.io/HW3-Spec-Driven-Development/).
 All submission artifacts are present on this default branch. V2 descends from V1;
@@ -81,8 +81,7 @@ and goal relationships) and jointly authored the supplied learning log.
 - **Timothy Zhang:** Led interaction with and evaluation of Prototype V1 and prepared
   the Requirements Traceability Matrix.
 - **AI assistance:** Technical specification/planning, implementation, technical evaluation
-  and verification support, and repository organization. The team-supplied learning
-  log is included unchanged; no learning-log text was generated or rewritten here.
+  and verification support, and repository organization.
 
 ## Repository access
 
